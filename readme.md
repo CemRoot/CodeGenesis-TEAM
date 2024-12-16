@@ -1,3 +1,4 @@
+```markdown
 /CodeGenesisTeam/                     # Root project directory
 │
 ├── data/                             # Data directory
@@ -30,3 +31,4 @@
 ├── .env                              # Environment variables (MongoDB credentials)
 ├── README.md                         # Main README file with project overview
 └── requirements.txt                  # Python dependencies list
+```
