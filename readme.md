@@ -1,3 +1,7 @@
+![image](https://github.com/user-attachments/assets/168d6364-b487-46e7-a6d3-baa24183ff6d)
+
+
+
 ```markdown
 /CodeGenesisTeam/                     # Root project directory
 │
