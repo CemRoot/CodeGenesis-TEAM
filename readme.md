@@ -1,5 +1,5 @@
-![image](https://github.com/user-attachments/assets/168d6364-b487-46e7-a6d3-baa24183ff6d)
 
+![Task Overview (Jira Table)](https://github.com/user-attachments/assets/79a41561-86eb-4166-8644-7d6545c0ed07)
 
 
 ```markdown
