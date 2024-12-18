@@ -19,8 +19,7 @@
 │   │   ├── merged_dataset.csv        # Cleaned and merged dataset
 │   │   └── README.md                 # Documentation for data processing steps
 │
-├── notebooks/                        # Jupyter Notebooks
-│   ├── 00_data_collection.ipynb      # Collecting and downloading data
+├── notebooks/                        # Jupyter Notebooks directory
 │   ├── 01_data_exploration.ipynb     # Initial data exploration and analysis
 │   ├── 02_data_to_mongo.ipynb        # Loading data into MongoDB
 │   ├── 03_data_cleaning.ipynb        # Cleaning and preprocessing data
