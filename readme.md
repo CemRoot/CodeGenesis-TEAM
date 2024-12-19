@@ -35,3 +35,6 @@
 ├── README.md                         # Main README file with project overview
 └── requirements.txt                  # Python dependencies list
 ```
+
+
+run the processing file and then streamlit run Scripts/dashboard.py to get the dashboard to show
