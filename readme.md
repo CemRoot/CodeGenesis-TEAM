@@ -1,10 +1,8 @@
-# REM =======================
-# REM   README (Markdown)
-# REM =======================
+
 
 # 🚧 **Project Under Construction** 🚧
 
-![Project Under Construction](https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif)
+![Project Under Construction](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaW56eG5ubW1kbHMwamx0MzliczA1b3hnNm1sdHB5dmViY3hpOGhsbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xZsLh7B3KMMyUptD9D/giphy.gif)
 
 > **Heads up!** This project is currently under active development.  
 > Some sections may be incomplete or subject to change.  
