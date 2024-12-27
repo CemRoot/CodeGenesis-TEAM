@@ -3,6 +3,13 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="/Project/data/processed/covid_vacc_death_rate_cleaned.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/data/processed/covid_vacc_death_rate_cleaned.csv">
           <value>
             <Attribute>
@@ -10,7 +17,7 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="/data/processed/oecd_health_expenditure_cleaned.csv">
+        <entry key="/data/processed/covid_vacc_manufacturer_cleaned.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -18,13 +25,6 @@
           </value>
         </entry>
         <entry key="/data/processed/us_death_rates_cleaned.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/data/raw/OECD_health_expenditure.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
