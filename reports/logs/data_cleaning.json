@@ -74,3 +74,8 @@
 {"timestamp": "2024-12-27T13:45:49.707170+00:00", "level": "ERROR", "message": "Gerekli s\u00fctunlar veri \u00e7er\u00e7evesinde bulunamad\u0131: 'COVID-19 doses (cumulative, per hundred)', 'Daily new confirmed deaths due to COVID-19 per million people (rolling 7-day average, right-aligned)'"}
 {"timestamp": "2024-12-27T13:45:49.721767+00:00", "level": "ERROR", "message": "Gerekli s\u00fctunlar bulunamad\u0131: ['Death rate (weekly) of fully vaccinated people (with bivalent booster) - United States, by age']"}
 {"timestamp": "2024-12-27T13:45:49.722004+00:00", "level": "INFO", "message": "Basic statistical analyses completed successfully."}
+{"timestamp": "2024-12-27T14:06:49.900855+00:00", "level": "ERROR", "message": "covid_vacc_manufacturer_cleaned.csv dosyas\u0131 y\u00fcklenirken hata olu\u015ftu: [Errno 2] No such file or directory: 'covid_vacc_manufacturer_cleaned.csv'"}
+{"timestamp": "2024-12-27T14:06:49.931025+00:00", "level": "ERROR", "message": "us_death_rates_cleaned.csv dosyas\u0131 y\u00fcklenirken hata olu\u015ftu: [Errno 2] No such file or directory: 'us_death_rates_cleaned.csv'"}
+{"timestamp": "2024-12-30T11:44:44.254884+00:00", "level": "INFO", "message": "MongoDB'ye ba\u015far\u0131yla ba\u011flan\u0131ld\u0131."}
+{"timestamp": "2024-12-30T11:44:44.257252+00:00", "level": "INFO", "message": "Veriler MongoDB'den y\u00fckleniyor..."}
+{"timestamp": "2024-12-30T11:44:52.486799+00:00", "level": "INFO", "message": "MongoDB ba\u011flant\u0131s\u0131 kapat\u0131ld\u0131."}
