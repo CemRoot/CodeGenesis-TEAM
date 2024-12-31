@@ -56,7 +56,7 @@ Below is a high-level overview of the project’s structure:
 │
 ├── notebooks/                        # Jupyter Notebooks directory
 │   ├── main.ipynb                    # Main notebook for the project
-│   ├── 02_data_to_mongo.py.          # Loading data into MongoDB
+│   ├── data_to_mongo.py.          # Loading data into MongoDB
 │
 ├── reports/                          # Project reports and documentation
 │   ├── logs/                         # Log files (optional)
