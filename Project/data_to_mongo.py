@@ -138,10 +138,10 @@ def load_csv_to_mongo(client: MongoClient, db_name: str, file_path: str, collect
 
 def main():
     csv_files = {
-        "/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/raw/covid-vaccinations-vs-covid-death-rate.csv": "covid_vacc_death_rate",
-        "/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/raw/covid-vaccine-doses-by-manufacturer.csv": "covid_vacc_manufacturer",
-        "/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/raw/OECD_health_expenditure.csv": "oecd_health_expenditure",
-        "/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/raw/united-states-rates-of-covid-19-deaths-by-vaccination-status.csv": "us_death_rates",
+        "../data/raw/covid-vaccinations-vs-covid-death-rate.csv": "covid_vacc_death_rate",
+        "../data/raw/covid-vaccine-doses-by-manufacturer.csv": "covid_vacc_manufacturer",
+        "../data/raw/OECD_health_expenditure.csv": "oecd_health_expenditure",
+        "../data/raw/united-states-rates-of-covid-19-deaths-by-vaccination-status.csv": "us_death_rates",
     }
 
     print("Select an option:")

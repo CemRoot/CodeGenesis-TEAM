@@ -1,81 +1,341 @@
-{"timestamp": "2024-12-27T13:15:57.042945+00:00", "level": "INFO", "message": "Loading data from the 'covid_vacc_death_rate' collection..."}
-{"timestamp": "2024-12-27T13:16:10.626779+00:00", "level": "INFO", "message": "Loaded 447729 records from the 'covid_vacc_death_rate' collection."}
-{"timestamp": "2024-12-27T13:16:10.658133+00:00", "level": "INFO", "message": "Dataset 'covid_vacc_death_rate' loaded successfully."}
-{"timestamp": "2024-12-27T13:16:10.694141+00:00", "level": "INFO", "message": "Missing values in dataset 'covid_vacc_death_rate':\n                                                    Missing Values  Percentage\nCOVID-19 doses (cumulative, per hundred)                    364507   81.412417\nWorld regions according to OWID                              28624    6.393153\nCode                                                         26835    5.993581\nDaily new confirmed deaths due to COVID-19 per ...            2017    0.450496"}
-{"timestamp": "2024-12-27T13:16:10.694425+00:00", "level": "INFO", "message": "Cleaning dataset 'covid_vacc_death_rate'."}
-{"timestamp": "2024-12-27T13:16:10.725963+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
-{"timestamp": "2024-12-27T13:16:10.726945+00:00", "level": "INFO", "message": "Converted numeric columns to appropriate data types."}
-{"timestamp": "2024-12-27T13:16:10.770617+00:00", "level": "INFO", "message": "Filled 26835 missing values in 'Code' with 'Unknown'."}
-{"timestamp": "2024-12-27T13:16:10.805312+00:00", "level": "INFO", "message": "Filled 28624 missing values in 'World regions according to OWID' with 'Unknown'."}
-{"timestamp": "2024-12-27T13:16:10.835525+00:00", "level": "WARNING", "message": "Dropped column 'COVID-19 doses (cumulative, per hundred)' due to high missing value percentage (81.41%)."}
-{"timestamp": "2024-12-27T13:16:10.838910+00:00", "level": "INFO", "message": "Filled 2017 missing values in 'Daily new confirmed deaths due to COVID-19 per million people (rolling 7-day average, right-aligned)' with median value 0.0."}
-{"timestamp": "2024-12-27T13:16:10.838947+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'covid_vacc_death_rate'."}
-{"timestamp": "2024-12-27T13:16:10.840054+00:00", "level": "INFO", "message": "No inconsistent values found in dataset 'covid_vacc_death_rate'."}
-{"timestamp": "2024-12-27T13:16:10.840079+00:00", "level": "INFO", "message": "Finished cleaning dataset 'covid_vacc_death_rate'."}
-{"timestamp": "2024-12-27T13:16:10.869397+00:00", "level": "INFO", "message": "No missing values in dataset 'covid_vacc_death_rate (Cleaned)'."}
-{"timestamp": "2024-12-27T13:16:10.964386+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'covid_vacc_death_rate_cleaned'."}
-{"timestamp": "2024-12-27T13:17:06.082226+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'covid_vacc_death_rate_cleaned_6'."}
-{"timestamp": "2024-12-27T13:17:06.138245+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'covid_vacc_death_rate_cleaned_6'."}
-{"timestamp": "2024-12-27T13:17:06.495954+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/covid_vacc_death_rate_cleaned.csv'."}
-{"timestamp": "2024-12-27T13:17:06.496070+00:00", "level": "INFO", "message": "Loading data from the 'covid_vacc_manufacturer' collection..."}
-{"timestamp": "2024-12-27T13:17:14.376602+00:00", "level": "INFO", "message": "Loaded 59224 records from the 'covid_vacc_manufacturer' collection."}
-{"timestamp": "2024-12-27T13:17:14.386941+00:00", "level": "INFO", "message": "Dataset 'covid_vacc_manufacturer' loaded successfully."}
-{"timestamp": "2024-12-27T13:17:14.392589+00:00", "level": "INFO", "message": "Missing values in dataset 'covid_vacc_manufacturer':\n      Missing Values  Percentage\nCode            1346    2.272727"}
-{"timestamp": "2024-12-27T13:17:14.392857+00:00", "level": "INFO", "message": "Cleaning dataset 'covid_vacc_manufacturer'."}
-{"timestamp": "2024-12-27T13:17:14.398007+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
-{"timestamp": "2024-12-27T13:17:14.399509+00:00", "level": "INFO", "message": "Converted numeric columns to appropriate data types."}
-{"timestamp": "2024-12-27T13:17:14.404379+00:00", "level": "INFO", "message": "Filled 1346 missing values in 'Code' with 'Unknown'."}
-{"timestamp": "2024-12-27T13:17:14.404985+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Pfizer/BioNTech' with median value 8629281.0."}
-{"timestamp": "2024-12-27T13:17:14.405442+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Moderna' with median value 1008835.0."}
-{"timestamp": "2024-12-27T13:17:14.405789+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Oxford/AstraZeneca' with median value 553922.0."}
-{"timestamp": "2024-12-27T13:17:14.406141+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Johnson&Johnson' with median value 63651.0."}
-{"timestamp": "2024-12-27T13:17:14.406505+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Sputnik V' with median value 0.0."}
-{"timestamp": "2024-12-27T13:17:14.406816+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Sinovac' with median value 0.0."}
-{"timestamp": "2024-12-27T13:17:14.407148+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Sinopharm/Beijing' with median value 0.0."}
-{"timestamp": "2024-12-27T13:17:14.407480+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer CanSino' with median value 0.0."}
-{"timestamp": "2024-12-27T13:17:14.407863+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Novavax' with median value 1.0."}
-{"timestamp": "2024-12-27T13:17:14.408205+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Covaxin' with median value 0.0."}
-{"timestamp": "2024-12-27T13:17:14.408493+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Medicago' with median value 0.0."}
-{"timestamp": "2024-12-27T13:17:14.408711+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Sanofi/GSK' with median value 0.0."}
-{"timestamp": "2024-12-27T13:17:14.408994+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer SKYCovione' with median value 0.0."}
-{"timestamp": "2024-12-27T13:17:14.409237+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Valneva' with median value 0.0."}
-{"timestamp": "2024-12-27T13:17:14.409253+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'covid_vacc_manufacturer'."}
-{"timestamp": "2024-12-27T13:17:14.413030+00:00", "level": "INFO", "message": "No inconsistent values found in dataset 'covid_vacc_manufacturer'."}
-{"timestamp": "2024-12-27T13:17:14.413100+00:00", "level": "INFO", "message": "Finished cleaning dataset 'covid_vacc_manufacturer'."}
-{"timestamp": "2024-12-27T13:17:14.417025+00:00", "level": "INFO", "message": "No missing values in dataset 'covid_vacc_manufacturer (Cleaned)'."}
-{"timestamp": "2024-12-27T13:17:14.428691+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'covid_vacc_manufacturer_cleaned'."}
-{"timestamp": "2024-12-27T13:17:40.641042+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'covid_vacc_manufacturer_cleaned_6'."}
-{"timestamp": "2024-12-27T13:17:40.660032+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'covid_vacc_manufacturer_cleaned_6'."}
-{"timestamp": "2024-12-27T13:17:40.756498+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/covid_vacc_manufacturer_cleaned.csv'."}
-{"timestamp": "2024-12-27T13:17:40.756558+00:00", "level": "INFO", "message": "Loading data from the 'us_death_rates' collection..."}
-{"timestamp": "2024-12-27T13:17:40.856208+00:00", "level": "INFO", "message": "Loaded 650 records from the 'us_death_rates' collection."}
-{"timestamp": "2024-12-27T13:17:40.856321+00:00", "level": "INFO", "message": "Dataset 'us_death_rates' loaded successfully."}
-{"timestamp": "2024-12-27T13:17:40.857498+00:00", "level": "INFO", "message": "Missing values in dataset 'us_death_rates':\n                                                    Missing Values  Percentage\nCode                                                           650  100.000000\nDeath rate (weekly) of fully vaccinated people ...             418   64.307692"}
-{"timestamp": "2024-12-27T13:17:40.857866+00:00", "level": "INFO", "message": "Cleaning dataset 'us_death_rates'."}
-{"timestamp": "2024-12-27T13:17:40.858480+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
-{"timestamp": "2024-12-27T13:17:40.858686+00:00", "level": "INFO", "message": "Converted numeric columns to appropriate data types."}
-{"timestamp": "2024-12-27T13:17:40.858962+00:00", "level": "INFO", "message": "Filled 650 missing values in 'Code' with 'Unknown'."}
-{"timestamp": "2024-12-27T13:17:40.859147+00:00", "level": "INFO", "message": "Filled 0 missing values in 'Death rate (weekly) of unvaccinated people - United States, by age' with median value 0.5994979."}
-{"timestamp": "2024-12-27T13:17:40.859301+00:00", "level": "INFO", "message": "Filled 0 missing values in 'Death rate (weekly) of fully vaccinated people (without bivalent booster) - United States, by age' with median value 0.09305295499999999."}
-{"timestamp": "2024-12-27T13:17:40.859568+00:00", "level": "WARNING", "message": "Dropped column 'Death rate (weekly) of fully vaccinated people (with bivalent booster) - United States, by age' due to high missing value percentage (64.31%)."}
-{"timestamp": "2024-12-27T13:17:40.859597+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'us_death_rates'."}
-{"timestamp": "2024-12-27T13:17:40.860007+00:00", "level": "INFO", "message": "No inconsistent values found in dataset 'us_death_rates'."}
-{"timestamp": "2024-12-27T13:17:40.860507+00:00", "level": "INFO", "message": "Finished cleaning dataset 'us_death_rates'."}
-{"timestamp": "2024-12-27T13:17:40.861103+00:00", "level": "INFO", "message": "No missing values in dataset 'us_death_rates (Cleaned)'."}
-{"timestamp": "2024-12-27T13:17:40.861739+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'us_death_rates_cleaned'."}
-{"timestamp": "2024-12-27T13:17:40.992972+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'us_death_rates_cleaned_6'."}
-{"timestamp": "2024-12-27T13:17:40.993164+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'us_death_rates_cleaned_6'."}
-{"timestamp": "2024-12-27T13:17:40.996752+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/us_death_rates_cleaned.csv'."}
-{"timestamp": "2024-12-27T13:17:40.996892+00:00", "level": "INFO", "message": "All datasets processed successfully."}
-{"timestamp": "2024-12-27T13:45:43.484670+00:00", "level": "INFO", "message": "Koleksiyon 'covid_vacc_death_rate_cleaned_4' den 447729 kay\u0131t y\u00fcklendi."}
-{"timestamp": "2024-12-27T13:45:49.098125+00:00", "level": "INFO", "message": "Koleksiyon 'covid_vacc_manufacturer_cleaned_4' den 59224 kay\u0131t y\u00fcklendi."}
-{"timestamp": "2024-12-27T13:45:49.170806+00:00", "level": "INFO", "message": "Koleksiyon 'us_death_rates_cleaned_4' den 650 kay\u0131t y\u00fcklendi."}
-{"timestamp": "2024-12-27T13:45:49.449195+00:00", "level": "ERROR", "message": "'COVID-19 doses (cumulative, per hundred)' s\u00fctunu veri \u00e7er\u00e7evesinde bulunamad\u0131."}
-{"timestamp": "2024-12-27T13:45:49.707170+00:00", "level": "ERROR", "message": "Gerekli s\u00fctunlar veri \u00e7er\u00e7evesinde bulunamad\u0131: 'COVID-19 doses (cumulative, per hundred)', 'Daily new confirmed deaths due to COVID-19 per million people (rolling 7-day average, right-aligned)'"}
-{"timestamp": "2024-12-27T13:45:49.721767+00:00", "level": "ERROR", "message": "Gerekli s\u00fctunlar bulunamad\u0131: ['Death rate (weekly) of fully vaccinated people (with bivalent booster) - United States, by age']"}
-{"timestamp": "2024-12-27T13:45:49.722004+00:00", "level": "INFO", "message": "Basic statistical analyses completed successfully."}
-{"timestamp": "2024-12-27T14:06:49.900855+00:00", "level": "ERROR", "message": "covid_vacc_manufacturer_cleaned.csv dosyas\u0131 y\u00fcklenirken hata olu\u015ftu: [Errno 2] No such file or directory: 'covid_vacc_manufacturer_cleaned.csv'"}
-{"timestamp": "2024-12-27T14:06:49.931025+00:00", "level": "ERROR", "message": "us_death_rates_cleaned.csv dosyas\u0131 y\u00fcklenirken hata olu\u015ftu: [Errno 2] No such file or directory: 'us_death_rates_cleaned.csv'"}
-{"timestamp": "2024-12-30T11:44:44.254884+00:00", "level": "INFO", "message": "MongoDB'ye ba\u015far\u0131yla ba\u011flan\u0131ld\u0131."}
-{"timestamp": "2024-12-30T11:44:44.257252+00:00", "level": "INFO", "message": "Veriler MongoDB'den y\u00fckleniyor..."}
-{"timestamp": "2024-12-30T11:44:52.486799+00:00", "level": "INFO", "message": "MongoDB ba\u011flant\u0131s\u0131 kapat\u0131ld\u0131."}
+{"timestamp": "2024-12-31T15:09:49.154944+00:00", "level": "INFO", "message": "[PROCESS] 'covid_vacc_death_rate' loaded successfully."}
+{"timestamp": "2024-12-31T15:09:49.210085+00:00", "level": "INFO", "message": "[ANALYSIS] Missing values in 'covid_vacc_death_rate' (Before Cleaning):\n                                                    Missing Values  Percentage\nCOVID-19 doses (cumulative, per hundred)                    364507   81.412417\nWorld regions according to OWID                              28624    6.393153\nCode                                                         26835    5.993581\nDaily new confirmed deaths due to COVID-19 per ...            2017    0.450496"}
+{"timestamp": "2024-12-31T15:09:49.211084+00:00", "level": "INFO", "message": "[CLEANING] Starting cleaning for 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T15:09:49.211084+00:00", "level": "INFO", "message": "[CLEANING] Initial shape of 'covid_vacc_death_rate': 447729 rows, 7 columns."}
+{"timestamp": "2024-12-31T15:09:49.374625+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary statistics for 'covid_vacc_death_rate' - Before Cleaning."}
+{"timestamp": "2024-12-31T15:09:49.602311+00:00", "level": "INFO", "message": "[CLEANING] Converted 'Day' to datetime (coerced)."}
+{"timestamp": "2024-12-31T15:09:49.603309+00:00", "level": "INFO", "message": "[CLEANING] Converted column 'COVID-19 doses (cumulative, per hundred)' to numeric with coercion."}
+{"timestamp": "2024-12-31T15:09:49.604311+00:00", "level": "INFO", "message": "[CLEANING] Converted column 'Daily new confirmed deaths due to COVID-19 per million people (rolling 7-day average, right-aligned)' to numeric with coercion."}
+{"timestamp": "2024-12-31T15:09:49.796639+00:00", "level": "INFO", "message": "[CLEANING] No duplicate rows found in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T15:09:49.797640+00:00", "level": "INFO", "message": "[CLEANING] Handling missing values for 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T15:09:49.902701+00:00", "level": "INFO", "message": "[CLEANING] Filled 26835 missing values in 'Code' with 'Unknown'."}
+{"timestamp": "2024-12-31T15:09:49.986195+00:00", "level": "INFO", "message": "[CLEANING] Filled 28624 missing values in 'World regions according to OWID' with 'Unknown'."}
+{"timestamp": "2024-12-31T15:09:50.009732+00:00", "level": "WARNING", "message": "[CLEANING] Dropped 'COVID-19 doses (cumulative, per hundred)' due to high missing (> 50.0%)."}
+{"timestamp": "2024-12-31T15:09:50.015734+00:00", "level": "INFO", "message": "[CLEANING] Filled 2017 missing in 'Daily new confirmed deaths due to COVID-19 per million people (rolling 7-day average, right-aligned)' with median=0.0."}
+{"timestamp": "2024-12-31T15:09:50.028254+00:00", "level": "INFO", "message": "[CLEANING] Starting outlier detection and handling."}
+{"timestamp": "2024-12-31T15:09:50.036764+00:00", "level": "INFO", "message": "[CLEANING] Capped outliers in 'Daily new confirmed deaths due to COVID-19 per million people (rolling 7-day average, right-aligned)' from [0.0, 129.07292] to [-0.457906275, 0.7631771249999999]."}
+{"timestamp": "2024-12-31T15:09:50.037763+00:00", "level": "INFO", "message": "[CLEANING] Outlier detection and capping completed."}
+{"timestamp": "2024-12-31T15:09:50.037763+00:00", "level": "INFO", "message": "[VALIDATION] Checking for inconsistent values in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T15:09:50.051318+00:00", "level": "INFO", "message": "[VALIDATION] No inconsistent values found in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T15:09:50.051318+00:00", "level": "INFO", "message": "[CLEANING] Final shape of 'covid_vacc_death_rate': 447729 rows, 6 columns."}
+{"timestamp": "2024-12-31T15:09:50.224779+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary statistics for 'covid_vacc_death_rate' - After Cleaning."}
+{"timestamp": "2024-12-31T15:09:51.466240+00:00", "level": "INFO", "message": "[CLEANING] Finished cleaning dataset 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T15:09:51.537504+00:00", "level": "INFO", "message": "[ANALYSIS] No missing values in 'covid_vacc_death_rate (Cleaned)'."}
+{"timestamp": "2024-12-31T15:09:51.537504+00:00", "level": "WARNING", "message": "[PROCESS] 'Day' column is not recognized as datetime; skipping .dt.strftime() for 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T15:09:52.810692+00:00", "level": "INFO", "message": "[PROCESS] Saved cleaned CSV '../data/processed\\covid_vacc_death_rate_cleaned.csv'."}
+{"timestamp": "2024-12-31T15:09:52.822226+00:00", "level": "INFO", "message": "[PROCESS] 'covid_vacc_manufacturer' loaded successfully."}
+{"timestamp": "2024-12-31T15:09:52.827226+00:00", "level": "INFO", "message": "[ANALYSIS] Missing values in 'covid_vacc_manufacturer' (Before Cleaning):\n                                                    Missing Values  Percentage\nSK,COVID-19 doses (cumulative) - Manufacturer S...           53840   90.909091\nEntity,Code,Day,COVID-19 doses (cumulative) - M...            1346    2.272727"}
+{"timestamp": "2024-12-31T15:09:52.827226+00:00", "level": "INFO", "message": "[CLEANING] Starting cleaning for 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T15:09:52.827226+00:00", "level": "INFO", "message": "[CLEANING] Initial shape of 'covid_vacc_manufacturer': 59224 rows, 2 columns."}
+{"timestamp": "2024-12-31T15:09:52.853807+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary statistics for 'covid_vacc_manufacturer' - Before Cleaning."}
+{"timestamp": "2024-12-31T15:09:52.882339+00:00", "level": "INFO", "message": "[CLEANING] Converted column 'Entity,Code,Day,COVID-19 doses (cumulative) - Manufacturer Pfizer/BioNTech,COVID-19 doses (cumulative) - Manufacturer Moderna,COVID-19 doses (cumulative) - Manufacturer Oxford/AstraZeneca,COVID-19 doses (cumulative) - Manufacturer Johnson&Johnson,COVID-19 doses (cumulative) - Manufacturer Sputnik V,COVID-19 doses (cumulative) - Manufacturer Sinovac,COVID-19 doses (cumulative) - Manufacturer Sinopharm/Beijing,COVID-19 doses (cumulative) - Manufacturer CanSino,COVID-19 doses (cumulative) - Manufacturer Novavax,COVID-19 doses (cumulative) - Manufacturer Covaxin,COVID-19 doses (cumulative) - Manufacturer Medicago,COVID-19 doses (cumulative) - Manufacturer Sanofi/' to numeric with coercion."}
+{"timestamp": "2024-12-31T15:09:52.887338+00:00", "level": "INFO", "message": "[CLEANING] Converted column 'SK,COVID-19 doses (cumulative) - Manufacturer SKYCovione,COVID-19 doses (cumulative) - Manufacturer Valneva' to numeric with coercion."}
+{"timestamp": "2024-12-31T15:09:52.889340+00:00", "level": "INFO", "message": "[CLEANING] Removed 59223 duplicate rows from 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T15:09:52.889340+00:00", "level": "INFO", "message": "[CLEANING] Handling missing values for 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T15:09:52.889340+00:00", "level": "WARNING", "message": "[CLEANING] Column 'Entity,Code,Day,COVID-19 doses (cumulative) - Manufacturer Pfizer/BioNTech,COVID-19 doses (cumulative) - Manufacturer Moderna,COVID-19 doses (cumulative) - Manufacturer Oxford/AstraZeneca,COVID-19 doses (cumulative) - Manufacturer Johnson&Johnson,COVID-19 doses (cumulative) - Manufacturer Sputnik V,COVID-19 doses (cumulative) - Manufacturer Sinovac,COVID-19 doses (cumulative) - Manufacturer Sinopharm/Beijing,COVID-19 doses (cumulative) - Manufacturer CanSino,COVID-19 doses (cumulative) - Manufacturer Novavax,COVID-19 doses (cumulative) - Manufacturer Covaxin,COVID-19 doses (cumulative) - Manufacturer Medicago,COVID-19 doses (cumulative) - Manufacturer Sanofi/' is not numeric after conversion. Skipping."}
+{"timestamp": "2024-12-31T15:09:52.889340+00:00", "level": "WARNING", "message": "[CLEANING] Column 'SK,COVID-19 doses (cumulative) - Manufacturer SKYCovione,COVID-19 doses (cumulative) - Manufacturer Valneva' is not numeric after conversion. Skipping."}
+{"timestamp": "2024-12-31T15:09:52.889340+00:00", "level": "INFO", "message": "[CLEANING] Starting outlier detection and handling."}
+{"timestamp": "2024-12-31T15:09:52.890598+00:00", "level": "INFO", "message": "[CLEANING] Outlier detection and capping completed."}
+{"timestamp": "2024-12-31T15:09:52.890598+00:00", "level": "INFO", "message": "[VALIDATION] Checking for inconsistent values in 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T15:09:52.890598+00:00", "level": "INFO", "message": "[VALIDATION] No inconsistent values found in 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T15:09:52.890598+00:00", "level": "INFO", "message": "[CLEANING] Final shape of 'covid_vacc_manufacturer': 1 rows, 2 columns."}
+{"timestamp": "2024-12-31T15:09:52.893595+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary statistics for 'covid_vacc_manufacturer' - After Cleaning."}
+{"timestamp": "2024-12-31T15:09:53.068327+00:00", "level": "INFO", "message": "[CLEANING] Finished cleaning dataset 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T15:09:53.069832+00:00", "level": "INFO", "message": "[ANALYSIS] Missing values in 'covid_vacc_manufacturer (Cleaned)' (After Cleaning):\n                                                    Missing Values  Percentage\nEntity,Code,Day,COVID-19 doses (cumulative) - M...               1       100.0\nSK,COVID-19 doses (cumulative) - Manufacturer S...               1       100.0"}
+{"timestamp": "2024-12-31T15:09:53.070837+00:00", "level": "WARNING", "message": "[PROCESS] 'Day' column is not recognized as datetime; skipping .dt.strftime() for 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T15:09:53.077833+00:00", "level": "INFO", "message": "[PROCESS] Saved cleaned CSV '../data/processed\\covid_vacc_manufacturer_cleaned.csv'."}
+{"timestamp": "2024-12-31T15:09:53.079338+00:00", "level": "INFO", "message": "[PROCESS] 'us_death_rates' loaded successfully."}
+{"timestamp": "2024-12-31T15:09:53.081350+00:00", "level": "INFO", "message": "[ANALYSIS] Missing values in 'us_death_rates' (Before Cleaning):\n                                                    Missing Values  Percentage\nCode                                                           650  100.000000\nDeath rate (weekly) of fully vaccinated people ...             418   64.307692"}
+{"timestamp": "2024-12-31T15:09:53.081350+00:00", "level": "INFO", "message": "[CLEANING] Starting cleaning for 'us_death_rates'."}
+{"timestamp": "2024-12-31T15:09:53.081350+00:00", "level": "INFO", "message": "[CLEANING] Initial shape of 'us_death_rates': 650 rows, 6 columns."}
+{"timestamp": "2024-12-31T15:09:53.088350+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary statistics for 'us_death_rates' - Before Cleaning."}
+{"timestamp": "2024-12-31T15:09:53.090485+00:00", "level": "INFO", "message": "[CLEANING] Converted 'Day' to datetime (coerced)."}
+{"timestamp": "2024-12-31T15:09:53.090485+00:00", "level": "INFO", "message": "[CLEANING] Converted column 'Death rate (weekly) of unvaccinated people - United States, by age' to numeric with coercion."}
+{"timestamp": "2024-12-31T15:09:53.090485+00:00", "level": "INFO", "message": "[CLEANING] Converted column 'Death rate (weekly) of fully vaccinated people (without bivalent booster) - United States, by age' to numeric with coercion."}
+{"timestamp": "2024-12-31T15:09:53.090485+00:00", "level": "INFO", "message": "[CLEANING] Converted column 'Death rate (weekly) of fully vaccinated people (with bivalent booster) - United States, by age' to numeric with coercion."}
+{"timestamp": "2024-12-31T15:09:53.091486+00:00", "level": "INFO", "message": "[CLEANING] Removed 37 duplicate rows from 'us_death_rates'."}
+{"timestamp": "2024-12-31T15:09:53.091486+00:00", "level": "INFO", "message": "[CLEANING] Handling missing values for 'us_death_rates'."}
+{"timestamp": "2024-12-31T15:09:53.092484+00:00", "level": "INFO", "message": "[CLEANING] Filled 613 missing values in 'Code' with 'Unknown'."}
+{"timestamp": "2024-12-31T15:09:53.093485+00:00", "level": "INFO", "message": "[CLEANING] Filled 0 missing in 'Death rate (weekly) of unvaccinated people - United States, by age' with median=0.99141717."}
+{"timestamp": "2024-12-31T15:09:53.093485+00:00", "level": "INFO", "message": "[CLEANING] Filled 0 missing in 'Death rate (weekly) of fully vaccinated people (without bivalent booster) - United States, by age' with median=0.13214403."}
+{"timestamp": "2024-12-31T15:09:53.093485+00:00", "level": "WARNING", "message": "[CLEANING] Dropped 'Death rate (weekly) of fully vaccinated people (with bivalent booster) - United States, by age' due to high missing (> 50.0%)."}
+{"timestamp": "2024-12-31T15:09:53.093485+00:00", "level": "INFO", "message": "[CLEANING] Starting outlier detection and handling."}
+{"timestamp": "2024-12-31T15:09:53.094486+00:00", "level": "INFO", "message": "[CLEANING] Capped outliers in 'Death rate (weekly) of unvaccinated people - United States, by age' from [0.0, 247.40009] to [-14.204458375, 23.805627025]."}
+{"timestamp": "2024-12-31T15:09:53.095485+00:00", "level": "INFO", "message": "[CLEANING] Capped outliers in 'Death rate (weekly) of fully vaccinated people (without bivalent booster) - United States, by age' from [0.0, 39.40205] to [-1.4162639824999999, 2.3801596215]."}
+{"timestamp": "2024-12-31T15:09:53.095485+00:00", "level": "INFO", "message": "[CLEANING] Outlier detection and capping completed."}
+{"timestamp": "2024-12-31T15:09:53.095485+00:00", "level": "INFO", "message": "[VALIDATION] Checking for inconsistent values in 'us_death_rates'."}
+{"timestamp": "2024-12-31T15:09:53.095485+00:00", "level": "WARNING", "message": "[VALIDATION] 'us_death_rates' has 56.28% missing values in 'Day' column."}
+{"timestamp": "2024-12-31T15:09:53.096484+00:00", "level": "INFO", "message": "[VALIDATION] Dropped 345 rows with missing 'Day' values in 'us_death_rates'."}
+{"timestamp": "2024-12-31T15:09:53.096484+00:00", "level": "INFO", "message": "[VALIDATION] Inconsistencies found in 'us_death_rates'."}
+{"timestamp": "2024-12-31T15:09:53.096484+00:00", "level": "INFO", "message": "[CLEANING] Final shape of 'us_death_rates': 268 rows, 5 columns."}
+{"timestamp": "2024-12-31T15:09:53.102994+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary statistics for 'us_death_rates' - After Cleaning."}
+{"timestamp": "2024-12-31T15:09:53.214875+00:00", "level": "INFO", "message": "[CLEANING] Finished cleaning dataset 'us_death_rates'."}
+{"timestamp": "2024-12-31T15:09:53.216877+00:00", "level": "INFO", "message": "[ANALYSIS] No missing values in 'us_death_rates (Cleaned)'."}
+{"timestamp": "2024-12-31T15:09:53.216877+00:00", "level": "WARNING", "message": "[PROCESS] 'Day' column is not recognized as datetime; skipping .dt.strftime() for 'us_death_rates'."}
+{"timestamp": "2024-12-31T15:09:53.222385+00:00", "level": "INFO", "message": "[PROCESS] Saved cleaned CSV '../data/processed\\us_death_rates_cleaned.csv'."}
+{"timestamp": "2024-12-31T15:09:53.222385+00:00", "level": "INFO", "message": "[PROCESS] All datasets cleaned and saved successfully."}
+{"timestamp": "2024-12-31T15:46:46.686552+00:00", "level": "ERROR", "message": "[LOAD] File '../data/raw\\covid_vacc_death_rate.csv' not found for dataset 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T15:46:46.687552+00:00", "level": "ERROR", "message": "[LOAD] File '../data/raw\\covid_vacc_manufacturer.csv' not found for dataset 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T15:46:46.687552+00:00", "level": "ERROR", "message": "[LOAD] File '../data/raw\\us_death_rates.csv' not found for dataset 'us_death_rates'."}
+{"timestamp": "2024-12-31T15:46:46.687552+00:00", "level": "WARNING", "message": "[PROCESS] 'covid_vacc_death_rate' is empty. Skipping specialized cleaning."}
+{"timestamp": "2024-12-31T15:46:46.687552+00:00", "level": "WARNING", "message": "[PROCESS] 'covid_vacc_manufacturer' is empty. Skipping specialized cleaning."}
+{"timestamp": "2024-12-31T15:46:46.687552+00:00", "level": "WARNING", "message": "[PROCESS] 'us_death_rates' is empty. Skipping specialized cleaning."}
+{"timestamp": "2024-12-31T15:46:46.687552+00:00", "level": "WARNING", "message": "[PROCESS] 'covid_vacc_death_rate' is empty after cleaning. Skipping export."}
+{"timestamp": "2024-12-31T15:46:46.688551+00:00", "level": "WARNING", "message": "[PROCESS] 'covid_vacc_manufacturer' is empty after cleaning. Skipping export."}
+{"timestamp": "2024-12-31T15:46:46.688551+00:00", "level": "WARNING", "message": "[PROCESS] 'us_death_rates' is empty after cleaning. Skipping export."}
+{"timestamp": "2024-12-31T15:46:46.688551+00:00", "level": "INFO", "message": "[PROCESS] All datasets cleaned and saved successfully."}
+{"timestamp": "2024-12-31T15:47:17.862296+00:00", "level": "INFO", "message": "[PROCESS] 'covid_vacc_death_rate' loaded successfully."}
+{"timestamp": "2024-12-31T15:47:17.922093+00:00", "level": "INFO", "message": "[ANALYSIS] No missing values in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T15:47:17.922093+00:00", "level": "INFO", "message": "[CLEANING] Starting cleaning for 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T15:47:17.922093+00:00", "level": "INFO", "message": "[CLEANING] Initial shape of 'covid_vacc_death_rate': 447729 rows, 6 columns."}
+{"timestamp": "2024-12-31T15:47:18.097840+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary statistics for 'covid_vacc_death_rate' - Before Cleaning."}
+{"timestamp": "2024-12-31T15:47:18.286975+00:00", "level": "INFO", "message": "[CLEANING] Converted 'Day' to datetime (coerced)."}
+{"timestamp": "2024-12-31T15:47:18.287975+00:00", "level": "INFO", "message": "[CLEANING] Converted column 'Daily new confirmed deaths due to COVID-19 per million people (rolling 7-day average, right-aligned)' to numeric with coercion."}
+{"timestamp": "2024-12-31T15:47:18.495291+00:00", "level": "INFO", "message": "[CLEANING] No duplicate rows found in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T15:47:18.495291+00:00", "level": "INFO", "message": "[CLEANING] Handling missing values for 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T15:47:18.552984+00:00", "level": "INFO", "message": "[CLEANING] Filled 0 missing in 'Daily new confirmed deaths due to COVID-19 per million people (rolling 7-day average, right-aligned)' with median=0.0."}
+{"timestamp": "2024-12-31T15:47:18.553984+00:00", "level": "INFO", "message": "[CLEANING] Starting outlier detection and handling."}
+{"timestamp": "2024-12-31T15:47:18.559984+00:00", "level": "INFO", "message": "[CLEANING] Capped outliers in 'Daily new confirmed deaths due to COVID-19 per million people (rolling 7-day average, right-aligned)' from [0.0, 0.7631771249999999] to [-0.457906275, 0.7631771249999999]."}
+{"timestamp": "2024-12-31T15:47:18.561490+00:00", "level": "INFO", "message": "[CLEANING] Outlier detection and capping completed."}
+{"timestamp": "2024-12-31T15:47:18.561490+00:00", "level": "INFO", "message": "[VALIDATION] Checking for inconsistent values in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T15:47:18.576006+00:00", "level": "INFO", "message": "[VALIDATION] No inconsistent values found in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T15:47:18.576006+00:00", "level": "INFO", "message": "[CLEANING] Final shape of 'covid_vacc_death_rate': 447729 rows, 6 columns."}
+{"timestamp": "2024-12-31T15:47:18.754068+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary statistics for 'covid_vacc_death_rate' - After Cleaning."}
+{"timestamp": "2024-12-31T15:47:19.859491+00:00", "level": "INFO", "message": "[CLEANING] Finished cleaning dataset 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T15:47:19.919974+00:00", "level": "INFO", "message": "[ANALYSIS] No missing values in 'covid_vacc_death_rate (Cleaned)'."}
+{"timestamp": "2024-12-31T15:47:19.919974+00:00", "level": "WARNING", "message": "[PROCESS] 'Day' column is not recognized as datetime; skipping .dt.strftime() for 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T15:47:21.061548+00:00", "level": "INFO", "message": "[PROCESS] Saved cleaned CSV '../data/processed\\covid_vacc_death_rate_cleaned.csv'."}
+{"timestamp": "2024-12-31T15:47:21.075513+00:00", "level": "INFO", "message": "[PROCESS] 'covid_vacc_manufacturer' loaded successfully."}
+{"timestamp": "2024-12-31T15:47:21.077510+00:00", "level": "INFO", "message": "[ANALYSIS] Missing values in 'covid_vacc_manufacturer' (Before Cleaning):\n                                                    Missing Values  Percentage\nEntity,Code,Day,COVID-19 doses (cumulative) - M...               1       100.0\nSK,COVID-19 doses (cumulative) - Manufacturer S...               1       100.0"}
+{"timestamp": "2024-12-31T15:47:21.077510+00:00", "level": "INFO", "message": "[CLEANING] Starting cleaning for 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T15:47:21.077510+00:00", "level": "INFO", "message": "[CLEANING] Initial shape of 'covid_vacc_manufacturer': 1 rows, 2 columns."}
+{"timestamp": "2024-12-31T15:47:21.080511+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary statistics for 'covid_vacc_manufacturer' - Before Cleaning."}
+{"timestamp": "2024-12-31T15:47:21.081512+00:00", "level": "INFO", "message": "[CLEANING] Converted column 'Entity,Code,Day,COVID-19 doses (cumulative) - Manufacturer Pfizer/BioNTech,COVID-19 doses (cumulative) - Manufacturer Moderna,COVID-19 doses (cumulative) - Manufacturer Oxford/AstraZeneca,COVID-19 doses (cumulative) - Manufacturer Johnson&Johnson,COVID-19 doses (cumulative) - Manufacturer Sputnik V,COVID-19 doses (cumulative) - Manufacturer Sinovac,COVID-19 doses (cumulative) - Manufacturer Sinopharm/Beijing,COVID-19 doses (cumulative) - Manufacturer CanSino,COVID-19 doses (cumulative) - Manufacturer Novavax,COVID-19 doses (cumulative) - Manufacturer Covaxin,COVID-19 doses (cumulative) - Manufacturer Medicago,COVID-19 doses (cumulative) - Manufacturer Sanofi/' to numeric with coercion."}
+{"timestamp": "2024-12-31T15:47:21.082020+00:00", "level": "INFO", "message": "[CLEANING] Converted column 'SK,COVID-19 doses (cumulative) - Manufacturer SKYCovione,COVID-19 doses (cumulative) - Manufacturer Valneva' to numeric with coercion."}
+{"timestamp": "2024-12-31T15:47:21.082020+00:00", "level": "INFO", "message": "[CLEANING] No duplicate rows found in 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T15:47:21.082020+00:00", "level": "INFO", "message": "[CLEANING] Handling missing values for 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T15:47:21.083022+00:00", "level": "WARNING", "message": "[CLEANING] Column 'Entity,Code,Day,COVID-19 doses (cumulative) - Manufacturer Pfizer/BioNTech,COVID-19 doses (cumulative) - Manufacturer Moderna,COVID-19 doses (cumulative) - Manufacturer Oxford/AstraZeneca,COVID-19 doses (cumulative) - Manufacturer Johnson&Johnson,COVID-19 doses (cumulative) - Manufacturer Sputnik V,COVID-19 doses (cumulative) - Manufacturer Sinovac,COVID-19 doses (cumulative) - Manufacturer Sinopharm/Beijing,COVID-19 doses (cumulative) - Manufacturer CanSino,COVID-19 doses (cumulative) - Manufacturer Novavax,COVID-19 doses (cumulative) - Manufacturer Covaxin,COVID-19 doses (cumulative) - Manufacturer Medicago,COVID-19 doses (cumulative) - Manufacturer Sanofi/' is not numeric after conversion. Skipping."}
+{"timestamp": "2024-12-31T15:47:21.083022+00:00", "level": "WARNING", "message": "[CLEANING] Column 'SK,COVID-19 doses (cumulative) - Manufacturer SKYCovione,COVID-19 doses (cumulative) - Manufacturer Valneva' is not numeric after conversion. Skipping."}
+{"timestamp": "2024-12-31T15:47:21.083022+00:00", "level": "INFO", "message": "[CLEANING] Starting outlier detection and handling."}
+{"timestamp": "2024-12-31T15:47:21.083022+00:00", "level": "INFO", "message": "[CLEANING] Outlier detection and capping completed."}
+{"timestamp": "2024-12-31T15:47:21.083022+00:00", "level": "INFO", "message": "[VALIDATION] Checking for inconsistent values in 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T15:47:21.083022+00:00", "level": "INFO", "message": "[VALIDATION] No inconsistent values found in 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T15:47:21.083022+00:00", "level": "INFO", "message": "[CLEANING] Final shape of 'covid_vacc_manufacturer': 1 rows, 2 columns."}
+{"timestamp": "2024-12-31T15:47:21.086022+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary statistics for 'covid_vacc_manufacturer' - After Cleaning."}
+{"timestamp": "2024-12-31T15:47:21.251457+00:00", "level": "INFO", "message": "[CLEANING] Finished cleaning dataset 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T15:47:21.252472+00:00", "level": "INFO", "message": "[ANALYSIS] Missing values in 'covid_vacc_manufacturer (Cleaned)' (After Cleaning):\n                                                    Missing Values  Percentage\nEntity,Code,Day,COVID-19 doses (cumulative) - M...               1       100.0\nSK,COVID-19 doses (cumulative) - Manufacturer S...               1       100.0"}
+{"timestamp": "2024-12-31T15:47:21.253464+00:00", "level": "WARNING", "message": "[PROCESS] 'Day' column is not recognized as datetime; skipping .dt.strftime() for 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T15:47:21.261971+00:00", "level": "INFO", "message": "[PROCESS] Saved cleaned CSV '../data/processed\\covid_vacc_manufacturer_cleaned.csv'."}
+{"timestamp": "2024-12-31T15:47:21.261971+00:00", "level": "INFO", "message": "[PROCESS] 'us_death_rates' loaded successfully."}
+{"timestamp": "2024-12-31T15:47:21.262974+00:00", "level": "INFO", "message": "[ANALYSIS] No missing values in 'us_death_rates'."}
+{"timestamp": "2024-12-31T15:47:21.263973+00:00", "level": "INFO", "message": "[CLEANING] Starting cleaning for 'us_death_rates'."}
+{"timestamp": "2024-12-31T15:47:21.263973+00:00", "level": "INFO", "message": "[CLEANING] Initial shape of 'us_death_rates': 268 rows, 5 columns."}
+{"timestamp": "2024-12-31T15:47:21.271478+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary statistics for 'us_death_rates' - Before Cleaning."}
+{"timestamp": "2024-12-31T15:47:21.272492+00:00", "level": "INFO", "message": "[CLEANING] Converted 'Day' to datetime (coerced)."}
+{"timestamp": "2024-12-31T15:47:21.272492+00:00", "level": "INFO", "message": "[CLEANING] Converted column 'Death rate (weekly) of unvaccinated people - United States, by age' to numeric with coercion."}
+{"timestamp": "2024-12-31T15:47:21.273484+00:00", "level": "INFO", "message": "[CLEANING] Converted column 'Death rate (weekly) of fully vaccinated people (without bivalent booster) - United States, by age' to numeric with coercion."}
+{"timestamp": "2024-12-31T15:47:21.274488+00:00", "level": "INFO", "message": "[CLEANING] No duplicate rows found in 'us_death_rates'."}
+{"timestamp": "2024-12-31T15:47:21.274488+00:00", "level": "INFO", "message": "[CLEANING] Handling missing values for 'us_death_rates'."}
+{"timestamp": "2024-12-31T15:47:21.274488+00:00", "level": "INFO", "message": "[CLEANING] Filled 0 missing in 'Death rate (weekly) of unvaccinated people - United States, by age' with median=0.5245131700000001."}
+{"timestamp": "2024-12-31T15:47:21.274488+00:00", "level": "INFO", "message": "[CLEANING] Filled 0 missing in 'Death rate (weekly) of fully vaccinated people (without bivalent booster) - United States, by age' with median=0.09235609."}
+{"timestamp": "2024-12-31T15:47:21.274488+00:00", "level": "INFO", "message": "[CLEANING] Starting outlier detection and handling."}
+{"timestamp": "2024-12-31T15:47:21.275484+00:00", "level": "INFO", "message": "[CLEANING] Capped outliers in 'Death rate (weekly) of unvaccinated people - United States, by age' from [0.0, 23.805627025] to [-13.124297748750001, 21.96821024925]."}
+{"timestamp": "2024-12-31T15:47:21.276485+00:00", "level": "INFO", "message": "[CLEANING] Capped outliers in 'Death rate (weekly) of fully vaccinated people (without bivalent booster) - United States, by age' from [0.0, 2.3801596215] to [-1.331433315, 2.219055525]."}
+{"timestamp": "2024-12-31T15:47:21.276485+00:00", "level": "INFO", "message": "[CLEANING] Outlier detection and capping completed."}
+{"timestamp": "2024-12-31T15:47:21.276485+00:00", "level": "INFO", "message": "[VALIDATION] Checking for inconsistent values in 'us_death_rates'."}
+{"timestamp": "2024-12-31T15:47:21.276485+00:00", "level": "INFO", "message": "[VALIDATION] No inconsistent values found in 'us_death_rates'."}
+{"timestamp": "2024-12-31T15:47:21.276485+00:00", "level": "INFO", "message": "[CLEANING] Final shape of 'us_death_rates': 268 rows, 5 columns."}
+{"timestamp": "2024-12-31T15:47:21.282995+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary statistics for 'us_death_rates' - After Cleaning."}
+{"timestamp": "2024-12-31T15:47:21.390092+00:00", "level": "INFO", "message": "[CLEANING] Finished cleaning dataset 'us_death_rates'."}
+{"timestamp": "2024-12-31T15:47:21.391599+00:00", "level": "INFO", "message": "[ANALYSIS] No missing values in 'us_death_rates (Cleaned)'."}
+{"timestamp": "2024-12-31T15:47:21.392605+00:00", "level": "WARNING", "message": "[PROCESS] 'Day' column is not recognized as datetime; skipping .dt.strftime() for 'us_death_rates'."}
+{"timestamp": "2024-12-31T15:47:21.398606+00:00", "level": "INFO", "message": "[PROCESS] Saved cleaned CSV '../data/processed\\us_death_rates_cleaned.csv'."}
+{"timestamp": "2024-12-31T15:47:21.398606+00:00", "level": "INFO", "message": "[PROCESS] All datasets cleaned and saved successfully."}
+{"timestamp": "2024-12-31T16:04:23.632043+00:00", "level": "INFO", "message": "[PROCESS] 'covid_vacc_death_rate' loaded successfully."}
+{"timestamp": "2024-12-31T16:04:23.632043+00:00", "level": "INFO", "message": "[CLEANING] Starting cleaning for 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:04:23.632043+00:00", "level": "INFO", "message": "[CLEANING] 'covid_vacc_death_rate' initial shape: (447729, 6)."}
+{"timestamp": "2024-12-31T16:04:23.811850+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary statistics for 'covid_vacc_death_rate' - Before Cleaning."}
+{"timestamp": "2024-12-31T16:04:24.021912+00:00", "level": "INFO", "message": "[CLEANING] Auto-converted 'Entity' to numeric in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:04:24.196984+00:00", "level": "INFO", "message": "[CLEANING] Auto-converted 'Code' to numeric in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:04:24.380853+00:00", "level": "INFO", "message": "[CLEANING] Auto-converted 'World regions according to OWID' to numeric in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:04:24.419466+00:00", "level": "INFO", "message": "[CLEANING] Removed 317461 duplicate rows from 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:04:24.420466+00:00", "level": "INFO", "message": "[CLEANING] Handling missing values for 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:04:24.420466+00:00", "level": "WARNING", "message": "[CLEANING] Column 'Entity' in 'covid_vacc_death_rate' is fully missing. Dropping."}
+{"timestamp": "2024-12-31T16:04:24.423467+00:00", "level": "WARNING", "message": "[CLEANING] Column 'Code' in 'covid_vacc_death_rate' is fully missing. Dropping."}
+{"timestamp": "2024-12-31T16:04:24.425466+00:00", "level": "WARNING", "message": "[CLEANING] Column 'World regions according to OWID' in 'covid_vacc_death_rate' is fully missing. Dropping."}
+{"timestamp": "2024-12-31T16:04:24.426897+00:00", "level": "INFO", "message": "[CLEANING] Starting outlier detection and handling."}
+{"timestamp": "2024-12-31T16:04:24.431896+00:00", "level": "INFO", "message": "[CLEANING] Outlier detection and capping completed."}
+{"timestamp": "2024-12-31T16:04:24.431896+00:00", "level": "INFO", "message": "[VALIDATION] Checking for inconsistent values in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:04:24.432898+00:00", "level": "INFO", "message": "[VALIDATION] No inconsistent values found in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:04:24.432898+00:00", "level": "INFO", "message": "[CLEANING] 'covid_vacc_death_rate' final shape: (130268, 3)."}
+{"timestamp": "2024-12-31T16:04:24.441414+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary statistics for 'covid_vacc_death_rate' - After Cleaning."}
+{"timestamp": "2024-12-31T16:04:25.056880+00:00", "level": "INFO", "message": "[CLEANING] Converted 'Day' column back to string for CSV in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:04:25.056880+00:00", "level": "INFO", "message": "[CLEANING] Finished cleaning dataset 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:04:25.574322+00:00", "level": "INFO", "message": "[PROCESS] Saved cleaned CSV '../data/processed\\covid_vacc_death_rate_cleaned.csv'."}
+{"timestamp": "2024-12-31T16:04:25.576841+00:00", "level": "INFO", "message": "[PROCESS] 'covid_vacc_manufacturer' loaded successfully."}
+{"timestamp": "2024-12-31T16:04:25.576841+00:00", "level": "INFO", "message": "[CLEANING] Starting cleaning for 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T16:04:25.576841+00:00", "level": "INFO", "message": "[CLEANING] 'covid_vacc_manufacturer' initial shape: (1, 2)."}
+{"timestamp": "2024-12-31T16:04:25.577851+00:00", "level": "WARNING", "message": "[PARSING] Columns in 'covid_vacc_manufacturer' did not match expected length. Skipping parsing."}
+{"timestamp": "2024-12-31T16:04:25.583876+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary statistics for 'covid_vacc_manufacturer' - Before Cleaning."}
+{"timestamp": "2024-12-31T16:04:25.588460+00:00", "level": "INFO", "message": "[CLEANING] Auto-converted 'Entity,Code,Day,COVID-19 doses (cumulative) - Manufacturer Pfizer/BioNTech,COVID-19 doses (cumulative) - Manufacturer Moderna,COVID-19 doses (cumulative) - Manufacturer Oxford/AstraZeneca,COVID-19 doses (cumulative) - Manufacturer Johnson&Johnson,COVID-19 doses (cumulative) - Manufacturer Sputnik V,COVID-19 doses (cumulative) - Manufacturer Sinovac,COVID-19 doses (cumulative) - Manufacturer Sinopharm/Beijing,COVID-19 doses (cumulative) - Manufacturer CanSino,COVID-19 doses (cumulative) - Manufacturer Novavax,COVID-19 doses (cumulative) - Manufacturer Covaxin,COVID-19 doses (cumulative) - Manufacturer Medicago,COVID-19 doses (cumulative) - Manufacturer Sanofi/' to numeric in 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T16:04:25.589457+00:00", "level": "INFO", "message": "[CLEANING] Auto-converted 'SK,COVID-19 doses (cumulative) - Manufacturer SKYCovione,COVID-19 doses (cumulative) - Manufacturer Valneva' to numeric in 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T16:04:25.590454+00:00", "level": "INFO", "message": "[CLEANING] No duplicate rows found in 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T16:04:25.590454+00:00", "level": "INFO", "message": "[CLEANING] Handling missing values for 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T16:04:25.591453+00:00", "level": "WARNING", "message": "[CLEANING] Column 'Entity,Code,Day,COVID-19 doses (cumulative) - Manufacturer Pfizer/BioNTech,COVID-19 doses (cumulative) - Manufacturer Moderna,COVID-19 doses (cumulative) - Manufacturer Oxford/AstraZeneca,COVID-19 doses (cumulative) - Manufacturer Johnson&Johnson,COVID-19 doses (cumulative) - Manufacturer Sputnik V,COVID-19 doses (cumulative) - Manufacturer Sinovac,COVID-19 doses (cumulative) - Manufacturer Sinopharm/Beijing,COVID-19 doses (cumulative) - Manufacturer CanSino,COVID-19 doses (cumulative) - Manufacturer Novavax,COVID-19 doses (cumulative) - Manufacturer Covaxin,COVID-19 doses (cumulative) - Manufacturer Medicago,COVID-19 doses (cumulative) - Manufacturer Sanofi/' in 'covid_vacc_manufacturer' is fully missing. Dropping."}
+{"timestamp": "2024-12-31T16:04:25.591453+00:00", "level": "WARNING", "message": "[CLEANING] Column 'SK,COVID-19 doses (cumulative) - Manufacturer SKYCovione,COVID-19 doses (cumulative) - Manufacturer Valneva' in 'covid_vacc_manufacturer' is fully missing. Dropping."}
+{"timestamp": "2024-12-31T16:04:25.591453+00:00", "level": "INFO", "message": "[CLEANING] Starting outlier detection and handling."}
+{"timestamp": "2024-12-31T16:04:25.591453+00:00", "level": "INFO", "message": "[CLEANING] Outlier detection and capping completed."}
+{"timestamp": "2024-12-31T16:04:25.591453+00:00", "level": "INFO", "message": "[VALIDATION] Checking for inconsistent values in 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T16:04:25.592455+00:00", "level": "INFO", "message": "[VALIDATION] No inconsistent values found in 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T16:04:25.592455+00:00", "level": "INFO", "message": "[CLEANING] 'covid_vacc_manufacturer' final shape: (1, 0)."}
+{"timestamp": "2024-12-31T16:04:25.592455+00:00", "level": "ERROR", "message": "[CLEANING] Error cleaning dataset 'covid_vacc_manufacturer': Cannot describe a DataFrame without columns"}
+{"timestamp": "2024-12-31T16:04:25.593455+00:00", "level": "INFO", "message": "[PROCESS] Saved cleaned CSV '../data/processed\\covid_vacc_manufacturer_cleaned.csv'."}
+{"timestamp": "2024-12-31T16:04:25.593455+00:00", "level": "INFO", "message": "[PROCESS] 'us_death_rates' loaded successfully."}
+{"timestamp": "2024-12-31T16:04:25.593455+00:00", "level": "INFO", "message": "[CLEANING] Starting cleaning for 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:04:25.593455+00:00", "level": "INFO", "message": "[CLEANING] 'us_death_rates' initial shape: (268, 5)."}
+{"timestamp": "2024-12-31T16:04:25.600661+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary statistics for 'us_death_rates' - Before Cleaning."}
+{"timestamp": "2024-12-31T16:04:25.601662+00:00", "level": "INFO", "message": "[CLEANING] Auto-converted 'Entity' to numeric in 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:04:25.602660+00:00", "level": "INFO", "message": "[CLEANING] Auto-converted 'Code' to numeric in 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:04:25.602660+00:00", "level": "INFO", "message": "[CLEANING] Removed 21 duplicate rows from 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:04:25.602660+00:00", "level": "INFO", "message": "[CLEANING] Handling missing values for 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:04:25.603661+00:00", "level": "WARNING", "message": "[CLEANING] Column 'Entity' in 'us_death_rates' is fully missing. Dropping."}
+{"timestamp": "2024-12-31T16:04:25.603661+00:00", "level": "WARNING", "message": "[CLEANING] Column 'Code' in 'us_death_rates' is fully missing. Dropping."}
+{"timestamp": "2024-12-31T16:04:25.603661+00:00", "level": "INFO", "message": "[CLEANING] Starting outlier detection and handling."}
+{"timestamp": "2024-12-31T16:04:25.605167+00:00", "level": "INFO", "message": "[CLEANING] Capped outliers in 'Death rate (weekly) of unvaccinated people - United States, by age' from [0.0, 21.96821024925] to [0.0, 17.2693259725]."}
+{"timestamp": "2024-12-31T16:04:25.606174+00:00", "level": "INFO", "message": "[CLEANING] Capped outliers in 'Death rate (weekly) of fully vaccinated people (without bivalent booster) - United States, by age' from [0.0, 2.219055525] to [0.0, 1.969791062]."}
+{"timestamp": "2024-12-31T16:04:25.606174+00:00", "level": "INFO", "message": "[CLEANING] Outlier detection and capping completed."}
+{"timestamp": "2024-12-31T16:04:25.606174+00:00", "level": "INFO", "message": "[VALIDATION] Checking for inconsistent values in 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:04:25.606174+00:00", "level": "INFO", "message": "[VALIDATION] No inconsistent values found in 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:04:25.606174+00:00", "level": "INFO", "message": "[CLEANING] 'us_death_rates' final shape: (247, 3)."}
+{"timestamp": "2024-12-31T16:04:25.611173+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary statistics for 'us_death_rates' - After Cleaning."}
+{"timestamp": "2024-12-31T16:04:25.736287+00:00", "level": "INFO", "message": "[CLEANING] Converted 'Day' column back to string for CSV in 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:04:25.737283+00:00", "level": "INFO", "message": "[CLEANING] Finished cleaning dataset 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:04:25.742281+00:00", "level": "INFO", "message": "[PROCESS] Saved cleaned CSV '../data/processed\\us_death_rates_cleaned.csv'."}
+{"timestamp": "2024-12-31T16:04:25.742281+00:00", "level": "INFO", "message": "[PROCESS] All datasets cleaned and saved successfully."}
+{"timestamp": "2024-12-31T16:19:21.663792+00:00", "level": "ERROR", "message": "[PROCESS] File '../data/raw\\covid_vacc_death_rate.csv' for dataset 'covid_vacc_death_rate' does not exist. Skipping."}
+{"timestamp": "2024-12-31T16:19:21.663792+00:00", "level": "ERROR", "message": "[PROCESS] File '../data/raw\\covid_vacc_manufacturer.csv' for dataset 'covid_vacc_manufacturer' does not exist. Skipping."}
+{"timestamp": "2024-12-31T16:19:21.663792+00:00", "level": "ERROR", "message": "[PROCESS] File '../data/raw\\us_death_rates.csv' for dataset 'us_death_rates' does not exist. Skipping."}
+{"timestamp": "2024-12-31T16:19:21.664792+00:00", "level": "INFO", "message": "[PROCESS] All datasets cleaned and saved EXACTLY."}
+{"timestamp": "2024-12-31T16:21:42.541465+00:00", "level": "INFO", "message": "[PROCESS] 'covid_vacc_death_rate' loaded successfully."}
+{"timestamp": "2024-12-31T16:21:42.543465+00:00", "level": "INFO", "message": "[CLEANING] Cleaning start for 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:21:42.543465+00:00", "level": "INFO", "message": "[CLEANING] 'covid_vacc_death_rate' initial shape: (130268, 3)."}
+{"timestamp": "2024-12-31T16:21:42.567303+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary for 'covid_vacc_death_rate' at stage: Before Cleaning."}
+{"timestamp": "2024-12-31T16:21:42.746601+00:00", "level": "INFO", "message": "[CLEANING] Removed 95116 duplicate rows from 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:21:42.747601+00:00", "level": "INFO", "message": "[CLEANING] Handling missing values for 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:21:42.748602+00:00", "level": "WARNING", "message": "[CLEANING] Dropping column 'Day' (fully missing) in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:21:42.749608+00:00", "level": "INFO", "message": "[CLEANING] Checking outliers for 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:21:42.752121+00:00", "level": "INFO", "message": "[CLEANING] Capped outliers in 'year' from [2020, 2024] to [2020.0, 2023.5]."}
+{"timestamp": "2024-12-31T16:21:42.754121+00:00", "level": "INFO", "message": "[VALIDATION] Checking for inconsistent values in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:21:42.754121+00:00", "level": "INFO", "message": "[VALIDATION] No inconsistent values found in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:21:42.754121+00:00", "level": "INFO", "message": "[CLEANING] 'covid_vacc_death_rate' final shape: (35152, 2)."}
+{"timestamp": "2024-12-31T16:21:42.758120+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary for 'covid_vacc_death_rate' at stage: After Cleaning."}
+{"timestamp": "2024-12-31T16:21:42.991327+00:00", "level": "INFO", "message": "[CLEANING] Finished cleaning for 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:21:43.067816+00:00", "level": "INFO", "message": "[PROCESS] Saved cleaned CSV => '../data/processed\\covid_vacc_death_rate_cleaned.csv'."}
+{"timestamp": "2024-12-31T16:21:43.067816+00:00", "level": "WARNING", "message": "[PROCESS] 'covid_vacc_manufacturer' is empty. Skipping cleaning."}
+{"timestamp": "2024-12-31T16:21:43.067816+00:00", "level": "INFO", "message": "[PROCESS] 'us_death_rates' loaded successfully."}
+{"timestamp": "2024-12-31T16:21:43.067816+00:00", "level": "INFO", "message": "[CLEANING] Cleaning start for 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:21:43.069325+00:00", "level": "INFO", "message": "[CLEANING] 'us_death_rates' initial shape: (247, 3)."}
+{"timestamp": "2024-12-31T16:21:43.073334+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary for 'us_death_rates' at stage: Before Cleaning."}
+{"timestamp": "2024-12-31T16:21:43.076331+00:00", "level": "INFO", "message": "[CLEANING] Removed 45 duplicate rows from 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:21:43.076331+00:00", "level": "INFO", "message": "[CLEANING] Handling missing values for 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:21:43.076331+00:00", "level": "WARNING", "message": "[CLEANING] Dropping column 'Day' (fully missing) in 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:21:43.076331+00:00", "level": "INFO", "message": "[CLEANING] Checking outliers for 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:21:43.077331+00:00", "level": "INFO", "message": "[CLEANING] Capped outliers in 'Death rate (weekly) of unvaccinated people - United States, by age' from [0.0, 17.2693259725] to [0.0, 8.921724539125]."}
+{"timestamp": "2024-12-31T16:21:43.078334+00:00", "level": "INFO", "message": "[CLEANING] Capped outliers in 'Death rate (weekly) of fully vaccinated people (without bivalent booster) - United States, by age' from [0.0, 1.969791062] to [0.0, 1.3158859275]."}
+{"timestamp": "2024-12-31T16:21:43.078334+00:00", "level": "INFO", "message": "[VALIDATION] Checking for inconsistent values in 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:21:43.078334+00:00", "level": "INFO", "message": "[VALIDATION] No inconsistent values found in 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:21:43.078334+00:00", "level": "INFO", "message": "[CLEANING] 'us_death_rates' final shape: (202, 2)."}
+{"timestamp": "2024-12-31T16:21:43.081843+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary for 'us_death_rates' at stage: After Cleaning."}
+{"timestamp": "2024-12-31T16:21:43.194986+00:00", "level": "INFO", "message": "[CLEANING] Finished cleaning for 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:21:43.202498+00:00", "level": "INFO", "message": "[PROCESS] Saved cleaned CSV => '../data/processed\\us_death_rates_cleaned.csv'."}
+{"timestamp": "2024-12-31T16:21:43.202498+00:00", "level": "INFO", "message": "[PROCESS] All datasets cleaned and saved EXACTLY."}
+{"timestamp": "2024-12-31T16:23:32.759093+00:00", "level": "INFO", "message": "[PROCESS] 'covid_vacc_death_rate' loaded successfully."}
+{"timestamp": "2024-12-31T16:23:32.775975+00:00", "level": "INFO", "message": "[CLEANING] Cleaning start for 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:23:32.775975+00:00", "level": "INFO", "message": "[CLEANING] 'covid_vacc_death_rate' initial shape: (447729, 7)."}
+{"timestamp": "2024-12-31T16:23:32.940791+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary for 'covid_vacc_death_rate' at stage: Before Cleaning."}
+{"timestamp": "2024-12-31T16:23:34.433968+00:00", "level": "INFO", "message": "[CLEANING] Removed 323323 duplicate rows from 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:23:34.453199+00:00", "level": "INFO", "message": "[CLEANING] Handling missing values for 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:23:34.455196+00:00", "level": "WARNING", "message": "[CLEANING] Dropping column 'Entity' (fully missing) in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:23:34.457196+00:00", "level": "WARNING", "message": "[CLEANING] Dropping column 'Code' (fully missing) in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:23:34.459196+00:00", "level": "WARNING", "message": "[CLEANING] Dropping column 'Day' (fully missing) in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:23:34.461200+00:00", "level": "INFO", "message": "[CLEANING] Filled 2016 missing in 'Daily new confirmed deaths due to COVID-19 per million people (rolling 7-day average, right-aligned)' with median=0.5439."}
+{"timestamp": "2024-12-31T16:23:34.463244+00:00", "level": "INFO", "message": "[CLEANING] Filled 42625 missing in 'COVID-19 doses (cumulative, per hundred)' with median=126.6158."}
+{"timestamp": "2024-12-31T16:23:34.467246+00:00", "level": "WARNING", "message": "[CLEANING] Dropping column 'World regions according to OWID' (fully missing) in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:23:34.476754+00:00", "level": "INFO", "message": "[CLEANING] Checking outliers for 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:23:34.483799+00:00", "level": "INFO", "message": "[CLEANING] Capped outliers in 'year' from [2020, 2024] to [2020.0, 2023.5]."}
+{"timestamp": "2024-12-31T16:23:34.487792+00:00", "level": "INFO", "message": "[CLEANING] Capped outliers in 'Daily new confirmed deaths due to COVID-19 per million people (rolling 7-day average, right-aligned)' from [0.0, 129.07292] to [0.0, 4.455185195]."}
+{"timestamp": "2024-12-31T16:23:34.489792+00:00", "level": "INFO", "message": "[CLEANING] Capped outliers in 'COVID-19 doses (cumulative, per hundred)' from [0.0, 415.88147] to [0.0, 270.5766300000001]."}
+{"timestamp": "2024-12-31T16:23:34.490791+00:00", "level": "INFO", "message": "[VALIDATION] Checking for inconsistent values in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:23:34.491791+00:00", "level": "INFO", "message": "[VALIDATION] No inconsistent values found in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:23:34.493003+00:00", "level": "INFO", "message": "[CLEANING] 'covid_vacc_death_rate' final shape: (124406, 3)."}
+{"timestamp": "2024-12-31T16:23:34.503516+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary for 'covid_vacc_death_rate' at stage: After Cleaning."}
+{"timestamp": "2024-12-31T16:23:35.252399+00:00", "level": "INFO", "message": "[CLEANING] Finished cleaning for 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:23:35.622354+00:00", "level": "INFO", "message": "[PROCESS] Saved cleaned CSV => '../data/processed\\covid_vacc_death_rate_cleaned.csv'."}
+{"timestamp": "2024-12-31T16:23:35.635881+00:00", "level": "INFO", "message": "[PROCESS] 'covid_vacc_manufacturer' loaded successfully."}
+{"timestamp": "2024-12-31T16:23:35.637888+00:00", "level": "INFO", "message": "[CLEANING] Cleaning start for 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T16:23:35.637888+00:00", "level": "INFO", "message": "[CLEANING] 'covid_vacc_manufacturer' initial shape: (59224, 2)."}
+{"timestamp": "2024-12-31T16:23:35.637888+00:00", "level": "WARNING", "message": "[PARSING] 'covid_vacc_manufacturer' does not have (1,2) shape. Skipping parsing."}
+{"timestamp": "2024-12-31T16:23:35.665420+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary for 'covid_vacc_manufacturer' at stage: Before Cleaning."}
+{"timestamp": "2024-12-31T16:23:35.704300+00:00", "level": "INFO", "message": "[CLEANING] Removed 59223 duplicate rows from 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T16:23:35.705299+00:00", "level": "INFO", "message": "[CLEANING] Handling missing values for 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T16:23:35.706299+00:00", "level": "WARNING", "message": "[CLEANING] Dropping column 'Entity,Code,Day,COVID-19 doses (cumulative) - Manufacturer Pfizer/BioNTech,COVID-19 doses (cumulative) - Manufacturer Moderna,COVID-19 doses (cumulative) - Manufacturer Oxford/AstraZeneca,COVID-19 doses (cumulative) - Manufacturer Johnson&Johnson,COVID-19 doses (cumulative) - Manufacturer Sputnik V,COVID-19 doses (cumulative) - Manufacturer Sinovac,COVID-19 doses (cumulative) - Manufacturer Sinopharm/Beijing,COVID-19 doses (cumulative) - Manufacturer CanSino,COVID-19 doses (cumulative) - Manufacturer Novavax,COVID-19 doses (cumulative) - Manufacturer Covaxin,COVID-19 doses (cumulative) - Manufacturer Medicago,COVID-19 doses (cumulative) - Manufacturer Sanofi/' (fully missing) in 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T16:23:35.706299+00:00", "level": "WARNING", "message": "[CLEANING] Dropping column 'SK,COVID-19 doses (cumulative) - Manufacturer SKYCovione,COVID-19 doses (cumulative) - Manufacturer Valneva' (fully missing) in 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T16:23:35.706299+00:00", "level": "INFO", "message": "[CLEANING] Checking outliers for 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T16:23:35.706299+00:00", "level": "INFO", "message": "[VALIDATION] Checking for inconsistent values in 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T16:23:35.706299+00:00", "level": "INFO", "message": "[VALIDATION] No inconsistent values found in 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T16:23:35.706299+00:00", "level": "INFO", "message": "[CLEANING] 'covid_vacc_manufacturer' final shape: (1, 0)."}
+{"timestamp": "2024-12-31T16:23:35.706299+00:00", "level": "INFO", "message": "[SUMMARY] No columns to describe in 'covid_vacc_manufacturer' at stage: After Cleaning."}
+{"timestamp": "2024-12-31T16:23:35.706299+00:00", "level": "INFO", "message": "[CLEANING] Finished cleaning for 'covid_vacc_manufacturer'."}
+{"timestamp": "2024-12-31T16:23:35.708300+00:00", "level": "INFO", "message": "[PROCESS] Saved cleaned CSV => '../data/processed\\covid_vacc_manufacturer_cleaned.csv'."}
+{"timestamp": "2024-12-31T16:23:35.708300+00:00", "level": "INFO", "message": "[PROCESS] 'us_death_rates' loaded successfully."}
+{"timestamp": "2024-12-31T16:23:35.708300+00:00", "level": "INFO", "message": "[CLEANING] Cleaning start for 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:23:35.708300+00:00", "level": "INFO", "message": "[CLEANING] 'us_death_rates' initial shape: (650, 6)."}
+{"timestamp": "2024-12-31T16:23:35.715812+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary for 'us_death_rates' at stage: Before Cleaning."}
+{"timestamp": "2024-12-31T16:23:35.716812+00:00", "level": "WARNING", "message": "[CLEANING] In 'us_death_rates', 382 entries in 'Day' became NaT."}
+{"timestamp": "2024-12-31T16:23:35.718811+00:00", "level": "INFO", "message": "[CLEANING] Removed 74 duplicate rows from 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:23:35.718811+00:00", "level": "INFO", "message": "[CLEANING] Handling missing values for 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:23:35.718811+00:00", "level": "WARNING", "message": "[CLEANING] Dropping column 'Entity' (fully missing) in 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:23:35.719812+00:00", "level": "WARNING", "message": "[CLEANING] Dropping column 'Code' (fully missing) in 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:23:35.719812+00:00", "level": "WARNING", "message": "[CLEANING] Dropping column 'Day' (fully missing) in 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:23:35.719812+00:00", "level": "WARNING", "message": "[CLEANING] Dropping numeric column 'Death rate (weekly) of fully vaccinated people (with bivalent booster) - United States, by age' (> 50.0% missing) in 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:23:35.719812+00:00", "level": "INFO", "message": "[CLEANING] Checking outliers for 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:23:35.720812+00:00", "level": "INFO", "message": "[CLEANING] Capped outliers in 'Death rate (weekly) of unvaccinated people - United States, by age' from [0.0, 247.40009] to [0.0, 25.94650818125]."}
+{"timestamp": "2024-12-31T16:23:35.721812+00:00", "level": "INFO", "message": "[CLEANING] Capped outliers in 'Death rate (weekly) of fully vaccinated people (without bivalent booster) - United States, by age' from [0.0, 39.40205] to [0.0, 2.610753306875]."}
+{"timestamp": "2024-12-31T16:23:35.721812+00:00", "level": "INFO", "message": "[VALIDATION] Checking for inconsistent values in 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:23:35.722319+00:00", "level": "INFO", "message": "[VALIDATION] No inconsistent values found in 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:23:35.722319+00:00", "level": "INFO", "message": "[CLEANING] 'us_death_rates' final shape: (576, 2)."}
+{"timestamp": "2024-12-31T16:23:35.725322+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary for 'us_death_rates' at stage: After Cleaning."}
+{"timestamp": "2024-12-31T16:23:35.838104+00:00", "level": "INFO", "message": "[CLEANING] Finished cleaning for 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:23:35.844608+00:00", "level": "INFO", "message": "[PROCESS] Saved cleaned CSV => '../data/processed\\us_death_rates_cleaned.csv'."}
+{"timestamp": "2024-12-31T16:23:35.844608+00:00", "level": "INFO", "message": "[PROCESS] All datasets cleaned and saved EXACTLY."}
+{"timestamp": "2024-12-31T16:26:32.835185+00:00", "level": "INFO", "message": "[PROCESS] 'covid_vacc_death_rate' loaded successfully."}
+{"timestamp": "2024-12-31T16:26:32.836183+00:00", "level": "INFO", "message": "[CLEANING] Cleaning start for 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:26:32.836183+00:00", "level": "INFO", "message": "[CLEANING] 'covid_vacc_death_rate' initial shape: (124406, 3)."}
+{"timestamp": "2024-12-31T16:26:32.844311+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary for 'covid_vacc_death_rate' at stage: Before Cleaning."}
+{"timestamp": "2024-12-31T16:26:32.859115+00:00", "level": "INFO", "message": "[CLEANING] Removed 6759 duplicate rows from 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:26:32.860115+00:00", "level": "INFO", "message": "[CLEANING] Handling missing values for 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:26:32.862115+00:00", "level": "INFO", "message": "[CLEANING] Checking outliers for 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:26:32.866623+00:00", "level": "INFO", "message": "[CLEANING] Capped outliers in 'Daily new confirmed deaths due to COVID-19 per million people (rolling 7-day average, right-aligned)' from [0.0, 4.455185195] to [0.0, 3.7518893589999998]."}
+{"timestamp": "2024-12-31T16:26:32.868625+00:00", "level": "INFO", "message": "[VALIDATION] Checking for inconsistent values in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:26:32.869626+00:00", "level": "INFO", "message": "[VALIDATION] No inconsistent values found in 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:26:32.869626+00:00", "level": "INFO", "message": "[CLEANING] 'covid_vacc_death_rate' final shape: (117647, 3)."}
+{"timestamp": "2024-12-31T16:26:32.876130+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary for 'covid_vacc_death_rate' at stage: After Cleaning."}
+{"timestamp": "2024-12-31T16:26:33.584239+00:00", "level": "INFO", "message": "[CLEANING] Finished cleaning for 'covid_vacc_death_rate'."}
+{"timestamp": "2024-12-31T16:26:33.982969+00:00", "level": "INFO", "message": "[PROCESS] Saved cleaned CSV => '../data/processed\\covid_vacc_death_rate_cleaned.csv'."}
+{"timestamp": "2024-12-31T16:26:33.983969+00:00", "level": "WARNING", "message": "[PROCESS] 'covid_vacc_manufacturer' is empty. Skipping cleaning."}
+{"timestamp": "2024-12-31T16:26:33.983969+00:00", "level": "INFO", "message": "[PROCESS] 'us_death_rates' loaded successfully."}
+{"timestamp": "2024-12-31T16:26:33.983969+00:00", "level": "INFO", "message": "[CLEANING] Cleaning start for 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:26:33.983969+00:00", "level": "INFO", "message": "[CLEANING] 'us_death_rates' initial shape: (576, 2)."}
+{"timestamp": "2024-12-31T16:26:33.987480+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary for 'us_death_rates' at stage: Before Cleaning."}
+{"timestamp": "2024-12-31T16:26:33.988479+00:00", "level": "INFO", "message": "[CLEANING] Removed 57 duplicate rows from 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:26:33.988479+00:00", "level": "INFO", "message": "[CLEANING] Handling missing values for 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:26:33.988479+00:00", "level": "INFO", "message": "[CLEANING] Checking outliers for 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:26:33.989478+00:00", "level": "INFO", "message": "[CLEANING] Capped outliers in 'Death rate (weekly) of unvaccinated people - United States, by age' from [0.0, 25.94650818125] to [0.0, 13.158276775000001]."}
+{"timestamp": "2024-12-31T16:26:33.990480+00:00", "level": "INFO", "message": "[CLEANING] Capped outliers in 'Death rate (weekly) of fully vaccinated people (without bivalent booster) - United States, by age' from [0.0, 2.610753306875] to [0.0, 1.6941583717500002]."}
+{"timestamp": "2024-12-31T16:26:33.990480+00:00", "level": "INFO", "message": "[VALIDATION] Checking for inconsistent values in 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:26:33.991479+00:00", "level": "INFO", "message": "[VALIDATION] No inconsistent values found in 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:26:33.991479+00:00", "level": "INFO", "message": "[CLEANING] 'us_death_rates' final shape: (519, 2)."}
+{"timestamp": "2024-12-31T16:26:33.994478+00:00", "level": "INFO", "message": "[SUMMARY] Displayed summary for 'us_death_rates' at stage: After Cleaning."}
+{"timestamp": "2024-12-31T16:26:34.119174+00:00", "level": "INFO", "message": "[CLEANING] Finished cleaning for 'us_death_rates'."}
+{"timestamp": "2024-12-31T16:26:34.124682+00:00", "level": "INFO", "message": "[PROCESS] Saved cleaned CSV => '../data/processed\\us_death_rates_cleaned.csv'."}
+{"timestamp": "2024-12-31T16:26:34.124682+00:00", "level": "INFO", "message": "[PROCESS] All datasets cleaned and saved EXACTLY."}
