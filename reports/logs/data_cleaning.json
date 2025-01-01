@@ -79,3 +79,369 @@
 {"timestamp": "2024-12-30T11:44:44.254884+00:00", "level": "INFO", "message": "MongoDB'ye ba\u015far\u0131yla ba\u011flan\u0131ld\u0131."}
 {"timestamp": "2024-12-30T11:44:44.257252+00:00", "level": "INFO", "message": "Veriler MongoDB'den y\u00fckleniyor..."}
 {"timestamp": "2024-12-30T11:44:52.486799+00:00", "level": "INFO", "message": "MongoDB ba\u011flant\u0131s\u0131 kapat\u0131ld\u0131."}
+{"timestamp": "2025-01-01T21:02:56.731126+00:00", "level": "INFO", "message": "Loading data from the 'covid_vacc_death_rate' collection..."}
+{"timestamp": "2025-01-01T21:03:12.451450+00:00", "level": "INFO", "message": "Loaded 447729 records from the 'covid_vacc_death_rate' collection."}
+{"timestamp": "2025-01-01T21:03:12.483564+00:00", "level": "INFO", "message": "Dataset 'covid_vacc_death_rate' loaded successfully."}
+{"timestamp": "2025-01-01T21:03:12.525231+00:00", "level": "INFO", "message": "Missing values in dataset 'covid_vacc_death_rate':\n                                                    Missing Values  Percentage\nCOVID-19 doses (cumulative, per hundred)                    364507   81.412417\nWorld regions according to OWID                              28624    6.393153\nCode                                                         26835    5.993581\nDaily new confirmed deaths due to COVID-19 per ...            2017    0.450496"}
+{"timestamp": "2025-01-01T21:03:12.525508+00:00", "level": "INFO", "message": "Cleaning dataset 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:03:12.555576+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
+{"timestamp": "2025-01-01T21:03:12.556507+00:00", "level": "INFO", "message": "Converted numeric columns to appropriate data types."}
+{"timestamp": "2025-01-01T21:03:12.606019+00:00", "level": "INFO", "message": "Filled 26835 missing values in 'Code' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:03:12.656592+00:00", "level": "INFO", "message": "Filled 28624 missing values in 'World regions according to OWID' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:03:12.691629+00:00", "level": "WARNING", "message": "Dropped column 'COVID-19 doses (cumulative, per hundred)' due to high missing value percentage (81.41%)."}
+{"timestamp": "2025-01-01T21:03:12.695962+00:00", "level": "INFO", "message": "Filled 2017 missing values in 'Daily new confirmed deaths due to COVID-19 per million people (rolling 7-day average, right-aligned)' with median value 0.0."}
+{"timestamp": "2025-01-01T21:03:12.696035+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:03:12.697881+00:00", "level": "INFO", "message": "No inconsistent values found in dataset 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:03:12.697913+00:00", "level": "INFO", "message": "Finished cleaning dataset 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:03:12.738675+00:00", "level": "INFO", "message": "No missing values in dataset 'covid_vacc_death_rate (Cleaned)'."}
+{"timestamp": "2025-01-01T21:03:12.837156+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'covid_vacc_death_rate_cleaned'."}
+{"timestamp": "2025-01-01T21:04:15.027595+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'covid_vacc_death_rate_cleaned_7'."}
+{"timestamp": "2025-01-01T21:04:15.080266+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'covid_vacc_death_rate_cleaned_7'."}
+{"timestamp": "2025-01-01T21:04:15.396713+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/covid_vacc_death_rate_cleaned.csv'."}
+{"timestamp": "2025-01-01T21:04:15.396813+00:00", "level": "INFO", "message": "Loading data from the 'covid_vacc_manufacturer' collection..."}
+{"timestamp": "2025-01-01T21:04:20.970725+00:00", "level": "INFO", "message": "Loaded 59224 records from the 'covid_vacc_manufacturer' collection."}
+{"timestamp": "2025-01-01T21:04:20.981319+00:00", "level": "INFO", "message": "Dataset 'covid_vacc_manufacturer' loaded successfully."}
+{"timestamp": "2025-01-01T21:04:20.986079+00:00", "level": "INFO", "message": "Missing values in dataset 'covid_vacc_manufacturer':\n      Missing Values  Percentage\nCode            1346    2.272727"}
+{"timestamp": "2025-01-01T21:04:20.986305+00:00", "level": "INFO", "message": "Cleaning dataset 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:04:20.990757+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
+{"timestamp": "2025-01-01T21:04:20.991910+00:00", "level": "INFO", "message": "Converted numeric columns to appropriate data types."}
+{"timestamp": "2025-01-01T21:04:20.995407+00:00", "level": "INFO", "message": "Filled 1346 missing values in 'Code' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:04:20.995770+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Pfizer/BioNTech' with median value 8629281.0."}
+{"timestamp": "2025-01-01T21:04:20.996056+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Moderna' with median value 1008835.0."}
+{"timestamp": "2025-01-01T21:04:20.996287+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Oxford/AstraZeneca' with median value 553922.0."}
+{"timestamp": "2025-01-01T21:04:20.996508+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Johnson&Johnson' with median value 63651.0."}
+{"timestamp": "2025-01-01T21:04:20.996722+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Sputnik V' with median value 0.0."}
+{"timestamp": "2025-01-01T21:04:20.996926+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Sinovac' with median value 0.0."}
+{"timestamp": "2025-01-01T21:04:20.997133+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Sinopharm/Beijing' with median value 0.0."}
+{"timestamp": "2025-01-01T21:04:20.997322+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer CanSino' with median value 0.0."}
+{"timestamp": "2025-01-01T21:04:20.997553+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Novavax' with median value 1.0."}
+{"timestamp": "2025-01-01T21:04:20.997749+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Covaxin' with median value 0.0."}
+{"timestamp": "2025-01-01T21:04:20.997941+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Medicago' with median value 0.0."}
+{"timestamp": "2025-01-01T21:04:20.998137+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Sanofi/GSK' with median value 0.0."}
+{"timestamp": "2025-01-01T21:04:20.998354+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer SKYCovione' with median value 0.0."}
+{"timestamp": "2025-01-01T21:04:20.998537+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Valneva' with median value 0.0."}
+{"timestamp": "2025-01-01T21:04:20.998551+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:04:21.001401+00:00", "level": "INFO", "message": "No inconsistent values found in dataset 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:04:21.001420+00:00", "level": "INFO", "message": "Finished cleaning dataset 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:04:21.004775+00:00", "level": "INFO", "message": "No missing values in dataset 'covid_vacc_manufacturer (Cleaned)'."}
+{"timestamp": "2025-01-01T21:04:21.015774+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'covid_vacc_manufacturer_cleaned'."}
+{"timestamp": "2025-01-01T21:04:47.110754+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'covid_vacc_manufacturer_cleaned_7'."}
+{"timestamp": "2025-01-01T21:04:47.130754+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'covid_vacc_manufacturer_cleaned_7'."}
+{"timestamp": "2025-01-01T21:04:47.224239+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/covid_vacc_manufacturer_cleaned.csv'."}
+{"timestamp": "2025-01-01T21:04:47.224282+00:00", "level": "INFO", "message": "Loading data from the 'us_death_rates' collection..."}
+{"timestamp": "2025-01-01T21:04:47.332231+00:00", "level": "INFO", "message": "Loaded 650 records from the 'us_death_rates' collection."}
+{"timestamp": "2025-01-01T21:04:47.332511+00:00", "level": "INFO", "message": "Dataset 'us_death_rates' loaded successfully."}
+{"timestamp": "2025-01-01T21:04:47.333969+00:00", "level": "INFO", "message": "Missing values in dataset 'us_death_rates':\n                                                    Missing Values  Percentage\nCode                                                           650  100.000000\nDeath rate (weekly) of fully vaccinated people ...             418   64.307692"}
+{"timestamp": "2025-01-01T21:04:47.334593+00:00", "level": "INFO", "message": "Cleaning dataset 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:04:47.335348+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
+{"timestamp": "2025-01-01T21:04:47.335580+00:00", "level": "INFO", "message": "Converted numeric columns to appropriate data types."}
+{"timestamp": "2025-01-01T21:04:47.335891+00:00", "level": "INFO", "message": "Filled 650 missing values in 'Code' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:04:47.336098+00:00", "level": "INFO", "message": "Filled 0 missing values in 'Death rate (weekly) of unvaccinated people - United States, by age' with median value 0.5994979."}
+{"timestamp": "2025-01-01T21:04:47.336302+00:00", "level": "INFO", "message": "Filled 0 missing values in 'Death rate (weekly) of fully vaccinated people (without bivalent booster) - United States, by age' with median value 0.09305295499999999."}
+{"timestamp": "2025-01-01T21:04:47.336629+00:00", "level": "WARNING", "message": "Dropped column 'Death rate (weekly) of fully vaccinated people (with bivalent booster) - United States, by age' due to high missing value percentage (64.31%)."}
+{"timestamp": "2025-01-01T21:04:47.336661+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:04:47.337124+00:00", "level": "INFO", "message": "No inconsistent values found in dataset 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:04:47.337153+00:00", "level": "INFO", "message": "Finished cleaning dataset 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:04:47.337782+00:00", "level": "INFO", "message": "No missing values in dataset 'us_death_rates (Cleaned)'."}
+{"timestamp": "2025-01-01T21:04:47.338137+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'us_death_rates_cleaned'."}
+{"timestamp": "2025-01-01T21:04:47.473248+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'us_death_rates_cleaned_7'."}
+{"timestamp": "2025-01-01T21:04:47.473909+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'us_death_rates_cleaned_7'."}
+{"timestamp": "2025-01-01T21:04:47.479465+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/us_death_rates_cleaned.csv'."}
+{"timestamp": "2025-01-01T21:04:47.479778+00:00", "level": "INFO", "message": "All datasets processed successfully."}
+{"timestamp": "2025-01-01T21:35:15.172610+00:00", "level": "INFO", "message": "Loading data from the 'covid_vacc_death_rate' collection..."}
+{"timestamp": "2025-01-01T21:35:15.173201+00:00", "level": "INFO", "message": "Loading data from the 'covid_vacc_death_rate' collection..."}
+{"timestamp": "2025-01-01T21:35:31.601107+00:00", "level": "INFO", "message": "Loaded 447729 records from the 'covid_vacc_death_rate' collection."}
+{"timestamp": "2025-01-01T21:35:31.601649+00:00", "level": "INFO", "message": "Loaded 447729 records from the 'covid_vacc_death_rate' collection."}
+{"timestamp": "2025-01-01T21:35:31.634346+00:00", "level": "INFO", "message": "Dataset 'covid_vacc_death_rate' loaded successfully."}
+{"timestamp": "2025-01-01T21:35:31.634682+00:00", "level": "INFO", "message": "Dataset 'covid_vacc_death_rate' loaded successfully."}
+{"timestamp": "2025-01-01T21:35:31.634758+00:00", "level": "INFO", "message": "Analyzing missing values before cleaning for 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:35:31.634941+00:00", "level": "INFO", "message": "Analyzing missing values before cleaning for 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:35:31.680463+00:00", "level": "INFO", "message": "Missing values in dataset 'covid_vacc_death_rate':\n                                                    Missing Values  Percentage\nCOVID-19 doses (cumulative, per hundred)                    364507   81.412417\nWorld regions according to OWID                              28624    6.393153\nCode                                                         26835    5.993581\nDaily new confirmed deaths due to COVID-19 per ...            2017    0.450496"}
+{"timestamp": "2025-01-01T21:35:31.680755+00:00", "level": "INFO", "message": "Missing values in dataset 'covid_vacc_death_rate':\n                                                    Missing Values  Percentage\nCOVID-19 doses (cumulative, per hundred)                    364507   81.412417\nWorld regions according to OWID                              28624    6.393153\nCode                                                         26835    5.993581\nDaily new confirmed deaths due to COVID-19 per ...            2017    0.450496"}
+{"timestamp": "2025-01-01T21:35:31.680836+00:00", "level": "INFO", "message": "Cleaning dataset 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:35:31.681056+00:00", "level": "INFO", "message": "Cleaning dataset 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:35:31.712305+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
+{"timestamp": "2025-01-01T21:35:31.712667+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
+{"timestamp": "2025-01-01T21:35:31.713582+00:00", "level": "INFO", "message": "Converted numeric columns to appropriate data types."}
+{"timestamp": "2025-01-01T21:35:31.713749+00:00", "level": "INFO", "message": "Converted numeric columns to appropriate data types."}
+{"timestamp": "2025-01-01T21:35:31.768934+00:00", "level": "INFO", "message": "Filled 26835 missing values in 'Code' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:35:31.769384+00:00", "level": "INFO", "message": "Filled 26835 missing values in 'Code' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:35:31.814606+00:00", "level": "INFO", "message": "Filled 28624 missing values in 'World regions according to OWID' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:35:31.814912+00:00", "level": "INFO", "message": "Filled 28624 missing values in 'World regions according to OWID' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:35:31.848247+00:00", "level": "WARNING", "message": "Dropped column 'COVID-19 doses (cumulative, per hundred)' due to high missing value percentage (81.41%)."}
+{"timestamp": "2025-01-01T21:35:31.848544+00:00", "level": "WARNING", "message": "Dropped column 'COVID-19 doses (cumulative, per hundred)' due to high missing value percentage (81.41%)."}
+{"timestamp": "2025-01-01T21:35:31.854097+00:00", "level": "INFO", "message": "Filled 2017 missing values in 'Daily new confirmed deaths due to COVID-19 per million people (rolling 7-day average, right-aligned)' with median value 0.0."}
+{"timestamp": "2025-01-01T21:35:31.854386+00:00", "level": "INFO", "message": "Filled 2017 missing values in 'Daily new confirmed deaths due to COVID-19 per million people (rolling 7-day average, right-aligned)' with median value 0.0."}
+{"timestamp": "2025-01-01T21:35:31.854449+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:35:31.854683+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:35:31.856864+00:00", "level": "ERROR", "message": "Error cleaning dataset 'covid_vacc_death_rate': Invalid comparison between dtype=datetime64[ns] and datetime"}
+{"timestamp": "2025-01-01T21:35:31.857083+00:00", "level": "ERROR", "message": "Error cleaning dataset 'covid_vacc_death_rate': Invalid comparison between dtype=datetime64[ns] and datetime"}
+{"timestamp": "2025-01-01T21:35:31.857196+00:00", "level": "INFO", "message": "Analyzing missing values after cleaning for 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:35:31.857441+00:00", "level": "INFO", "message": "Analyzing missing values after cleaning for 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:35:31.892741+00:00", "level": "INFO", "message": "No missing values in dataset 'covid_vacc_death_rate (Cleaned)'."}
+{"timestamp": "2025-01-01T21:35:31.893002+00:00", "level": "INFO", "message": "No missing values in dataset 'covid_vacc_death_rate (Cleaned)'."}
+{"timestamp": "2025-01-01T21:35:31.983022+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'covid_vacc_death_rate_cleaned'."}
+{"timestamp": "2025-01-01T21:35:31.983346+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'covid_vacc_death_rate_cleaned'."}
+{"timestamp": "2025-01-01T21:37:28.172473+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'covid_vacc_death_rate_cleaned'."}
+{"timestamp": "2025-01-01T21:37:28.173191+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'covid_vacc_death_rate_cleaned'."}
+{"timestamp": "2025-01-01T21:37:28.257001+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'covid_vacc_death_rate_cleaned'."}
+{"timestamp": "2025-01-01T21:37:28.257384+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'covid_vacc_death_rate_cleaned'."}
+{"timestamp": "2025-01-01T21:37:28.583344+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/covid_vacc_death_rate_cleaned.csv'."}
+{"timestamp": "2025-01-01T21:37:28.583652+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/covid_vacc_death_rate_cleaned.csv'."}
+{"timestamp": "2025-01-01T21:37:28.583712+00:00", "level": "INFO", "message": "Loading data from the 'covid_vacc_manufacturer' collection..."}
+{"timestamp": "2025-01-01T21:37:28.583951+00:00", "level": "INFO", "message": "Loading data from the 'covid_vacc_manufacturer' collection..."}
+{"timestamp": "2025-01-01T21:37:34.519618+00:00", "level": "INFO", "message": "Loaded 59224 records from the 'covid_vacc_manufacturer' collection."}
+{"timestamp": "2025-01-01T21:37:34.519976+00:00", "level": "INFO", "message": "Loaded 59224 records from the 'covid_vacc_manufacturer' collection."}
+{"timestamp": "2025-01-01T21:37:34.531449+00:00", "level": "INFO", "message": "Dataset 'covid_vacc_manufacturer' loaded successfully."}
+{"timestamp": "2025-01-01T21:37:34.531831+00:00", "level": "INFO", "message": "Dataset 'covid_vacc_manufacturer' loaded successfully."}
+{"timestamp": "2025-01-01T21:37:34.531920+00:00", "level": "INFO", "message": "Analyzing missing values before cleaning for 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:37:34.532122+00:00", "level": "INFO", "message": "Analyzing missing values before cleaning for 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:37:34.537985+00:00", "level": "INFO", "message": "Missing values in dataset 'covid_vacc_manufacturer':\n      Missing Values  Percentage\nCode            1346    2.272727"}
+{"timestamp": "2025-01-01T21:37:34.538312+00:00", "level": "INFO", "message": "Missing values in dataset 'covid_vacc_manufacturer':\n      Missing Values  Percentage\nCode            1346    2.272727"}
+{"timestamp": "2025-01-01T21:37:34.538397+00:00", "level": "INFO", "message": "Cleaning dataset 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:37:34.538556+00:00", "level": "INFO", "message": "Cleaning dataset 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:37:34.544420+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
+{"timestamp": "2025-01-01T21:37:34.544724+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
+{"timestamp": "2025-01-01T21:37:34.550396+00:00", "level": "INFO", "message": "Filled 1346 missing values in 'Code' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:37:34.550660+00:00", "level": "INFO", "message": "Filled 1346 missing values in 'Code' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:37:34.550714+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:37:34.550896+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:37:34.552439+00:00", "level": "ERROR", "message": "Error cleaning dataset 'covid_vacc_manufacturer': Invalid comparison between dtype=datetime64[ns] and datetime"}
+{"timestamp": "2025-01-01T21:37:34.552618+00:00", "level": "ERROR", "message": "Error cleaning dataset 'covid_vacc_manufacturer': Invalid comparison between dtype=datetime64[ns] and datetime"}
+{"timestamp": "2025-01-01T21:37:34.579749+00:00", "level": "INFO", "message": "Analyzing missing values after cleaning for 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:37:34.580129+00:00", "level": "INFO", "message": "Analyzing missing values after cleaning for 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:37:34.584738+00:00", "level": "INFO", "message": "No missing values in dataset 'covid_vacc_manufacturer (Cleaned)'."}
+{"timestamp": "2025-01-01T21:37:34.584989+00:00", "level": "INFO", "message": "No missing values in dataset 'covid_vacc_manufacturer (Cleaned)'."}
+{"timestamp": "2025-01-01T21:37:34.596152+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'covid_vacc_manufacturer_cleaned'."}
+{"timestamp": "2025-01-01T21:37:34.596414+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'covid_vacc_manufacturer_cleaned'."}
+{"timestamp": "2025-01-01T21:38:06.436183+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'covid_vacc_manufacturer_cleaned'."}
+{"timestamp": "2025-01-01T21:38:06.438095+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'covid_vacc_manufacturer_cleaned'."}
+{"timestamp": "2025-01-01T21:38:06.452630+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'covid_vacc_manufacturer_cleaned'."}
+{"timestamp": "2025-01-01T21:38:06.453041+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'covid_vacc_manufacturer_cleaned'."}
+{"timestamp": "2025-01-01T21:38:06.542078+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/covid_vacc_manufacturer_cleaned.csv'."}
+{"timestamp": "2025-01-01T21:38:06.542366+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/covid_vacc_manufacturer_cleaned.csv'."}
+{"timestamp": "2025-01-01T21:38:06.542438+00:00", "level": "INFO", "message": "Loading data from the 'us_death_rates' collection..."}
+{"timestamp": "2025-01-01T21:38:06.542658+00:00", "level": "INFO", "message": "Loading data from the 'us_death_rates' collection..."}
+{"timestamp": "2025-01-01T21:38:06.655060+00:00", "level": "INFO", "message": "Loaded 650 records from the 'us_death_rates' collection."}
+{"timestamp": "2025-01-01T21:38:06.655411+00:00", "level": "INFO", "message": "Loaded 650 records from the 'us_death_rates' collection."}
+{"timestamp": "2025-01-01T21:38:06.655552+00:00", "level": "INFO", "message": "Dataset 'us_death_rates' loaded successfully."}
+{"timestamp": "2025-01-01T21:38:06.655803+00:00", "level": "INFO", "message": "Dataset 'us_death_rates' loaded successfully."}
+{"timestamp": "2025-01-01T21:38:06.655870+00:00", "level": "INFO", "message": "Analyzing missing values before cleaning for 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:38:06.656115+00:00", "level": "INFO", "message": "Analyzing missing values before cleaning for 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:38:06.657427+00:00", "level": "INFO", "message": "Missing values in dataset 'us_death_rates':\n                                                    Missing Values  Percentage\nCode                                                           650  100.000000\nDeath rate (weekly) of fully vaccinated people ...             418   64.307692"}
+{"timestamp": "2025-01-01T21:38:06.657654+00:00", "level": "INFO", "message": "Missing values in dataset 'us_death_rates':\n                                                    Missing Values  Percentage\nCode                                                           650  100.000000\nDeath rate (weekly) of fully vaccinated people ...             418   64.307692"}
+{"timestamp": "2025-01-01T21:38:06.657729+00:00", "level": "INFO", "message": "Cleaning dataset 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:38:06.657922+00:00", "level": "INFO", "message": "Cleaning dataset 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:38:06.658693+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
+{"timestamp": "2025-01-01T21:38:06.658986+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
+{"timestamp": "2025-01-01T21:38:06.659238+00:00", "level": "INFO", "message": "Converted numeric columns to appropriate data types."}
+{"timestamp": "2025-01-01T21:38:06.659427+00:00", "level": "INFO", "message": "Converted numeric columns to appropriate data types."}
+{"timestamp": "2025-01-01T21:38:06.659854+00:00", "level": "INFO", "message": "Filled 650 missing values in 'Code' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:38:06.660025+00:00", "level": "INFO", "message": "Filled 650 missing values in 'Code' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:38:06.660415+00:00", "level": "INFO", "message": "Filled 0 missing values in 'Death rate (weekly) of unvaccinated people - United States, by age' with median value 0.5994979."}
+{"timestamp": "2025-01-01T21:38:06.660630+00:00", "level": "INFO", "message": "Filled 0 missing values in 'Death rate (weekly) of unvaccinated people - United States, by age' with median value 0.5994979."}
+{"timestamp": "2025-01-01T21:38:06.660937+00:00", "level": "INFO", "message": "Filled 0 missing values in 'Death rate (weekly) of fully vaccinated people (without bivalent booster) - United States, by age' with median value 0.09305295499999999."}
+{"timestamp": "2025-01-01T21:38:06.661159+00:00", "level": "INFO", "message": "Filled 0 missing values in 'Death rate (weekly) of fully vaccinated people (without bivalent booster) - United States, by age' with median value 0.09305295499999999."}
+{"timestamp": "2025-01-01T21:38:06.661602+00:00", "level": "WARNING", "message": "Dropped column 'Death rate (weekly) of fully vaccinated people (with bivalent booster) - United States, by age' due to high missing value percentage (64.31%)."}
+{"timestamp": "2025-01-01T21:38:06.661837+00:00", "level": "WARNING", "message": "Dropped column 'Death rate (weekly) of fully vaccinated people (with bivalent booster) - United States, by age' due to high missing value percentage (64.31%)."}
+{"timestamp": "2025-01-01T21:38:06.661864+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:38:06.662163+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:38:06.662575+00:00", "level": "ERROR", "message": "Error cleaning dataset 'us_death_rates': Invalid comparison between dtype=datetime64[ns] and datetime"}
+{"timestamp": "2025-01-01T21:38:06.662783+00:00", "level": "ERROR", "message": "Error cleaning dataset 'us_death_rates': Invalid comparison between dtype=datetime64[ns] and datetime"}
+{"timestamp": "2025-01-01T21:38:06.667701+00:00", "level": "INFO", "message": "Analyzing missing values after cleaning for 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:38:06.668186+00:00", "level": "INFO", "message": "Analyzing missing values after cleaning for 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:38:06.669056+00:00", "level": "INFO", "message": "No missing values in dataset 'us_death_rates (Cleaned)'."}
+{"timestamp": "2025-01-01T21:38:06.669250+00:00", "level": "INFO", "message": "No missing values in dataset 'us_death_rates (Cleaned)'."}
+{"timestamp": "2025-01-01T21:38:06.669734+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'us_death_rates_cleaned'."}
+{"timestamp": "2025-01-01T21:38:06.669971+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'us_death_rates_cleaned'."}
+{"timestamp": "2025-01-01T21:38:06.944895+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'us_death_rates_cleaned'."}
+{"timestamp": "2025-01-01T21:38:06.946530+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'us_death_rates_cleaned'."}
+{"timestamp": "2025-01-01T21:38:06.947124+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'us_death_rates_cleaned'."}
+{"timestamp": "2025-01-01T21:38:06.947978+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'us_death_rates_cleaned'."}
+{"timestamp": "2025-01-01T21:38:06.954734+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/us_death_rates_cleaned.csv'."}
+{"timestamp": "2025-01-01T21:38:06.955409+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/us_death_rates_cleaned.csv'."}
+{"timestamp": "2025-01-01T21:38:06.955704+00:00", "level": "INFO", "message": "All datasets processed successfully."}
+{"timestamp": "2025-01-01T21:38:06.956193+00:00", "level": "INFO", "message": "All datasets processed successfully."}
+{"timestamp": "2025-01-01T21:45:05.243964+00:00", "level": "INFO", "message": "Loading data from the 'covid_vacc_death_rate' collection..."}
+{"timestamp": "2025-01-01T21:45:05.244585+00:00", "level": "INFO", "message": "Loading data from the 'covid_vacc_death_rate' collection..."}
+{"timestamp": "2025-01-01T21:45:20.205541+00:00", "level": "INFO", "message": "Loaded 447729 records from the 'covid_vacc_death_rate' collection."}
+{"timestamp": "2025-01-01T21:45:20.206896+00:00", "level": "INFO", "message": "Loaded 447729 records from the 'covid_vacc_death_rate' collection."}
+{"timestamp": "2025-01-01T21:45:20.242601+00:00", "level": "INFO", "message": "Dataset 'covid_vacc_death_rate' loaded successfully."}
+{"timestamp": "2025-01-01T21:45:20.242947+00:00", "level": "INFO", "message": "Dataset 'covid_vacc_death_rate' loaded successfully."}
+{"timestamp": "2025-01-01T21:45:20.243023+00:00", "level": "INFO", "message": "Analyzing missing values before cleaning for 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:45:20.243205+00:00", "level": "INFO", "message": "Analyzing missing values before cleaning for 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:45:20.287843+00:00", "level": "INFO", "message": "Missing values in dataset 'covid_vacc_death_rate':\n                                                    Missing Values  Percentage\nCOVID-19 doses (cumulative, per hundred)                    364507   81.412417\nWorld regions according to OWID                              28624    6.393153\nCode                                                         26835    5.993581\nDaily new confirmed deaths due to COVID-19 per ...            2017    0.450496"}
+{"timestamp": "2025-01-01T21:45:20.288152+00:00", "level": "INFO", "message": "Missing values in dataset 'covid_vacc_death_rate':\n                                                    Missing Values  Percentage\nCOVID-19 doses (cumulative, per hundred)                    364507   81.412417\nWorld regions according to OWID                              28624    6.393153\nCode                                                         26835    5.993581\nDaily new confirmed deaths due to COVID-19 per ...            2017    0.450496"}
+{"timestamp": "2025-01-01T21:45:20.288250+00:00", "level": "INFO", "message": "Cleaning dataset 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:45:20.288475+00:00", "level": "INFO", "message": "Cleaning dataset 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:45:20.319024+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
+{"timestamp": "2025-01-01T21:45:20.319282+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
+{"timestamp": "2025-01-01T21:45:20.320108+00:00", "level": "INFO", "message": "Converted numeric columns to appropriate data types."}
+{"timestamp": "2025-01-01T21:45:20.320316+00:00", "level": "INFO", "message": "Converted numeric columns to appropriate data types."}
+{"timestamp": "2025-01-01T21:45:20.374807+00:00", "level": "INFO", "message": "Filled 26835 missing values in 'Code' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:45:20.375145+00:00", "level": "INFO", "message": "Filled 26835 missing values in 'Code' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:45:20.418529+00:00", "level": "INFO", "message": "Filled 28624 missing values in 'World regions according to OWID' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:45:20.418872+00:00", "level": "INFO", "message": "Filled 28624 missing values in 'World regions according to OWID' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:45:20.451575+00:00", "level": "WARNING", "message": "Dropped column 'COVID-19 doses (cumulative, per hundred)' due to high missing value percentage (81.41%)."}
+{"timestamp": "2025-01-01T21:45:20.451881+00:00", "level": "WARNING", "message": "Dropped column 'COVID-19 doses (cumulative, per hundred)' due to high missing value percentage (81.41%)."}
+{"timestamp": "2025-01-01T21:45:20.455470+00:00", "level": "INFO", "message": "Filled 2017 missing values in 'Daily new confirmed deaths due to COVID-19 per million people (rolling 7-day average, right-aligned)' with median value 0.0."}
+{"timestamp": "2025-01-01T21:45:20.455730+00:00", "level": "INFO", "message": "Filled 2017 missing values in 'Daily new confirmed deaths due to COVID-19 per million people (rolling 7-day average, right-aligned)' with median value 0.0."}
+{"timestamp": "2025-01-01T21:45:20.455799+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:45:20.456025+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:45:20.457208+00:00", "level": "ERROR", "message": "Error cleaning dataset 'covid_vacc_death_rate': Invalid comparison between dtype=datetime64[ns] and datetime"}
+{"timestamp": "2025-01-01T21:45:20.457381+00:00", "level": "ERROR", "message": "Error cleaning dataset 'covid_vacc_death_rate': Invalid comparison between dtype=datetime64[ns] and datetime"}
+{"timestamp": "2025-01-01T21:45:20.457571+00:00", "level": "INFO", "message": "Analyzing missing values after cleaning for 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:45:20.457779+00:00", "level": "INFO", "message": "Analyzing missing values after cleaning for 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:45:20.494786+00:00", "level": "INFO", "message": "No missing values in dataset 'covid_vacc_death_rate (Cleaned)'."}
+{"timestamp": "2025-01-01T21:45:20.495061+00:00", "level": "INFO", "message": "No missing values in dataset 'covid_vacc_death_rate (Cleaned)'."}
+{"timestamp": "2025-01-01T21:45:20.583447+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'covid_vacc_death_rate_cleaned'."}
+{"timestamp": "2025-01-01T21:45:20.583784+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'covid_vacc_death_rate_cleaned'."}
+{"timestamp": "2025-01-01T21:47:06.262552+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'covid_vacc_death_rate_cleaned'."}
+{"timestamp": "2025-01-01T21:47:06.264453+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'covid_vacc_death_rate_cleaned'."}
+{"timestamp": "2025-01-01T21:47:06.332336+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'covid_vacc_death_rate_cleaned'."}
+{"timestamp": "2025-01-01T21:47:06.332666+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'covid_vacc_death_rate_cleaned'."}
+{"timestamp": "2025-01-01T21:47:06.664151+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/covid_vacc_death_rate_cleaned.csv'."}
+{"timestamp": "2025-01-01T21:47:06.664459+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/covid_vacc_death_rate_cleaned.csv'."}
+{"timestamp": "2025-01-01T21:47:06.664526+00:00", "level": "INFO", "message": "Loading data from the 'covid_vacc_manufacturer' collection..."}
+{"timestamp": "2025-01-01T21:47:06.664733+00:00", "level": "INFO", "message": "Loading data from the 'covid_vacc_manufacturer' collection..."}
+{"timestamp": "2025-01-01T21:47:12.246935+00:00", "level": "INFO", "message": "Loaded 59224 records from the 'covid_vacc_manufacturer' collection."}
+{"timestamp": "2025-01-01T21:47:12.247284+00:00", "level": "INFO", "message": "Loaded 59224 records from the 'covid_vacc_manufacturer' collection."}
+{"timestamp": "2025-01-01T21:47:12.259398+00:00", "level": "INFO", "message": "Dataset 'covid_vacc_manufacturer' loaded successfully."}
+{"timestamp": "2025-01-01T21:47:12.259776+00:00", "level": "INFO", "message": "Dataset 'covid_vacc_manufacturer' loaded successfully."}
+{"timestamp": "2025-01-01T21:47:12.259852+00:00", "level": "INFO", "message": "Analyzing missing values before cleaning for 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:47:12.260061+00:00", "level": "INFO", "message": "Analyzing missing values before cleaning for 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:47:12.265887+00:00", "level": "INFO", "message": "Missing values in dataset 'covid_vacc_manufacturer':\n      Missing Values  Percentage\nCode            1346    2.272727"}
+{"timestamp": "2025-01-01T21:47:12.266220+00:00", "level": "INFO", "message": "Missing values in dataset 'covid_vacc_manufacturer':\n      Missing Values  Percentage\nCode            1346    2.272727"}
+{"timestamp": "2025-01-01T21:47:12.266280+00:00", "level": "INFO", "message": "Cleaning dataset 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:47:12.266496+00:00", "level": "INFO", "message": "Cleaning dataset 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:47:12.272897+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
+{"timestamp": "2025-01-01T21:47:12.273122+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
+{"timestamp": "2025-01-01T21:47:12.278275+00:00", "level": "INFO", "message": "Filled 1346 missing values in 'Code' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:47:12.278656+00:00", "level": "INFO", "message": "Filled 1346 missing values in 'Code' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:47:12.278715+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:47:12.278930+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:47:12.281012+00:00", "level": "ERROR", "message": "Error cleaning dataset 'covid_vacc_manufacturer': Invalid comparison between dtype=datetime64[ns] and datetime"}
+{"timestamp": "2025-01-01T21:47:12.281190+00:00", "level": "ERROR", "message": "Error cleaning dataset 'covid_vacc_manufacturer': Invalid comparison between dtype=datetime64[ns] and datetime"}
+{"timestamp": "2025-01-01T21:47:12.307649+00:00", "level": "INFO", "message": "Analyzing missing values after cleaning for 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:47:12.308000+00:00", "level": "INFO", "message": "Analyzing missing values after cleaning for 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:47:12.311408+00:00", "level": "INFO", "message": "No missing values in dataset 'covid_vacc_manufacturer (Cleaned)'."}
+{"timestamp": "2025-01-01T21:47:12.311647+00:00", "level": "INFO", "message": "No missing values in dataset 'covid_vacc_manufacturer (Cleaned)'."}
+{"timestamp": "2025-01-01T21:47:12.323375+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'covid_vacc_manufacturer_cleaned'."}
+{"timestamp": "2025-01-01T21:47:12.323627+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'covid_vacc_manufacturer_cleaned'."}
+{"timestamp": "2025-01-01T21:47:44.453078+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'covid_vacc_manufacturer_cleaned'."}
+{"timestamp": "2025-01-01T21:47:44.454948+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'covid_vacc_manufacturer_cleaned'."}
+{"timestamp": "2025-01-01T21:47:44.473261+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'covid_vacc_manufacturer_cleaned'."}
+{"timestamp": "2025-01-01T21:47:44.473899+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'covid_vacc_manufacturer_cleaned'."}
+{"timestamp": "2025-01-01T21:47:44.564836+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/covid_vacc_manufacturer_cleaned.csv'."}
+{"timestamp": "2025-01-01T21:47:44.565181+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/covid_vacc_manufacturer_cleaned.csv'."}
+{"timestamp": "2025-01-01T21:47:44.565253+00:00", "level": "INFO", "message": "Loading data from the 'us_death_rates' collection..."}
+{"timestamp": "2025-01-01T21:47:44.565494+00:00", "level": "INFO", "message": "Loading data from the 'us_death_rates' collection..."}
+{"timestamp": "2025-01-01T21:47:44.666718+00:00", "level": "INFO", "message": "Loaded 650 records from the 'us_death_rates' collection."}
+{"timestamp": "2025-01-01T21:47:44.667158+00:00", "level": "INFO", "message": "Loaded 650 records from the 'us_death_rates' collection."}
+{"timestamp": "2025-01-01T21:47:44.667378+00:00", "level": "INFO", "message": "Dataset 'us_death_rates' loaded successfully."}
+{"timestamp": "2025-01-01T21:47:44.667616+00:00", "level": "INFO", "message": "Dataset 'us_death_rates' loaded successfully."}
+{"timestamp": "2025-01-01T21:47:44.667644+00:00", "level": "INFO", "message": "Analyzing missing values before cleaning for 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:47:44.667935+00:00", "level": "INFO", "message": "Analyzing missing values before cleaning for 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:47:44.669346+00:00", "level": "INFO", "message": "Missing values in dataset 'us_death_rates':\n                                                    Missing Values  Percentage\nCode                                                           650  100.000000\nDeath rate (weekly) of fully vaccinated people ...             418   64.307692"}
+{"timestamp": "2025-01-01T21:47:44.669618+00:00", "level": "INFO", "message": "Missing values in dataset 'us_death_rates':\n                                                    Missing Values  Percentage\nCode                                                           650  100.000000\nDeath rate (weekly) of fully vaccinated people ...             418   64.307692"}
+{"timestamp": "2025-01-01T21:47:44.669754+00:00", "level": "INFO", "message": "Cleaning dataset 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:47:44.669950+00:00", "level": "INFO", "message": "Cleaning dataset 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:47:44.670715+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
+{"timestamp": "2025-01-01T21:47:44.671018+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
+{"timestamp": "2025-01-01T21:47:44.671311+00:00", "level": "INFO", "message": "Converted numeric columns to appropriate data types."}
+{"timestamp": "2025-01-01T21:47:44.671514+00:00", "level": "INFO", "message": "Converted numeric columns to appropriate data types."}
+{"timestamp": "2025-01-01T21:47:44.671977+00:00", "level": "INFO", "message": "Filled 650 missing values in 'Code' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:47:44.672144+00:00", "level": "INFO", "message": "Filled 650 missing values in 'Code' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:47:44.672367+00:00", "level": "INFO", "message": "Filled 0 missing values in 'Death rate (weekly) of unvaccinated people - United States, by age' with median value 0.5994979."}
+{"timestamp": "2025-01-01T21:47:44.672513+00:00", "level": "INFO", "message": "Filled 0 missing values in 'Death rate (weekly) of unvaccinated people - United States, by age' with median value 0.5994979."}
+{"timestamp": "2025-01-01T21:47:44.672831+00:00", "level": "INFO", "message": "Filled 0 missing values in 'Death rate (weekly) of fully vaccinated people (without bivalent booster) - United States, by age' with median value 0.09305295499999999."}
+{"timestamp": "2025-01-01T21:47:44.673057+00:00", "level": "INFO", "message": "Filled 0 missing values in 'Death rate (weekly) of fully vaccinated people (without bivalent booster) - United States, by age' with median value 0.09305295499999999."}
+{"timestamp": "2025-01-01T21:47:44.673519+00:00", "level": "WARNING", "message": "Dropped column 'Death rate (weekly) of fully vaccinated people (with bivalent booster) - United States, by age' due to high missing value percentage (64.31%)."}
+{"timestamp": "2025-01-01T21:47:44.673735+00:00", "level": "WARNING", "message": "Dropped column 'Death rate (weekly) of fully vaccinated people (with bivalent booster) - United States, by age' due to high missing value percentage (64.31%)."}
+{"timestamp": "2025-01-01T21:47:44.673825+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:47:44.674149+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:47:44.674578+00:00", "level": "ERROR", "message": "Error cleaning dataset 'us_death_rates': Invalid comparison between dtype=datetime64[ns] and datetime"}
+{"timestamp": "2025-01-01T21:47:44.674810+00:00", "level": "ERROR", "message": "Error cleaning dataset 'us_death_rates': Invalid comparison between dtype=datetime64[ns] and datetime"}
+{"timestamp": "2025-01-01T21:47:44.679229+00:00", "level": "INFO", "message": "Analyzing missing values after cleaning for 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:47:44.679672+00:00", "level": "INFO", "message": "Analyzing missing values after cleaning for 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:47:44.680689+00:00", "level": "INFO", "message": "No missing values in dataset 'us_death_rates (Cleaned)'."}
+{"timestamp": "2025-01-01T21:47:44.680910+00:00", "level": "INFO", "message": "No missing values in dataset 'us_death_rates (Cleaned)'."}
+{"timestamp": "2025-01-01T21:47:44.681369+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'us_death_rates_cleaned'."}
+{"timestamp": "2025-01-01T21:47:44.681591+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'us_death_rates_cleaned'."}
+{"timestamp": "2025-01-01T21:47:44.893842+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'us_death_rates_cleaned'."}
+{"timestamp": "2025-01-01T21:47:44.894473+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'us_death_rates_cleaned'."}
+{"timestamp": "2025-01-01T21:47:44.894894+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'us_death_rates_cleaned'."}
+{"timestamp": "2025-01-01T21:47:44.895427+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'us_death_rates_cleaned'."}
+{"timestamp": "2025-01-01T21:47:44.899673+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/us_death_rates_cleaned.csv'."}
+{"timestamp": "2025-01-01T21:47:44.900115+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/us_death_rates_cleaned.csv'."}
+{"timestamp": "2025-01-01T21:47:44.900342+00:00", "level": "INFO", "message": "All datasets processed successfully."}
+{"timestamp": "2025-01-01T21:47:44.900543+00:00", "level": "INFO", "message": "All datasets processed successfully."}
+{"timestamp": "2025-01-01T21:48:03.003755+00:00", "level": "INFO", "message": "Loading data from the 'covid_vacc_death_rate' collection..."}
+{"timestamp": "2025-01-01T21:48:17.367056+00:00", "level": "INFO", "message": "Loaded 447729 records from the 'covid_vacc_death_rate' collection."}
+{"timestamp": "2025-01-01T21:48:17.397345+00:00", "level": "INFO", "message": "Dataset 'covid_vacc_death_rate' loaded successfully."}
+{"timestamp": "2025-01-01T21:48:17.431419+00:00", "level": "INFO", "message": "Missing values in dataset 'covid_vacc_death_rate':\n                                                    Missing Values  Percentage\nCOVID-19 doses (cumulative, per hundred)                    364507   81.412417\nWorld regions according to OWID                              28624    6.393153\nCode                                                         26835    5.993581\nDaily new confirmed deaths due to COVID-19 per ...            2017    0.450496"}
+{"timestamp": "2025-01-01T21:48:17.431691+00:00", "level": "INFO", "message": "Cleaning dataset 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:48:17.459278+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
+{"timestamp": "2025-01-01T21:48:17.459905+00:00", "level": "INFO", "message": "Converted numeric columns to appropriate data types."}
+{"timestamp": "2025-01-01T21:48:17.506981+00:00", "level": "INFO", "message": "Filled 26835 missing values in 'Code' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:48:17.542946+00:00", "level": "INFO", "message": "Filled 28624 missing values in 'World regions according to OWID' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:48:17.573274+00:00", "level": "WARNING", "message": "Dropped column 'COVID-19 doses (cumulative, per hundred)' due to high missing value percentage (81.41%)."}
+{"timestamp": "2025-01-01T21:48:17.576472+00:00", "level": "INFO", "message": "Filled 2017 missing values in 'Daily new confirmed deaths due to COVID-19 per million people (rolling 7-day average, right-aligned)' with median value 0.0."}
+{"timestamp": "2025-01-01T21:48:17.576506+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:48:17.578406+00:00", "level": "INFO", "message": "No inconsistent values found in dataset 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:48:17.578430+00:00", "level": "INFO", "message": "Finished cleaning dataset 'covid_vacc_death_rate'."}
+{"timestamp": "2025-01-01T21:48:17.604098+00:00", "level": "INFO", "message": "No missing values in dataset 'covid_vacc_death_rate (Cleaned)'."}
+{"timestamp": "2025-01-01T21:48:17.694426+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'covid_vacc_death_rate_cleaned'."}
+{"timestamp": "2025-01-01T21:49:12.081763+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'covid_vacc_death_rate_cleaned_8'."}
+{"timestamp": "2025-01-01T21:49:12.151647+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'covid_vacc_death_rate_cleaned_8'."}
+{"timestamp": "2025-01-01T21:49:12.466655+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/covid_vacc_death_rate_cleaned.csv'."}
+{"timestamp": "2025-01-01T21:49:12.466755+00:00", "level": "INFO", "message": "Loading data from the 'covid_vacc_manufacturer' collection..."}
+{"timestamp": "2025-01-01T21:49:18.133694+00:00", "level": "INFO", "message": "Loaded 59224 records from the 'covid_vacc_manufacturer' collection."}
+{"timestamp": "2025-01-01T21:49:18.143800+00:00", "level": "INFO", "message": "Dataset 'covid_vacc_manufacturer' loaded successfully."}
+{"timestamp": "2025-01-01T21:49:18.149453+00:00", "level": "INFO", "message": "Missing values in dataset 'covid_vacc_manufacturer':\n      Missing Values  Percentage\nCode            1346    2.272727"}
+{"timestamp": "2025-01-01T21:49:18.149696+00:00", "level": "INFO", "message": "Cleaning dataset 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:49:18.154006+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
+{"timestamp": "2025-01-01T21:49:18.154914+00:00", "level": "INFO", "message": "Converted numeric columns to appropriate data types."}
+{"timestamp": "2025-01-01T21:49:18.158857+00:00", "level": "INFO", "message": "Filled 1346 missing values in 'Code' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:49:18.159256+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Pfizer/BioNTech' with median value 8629281.0."}
+{"timestamp": "2025-01-01T21:49:18.159558+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Moderna' with median value 1008835.0."}
+{"timestamp": "2025-01-01T21:49:18.159798+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Oxford/AstraZeneca' with median value 553922.0."}
+{"timestamp": "2025-01-01T21:49:18.160040+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Johnson&Johnson' with median value 63651.0."}
+{"timestamp": "2025-01-01T21:49:18.160287+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Sputnik V' with median value 0.0."}
+{"timestamp": "2025-01-01T21:49:18.160516+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Sinovac' with median value 0.0."}
+{"timestamp": "2025-01-01T21:49:18.160726+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Sinopharm/Beijing' with median value 0.0."}
+{"timestamp": "2025-01-01T21:49:18.160931+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer CanSino' with median value 0.0."}
+{"timestamp": "2025-01-01T21:49:18.161150+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Novavax' with median value 1.0."}
+{"timestamp": "2025-01-01T21:49:18.161381+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Covaxin' with median value 0.0."}
+{"timestamp": "2025-01-01T21:49:18.161589+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Medicago' with median value 0.0."}
+{"timestamp": "2025-01-01T21:49:18.161811+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Sanofi/GSK' with median value 0.0."}
+{"timestamp": "2025-01-01T21:49:18.162023+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer SKYCovione' with median value 0.0."}
+{"timestamp": "2025-01-01T21:49:18.162226+00:00", "level": "INFO", "message": "Filled 0 missing values in 'COVID-19 doses (cumulative) - Manufacturer Valneva' with median value 0.0."}
+{"timestamp": "2025-01-01T21:49:18.162241+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:49:18.164315+00:00", "level": "INFO", "message": "No inconsistent values found in dataset 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:49:18.164334+00:00", "level": "INFO", "message": "Finished cleaning dataset 'covid_vacc_manufacturer'."}
+{"timestamp": "2025-01-01T21:49:18.167564+00:00", "level": "INFO", "message": "No missing values in dataset 'covid_vacc_manufacturer (Cleaned)'."}
+{"timestamp": "2025-01-01T21:49:18.180013+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'covid_vacc_manufacturer_cleaned'."}
+{"timestamp": "2025-01-01T21:49:43.479831+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'covid_vacc_manufacturer_cleaned_8'."}
+{"timestamp": "2025-01-01T21:49:43.500346+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'covid_vacc_manufacturer_cleaned_8'."}
+{"timestamp": "2025-01-01T21:49:43.591448+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/covid_vacc_manufacturer_cleaned.csv'."}
+{"timestamp": "2025-01-01T21:49:43.591491+00:00", "level": "INFO", "message": "Loading data from the 'us_death_rates' collection..."}
+{"timestamp": "2025-01-01T21:49:43.691488+00:00", "level": "INFO", "message": "Loaded 650 records from the 'us_death_rates' collection."}
+{"timestamp": "2025-01-01T21:49:43.691619+00:00", "level": "INFO", "message": "Dataset 'us_death_rates' loaded successfully."}
+{"timestamp": "2025-01-01T21:49:43.692799+00:00", "level": "INFO", "message": "Missing values in dataset 'us_death_rates':\n                                                    Missing Values  Percentage\nCode                                                           650  100.000000\nDeath rate (weekly) of fully vaccinated people ...             418   64.307692"}
+{"timestamp": "2025-01-01T21:49:43.693157+00:00", "level": "INFO", "message": "Cleaning dataset 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:49:43.693769+00:00", "level": "INFO", "message": "Converted 'Day' column to datetime and removed timezone."}
+{"timestamp": "2025-01-01T21:49:43.693986+00:00", "level": "INFO", "message": "Converted numeric columns to appropriate data types."}
+{"timestamp": "2025-01-01T21:49:43.694266+00:00", "level": "INFO", "message": "Filled 650 missing values in 'Code' with 'Unknown'."}
+{"timestamp": "2025-01-01T21:49:43.694452+00:00", "level": "INFO", "message": "Filled 0 missing values in 'Death rate (weekly) of unvaccinated people - United States, by age' with median value 0.5994979."}
+{"timestamp": "2025-01-01T21:49:43.694600+00:00", "level": "INFO", "message": "Filled 0 missing values in 'Death rate (weekly) of fully vaccinated people (without bivalent booster) - United States, by age' with median value 0.09305295499999999."}
+{"timestamp": "2025-01-01T21:49:43.694862+00:00", "level": "WARNING", "message": "Dropped column 'Death rate (weekly) of fully vaccinated people (with bivalent booster) - United States, by age' due to high missing value percentage (64.31%)."}
+{"timestamp": "2025-01-01T21:49:43.694886+00:00", "level": "INFO", "message": "Checking for inconsistent values in dataset 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:49:43.695300+00:00", "level": "INFO", "message": "No inconsistent values found in dataset 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:49:43.695325+00:00", "level": "INFO", "message": "Finished cleaning dataset 'us_death_rates'."}
+{"timestamp": "2025-01-01T21:49:43.695850+00:00", "level": "INFO", "message": "No missing values in dataset 'us_death_rates (Cleaned)'."}
+{"timestamp": "2025-01-01T21:49:43.696152+00:00", "level": "INFO", "message": "Saving DataFrame to MongoDB collection 'us_death_rates_cleaned'."}
+{"timestamp": "2025-01-01T21:49:43.829234+00:00", "level": "INFO", "message": "Data saved to MongoDB collection 'us_death_rates_cleaned_8'."}
+{"timestamp": "2025-01-01T21:49:43.829542+00:00", "level": "INFO", "message": "Cleaned data saved to MongoDB collection 'us_death_rates_cleaned_8'."}
+{"timestamp": "2025-01-01T21:49:43.831897+00:00", "level": "INFO", "message": "Cleaned data saved to CSV file '/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/processed/us_death_rates_cleaned.csv'."}
+{"timestamp": "2025-01-01T21:49:43.832067+00:00", "level": "INFO", "message": "All datasets processed successfully."}
