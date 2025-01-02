@@ -1,0 +1,224 @@
+2025-01-02 13:38:51 - MongoDB bağlantısı başarılı.
+2025-01-02 13:38:51 - İşlem başlıyor.
+2025-01-02 13:39:05 - 'covid_vacc_death_rate' koleksiyonundan 447729 kayıt alındı.
+2025-01-02 13:39:05 - 'Day' sütunu tarih formatına çevrildi.
+2025-01-02 13:39:05 - 'COVID_19_doses_cumulative_per_hundred' sütunundaki NaN değerler Entity bazında ortalama ile dolduruldu.
+2025-01-02 13:39:05 - 'Daily_new_confirmed_deaths_due_to_COVID_19_per_million_people_rolling_7_day_average_right_aligned' sütunundaki NaN değerler Entity bazında ortalama ile dolduruldu.
+2025-01-02 13:39:05 - 
+'covid_vacc_death_rate' temizlenmiş ilk 5 veri:
+        Entity Code  year        Day  \
+0  Afghanistan  AFG  2020 2020-01-09   
+1  Afghanistan  AFG  2020 2020-01-10   
+2  Afghanistan  AFG  2020 2020-01-11   
+3  Afghanistan  AFG  2020 2020-01-12   
+4  Afghanistan  AFG  2020 2020-01-13   
+
+   Daily_new_confirmed_deaths_due_to_COVID_19_per_million_people_rolling_7_day_average_right_aligned  \
+0                                                0.0                                                   
+1                                                0.0                                                   
+2                                                0.0                                                   
+3                                                0.0                                                   
+4                                                0.0                                                   
+
+   COVID_19_doses_cumulative_per_hundred World_regions_according_to_OWID  
+0                              27.452268                            Asia  
+1                              27.452268                            Asia  
+2                              27.452268                            Asia  
+3                              27.452268                            Asia  
+4                              27.452268                            Asia  
+2025-01-02 13:39:05 - 
+'covid_vacc_death_rate' veri tipi özeti:
+None
+2025-01-02 13:39:05 - 
+'covid_vacc_death_rate' boş değer sayısı:
+Entity                                                                                                   0
+Code                                                                                                 26835
+year                                                                                                     0
+Day                                                                                                      0
+Daily_new_confirmed_deaths_due_to_COVID_19_per_million_people_rolling_7_day_average_right_aligned     2006
+COVID_19_doses_cumulative_per_hundred                                                                42936
+World_regions_according_to_OWID                                                                      28624
+dtype: int64
+2025-01-02 13:39:06 - cleaned_covid_vacc_death_rate.csv dosyası '../data/processed' dizinine kaydedildi.
+2025-01-02 13:39:06 - 'us_death_rates' koleksiyonundan 650 kayıt alındı.
+2025-01-02 13:39:06 - 'Day' sütunu tarih formatına çevrildi.
+2025-01-02 13:39:06 - 'Death_rate_weekly_of_unvaccinated_people_United_States_by_age' sütunundaki NaN değerler Entity bazında ortalama ile dolduruldu.
+2025-01-02 13:39:06 - 'Death_rate_weekly_of_fully_vaccinated_people_without_bivalent_booster_United_States_by_age' sütunundaki NaN değerler Entity bazında ortalama ile dolduruldu.
+2025-01-02 13:39:06 - 'Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age' sütunundaki NaN değerler Entity bazında ortalama ile dolduruldu.
+2025-01-02 13:39:06 - 
+'us_death_rates' temizlenmiş ilk 5 veri:
+  Entity  Code        Day  \
+0  0.5-4   NaN 2022-06-08   
+1  0.5-4   NaN        NaT   
+2  0.5-4   NaN        NaT   
+3  0.5-4   NaN        NaT   
+4  0.5-4   NaN 2022-03-09   
+
+   Death_rate_weekly_of_unvaccinated_people_United_States_by_age  \
+0                                           0.096528               
+1                                           0.019468               
+2                                           0.000000               
+3                                           0.079043               
+4                                           0.039777               
+
+   Death_rate_weekly_of_fully_vaccinated_people_without_bivalent_booster_United_States_by_age  \
+0                                                0.0                                            
+1                                                0.0                                            
+2                                                0.0                                            
+3                                                0.0                                            
+4                                                0.0                                            
+
+   Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age  
+0                                                0.0                                        
+1                                                0.0                                        
+2                                                0.0                                        
+3                                                0.0                                        
+4                                                0.0                                        
+2025-01-02 13:39:06 - 
+'us_death_rates' veri tipi özeti:
+None
+2025-01-02 13:39:06 - 
+'us_death_rates' boş değer sayısı:
+Entity                                                                                          0
+Code                                                                                          650
+Day                                                                                           382
+Death_rate_weekly_of_unvaccinated_people_United_States_by_age                                   0
+Death_rate_weekly_of_fully_vaccinated_people_without_bivalent_booster_United_States_by_age      0
+Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age         0
+dtype: int64
+2025-01-02 13:39:06 - cleaned_us_death_rates.csv dosyası '../data/processed' dizinine kaydedildi.
+2025-01-02 13:39:11 - 'covid_vacc_manufacturer' koleksiyonundan 59224 kayıt alındı.
+2025-01-02 13:39:11 - 'Day' sütunu tarih formatına çevrildi.
+2025-01-02 13:39:11 - 'Some_column_name_1' sütunu bulunamadı ve işlenemedi.
+2025-01-02 13:39:11 - 'Some_column_name_2' sütunu bulunamadı ve işlenemedi.
+2025-01-02 13:39:11 - 
+'covid_vacc_manufacturer' temizlenmiş ilk 5 veri:
+      Entity Code        Day  \
+0  Argentina  ARG 2020-12-04   
+1  Argentina  ARG 2020-12-05   
+2  Argentina  ARG 2020-12-06   
+3  Argentina  ARG 2020-12-07   
+4  Argentina  ARG 2020-12-08   
+
+   COVID_19_doses_cumulative_Manufacturer_Pfizer_BioNTech  \
+0                                                  1        
+1                                                  1        
+2                                                  1        
+3                                                  1        
+4                                                  1        
+
+   COVID_19_doses_cumulative_Manufacturer_Moderna  \
+0                                               1   
+1                                               1   
+2                                               1   
+3                                               1   
+4                                               1   
+
+   COVID_19_doses_cumulative_Manufacturer_Oxford_AstraZeneca  \
+0                                                  1           
+1                                                  1           
+2                                                  1           
+3                                                  1           
+4                                                  1           
+
+   COVID_19_doses_cumulative_Manufacturer_Johnson_Johnson  \
+0                                                  0        
+1                                                  0        
+2                                                  0        
+3                                                  0        
+4                                                  0        
+
+   COVID_19_doses_cumulative_Manufacturer_Sputnik_V  \
+0                                             20493   
+1                                             20493   
+2                                             20493   
+3                                             20493   
+4                                             20493   
+
+   COVID_19_doses_cumulative_Manufacturer_Sinovac  \
+0                                               0   
+1                                               0   
+2                                               0   
+3                                               0   
+4                                               0   
+
+   COVID_19_doses_cumulative_Manufacturer_Sinopharm_Beijing  \
+0                                                  1          
+1                                                  1          
+2                                                  1          
+3                                                  1          
+4                                                  1          
+
+   COVID_19_doses_cumulative_Manufacturer_CanSino  \
+0                                               1   
+1                                               1   
+2                                               1   
+3                                               1   
+4                                               1   
+
+   COVID_19_doses_cumulative_Manufacturer_Novavax  \
+0                                               0   
+1                                               0   
+2                                               0   
+3                                               0   
+4                                               0   
+
+   COVID_19_doses_cumulative_Manufacturer_Covaxin  \
+0                                               0   
+1                                               0   
+2                                               0   
+3                                               0   
+4                                               0   
+
+   COVID_19_doses_cumulative_Manufacturer_Medicago  \
+0                                                0   
+1                                                0   
+2                                                0   
+3                                                0   
+4                                                0   
+
+   COVID_19_doses_cumulative_Manufacturer_Sanofi_GSK  \
+0                                                  0   
+1                                                  0   
+2                                                  0   
+3                                                  0   
+4                                                  0   
+
+   COVID_19_doses_cumulative_Manufacturer_SKYCovione  \
+0                                                  0   
+1                                                  0   
+2                                                  0   
+3                                                  0   
+4                                                  0   
+
+   COVID_19_doses_cumulative_Manufacturer_Valneva  
+0                                               0  
+1                                               0  
+2                                               0  
+3                                               0  
+4                                               0  
+2025-01-02 13:39:11 - 
+'covid_vacc_manufacturer' veri tipi özeti:
+None
+2025-01-02 13:39:11 - 
+'covid_vacc_manufacturer' boş değer sayısı:
+Entity                                                          0
+Code                                                         1346
+Day                                                             0
+COVID_19_doses_cumulative_Manufacturer_Pfizer_BioNTech          0
+COVID_19_doses_cumulative_Manufacturer_Moderna                  0
+COVID_19_doses_cumulative_Manufacturer_Oxford_AstraZeneca       0
+COVID_19_doses_cumulative_Manufacturer_Johnson_Johnson          0
+COVID_19_doses_cumulative_Manufacturer_Sputnik_V                0
+COVID_19_doses_cumulative_Manufacturer_Sinovac                  0
+COVID_19_doses_cumulative_Manufacturer_Sinopharm_Beijing        0
+COVID_19_doses_cumulative_Manufacturer_CanSino                  0
+COVID_19_doses_cumulative_Manufacturer_Novavax                  0
+COVID_19_doses_cumulative_Manufacturer_Covaxin                  0
+COVID_19_doses_cumulative_Manufacturer_Medicago                 0
+COVID_19_doses_cumulative_Manufacturer_Sanofi_GSK               0
+COVID_19_doses_cumulative_Manufacturer_SKYCovione               0
+COVID_19_doses_cumulative_Manufacturer_Valneva                  0
+dtype: int64
+2025-01-02 13:39:11 - cleaned_covid_vacc_manufacturer.csv dosyası '../data/processed' dizinine kaydedildi.
+2025-01-02 13:39:11 - Tüm işlemler tamamlandı.

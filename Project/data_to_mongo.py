@@ -4,14 +4,9 @@ import certifi
 import logging
 import json
 from datetime import datetime
-from typing import Dict
-import csv
-
 import pandas as pd
 from dotenv import load_dotenv
 from pymongo import MongoClient, errors
-from pymongo.write_concern import WriteConcern
-from pymongo.read_concern import ReadConcern
 from logging.handlers import RotatingFileHandler
 
 # ================================================================
@@ -28,7 +23,7 @@ if not MONGO_URI or not DATABASE_NAME:
     raise EnvironmentError("Please define MONGO_URI and DATABASE_NAME in the .env file.")
 
 # Ensure the log directory exists
-LOG_DIR = "../reports/logs"  # Local writable directory
+LOG_DIR = "../reports/logs" # Local writable directory
 os.makedirs(LOG_DIR, exist_ok=True)
 
 # Log file configuration
@@ -68,20 +63,22 @@ logger.info("Logger setup complete. Logs will be written to '%s'.", LOG_FILE)
 # HELPER FUNCTIONS
 # ================================================================
 
-def detect_delimiter(file_path: str) -> str:
-    try:
-        with open(file_path, "r", newline="", encoding="utf-8") as csvfile:
-            sample = csvfile.read(1024)
-            sniffer = csv.Sniffer()
-            dialect = sniffer.sniff(sample)
-            delimiter = dialect.delimiter
-            logger.info(f"Detected delimiter '{delimiter}' for file: {file_path}")
-            return delimiter
-    except Exception as e:
-        logger.warning(f"Could not detect delimiter for file: {file_path}. Defaulting to comma. Error: {e}")
-        return ","
+def clean_column_names(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Makes column names compatible with MongoDB:
+    - Replaces spaces and special characters with underscores.
+    - Converts double underscores to single underscores.
+    - Removes leading and trailing underscores.
+    """
+    df.columns = df.columns.str.replace(r"[^a-zA-Z0-9_]", "_", regex=True)
+    df.columns = df.columns.str.replace(r"__+", "_", regex=True)  # Double underscores are converted to single underscores
+    df.columns = df.columns.str.strip("_")  # Leading and trailing underscores are removed
+    return df
 
 def validate_csv_file(file_path: str) -> bool:
+    """
+    Checks the existence and accessibility of the CSV file.
+    """
     if not os.path.exists(file_path):
         logger.error(f"File not found: {file_path}")
         return False
@@ -90,77 +87,78 @@ def validate_csv_file(file_path: str) -> bool:
         return False
     return True
 
-def convert_datetime_columns(df: pd.DataFrame) -> pd.DataFrame:
-    for column in df.columns:
-        if "date" in column.lower() or "time" in column.lower():
-            try:
-                df[column] = pd.to_datetime(df[column], errors="coerce")
-                df[column] = df[column].replace({pd.NaT: None})
-                logger.info(f"Converted '{column}' to datetime.")
-            except Exception as e:
-                logger.warning(f"Failed to convert '{column}' to datetime: {e}")
+def clean_dataframe(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Cleans the DataFrame:
+    - Trims leading and trailing spaces from string cells.
+    - Replaces NaN values with None.
+    """
+    for column in df.select_dtypes(include="object").columns:
+        df[column] = df[column].map(lambda x: str(x).strip() if isinstance(x, str) else x)
+    df = df.where(pd.notnull(df), None)
     return df
 
-def load_csv_to_mongo(client: MongoClient, db_name: str, file_path: str, collection_name: str, batch_size: int = 1000):
+def load_csv_to_mongo(client, db_name, file_path, collection_name):
+    """
+    Reads and cleans a CSV file and transfers it to MongoDB.
+    """
     if not validate_csv_file(file_path):
         return
 
     try:
-        delimiter = detect_delimiter(file_path)
-        df = pd.read_csv(file_path, delimiter=delimiter, encoding="utf-8", engine="python")
+        # Load the CSV file
+        df = pd.read_csv(file_path, delimiter=",", encoding="utf-8", engine="python")
         logger.info(f"Loaded {len(df)} records from {file_path}.")
 
-        df = df.where(pd.notnull(df), None)
-        df = convert_datetime_columns(df)
+        # Clean column names
+        df = clean_column_names(df)
+
+        # Data cleaning
+        df = clean_dataframe(df)
+
+        # Data verification before transferring to MongoDB
+        logger.info(f"DataFrame columns: {list(df.columns)}")
+        logger.info(f"Sample data:\n{df.head()}")
+
+        # Convert DataFrame to dictionary format and transfer to MongoDB
         data_records = df.to_dict(orient="records")
-
         db = client[db_name]
-        collection = db.get_collection(collection_name, write_concern=WriteConcern("majority"))
-
-        for i in range(0, len(data_records), batch_size):
-            batch = data_records[i:i + batch_size]
-            try:
-                collection.insert_many(batch, ordered=False)
-                logger.info(f"Inserted batch {i // batch_size + 1} of size {len(batch)} into '{collection_name}'.")
-            except errors.BulkWriteError as bwe:
-                logger.error(f"BulkWriteError on batch {i // batch_size + 1}: {bwe.details}")
-            except Exception as e:
-                logger.error(f"Error inserting batch {i // batch_size + 1}: {e}")
-
-        logger.info(f"Completed migration for '{file_path}' into '{collection_name}'.")
+        collection = db[collection_name]
+        collection.insert_many(data_records)
+        logger.info(f"{len(data_records)} records successfully inserted into '{collection_name}'.")
 
     except Exception as e:
-        logger.critical(f"Critical error during migration of '{file_path}': {e}")
+        logger.error(f"Error during data migration: {e}")
 
 # ================================================================
 # MAIN FUNCTION
 # ================================================================
 
 def main():
+    base_path = "/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/raw"  # Base directory
     csv_files = {
-        "/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/raw/covid-vaccinations-vs-covid-death-rate.csv": "covid_vacc_death_rate",
-        "/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/raw/covid-vaccine-doses-by-manufacturer.csv": "covid_vacc_manufacturer",
-        "/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/raw/OECD_health_expenditure.csv": "oecd_health_expenditure",
-        "/Users/dr.sam/Desktop/CodeGenesis-TEAM/data/raw/united-states-rates-of-covid-19-deaths-by-vaccination-status.csv": "us_death_rates",
+        "covid-vaccinations-vs-covid-death-rate.csv": "covid_vacc_death_rate",
+        "covid-vaccine-doses-by-manufacturer.csv": "covid_vacc_manufacturer",
+        "united-states-rates-of-covid-19-deaths-by-vaccination-status.csv": "us_death_rates",
     }
 
     print("Select an option:")
     print("0. Load all data")
-    for i, (file_path, collection_name) in enumerate(csv_files.items(), start=1):
-        print(f"{i}. {file_path} -> {collection_name}")
+    for i, (file_name, collection_name) in enumerate(csv_files.items(), start=1):
+        print(f"{i}. {file_name} -> {collection_name}")
 
     try:
         choice = int(input("Your choice: "))
         if choice == 0:
             logger.info("Selected option: Load all data.")
             with MongoClient(MONGO_URI, tlsCAFile=certifi.where()) as client:
-                for file_path, collection_name in csv_files.items():
-                    logger.info(f"Loading data from {file_path} into collection {collection_name}.")
+                for file_name, collection_name in csv_files.items():
+                    file_path = os.path.join(base_path, file_name)
                     load_csv_to_mongo(client, DATABASE_NAME, file_path, collection_name)
             logger.info("All data loaded successfully.")
         elif 1 <= choice <= len(csv_files):
-            file_path, collection_name = list(csv_files.items())[choice - 1]
-            logger.info(f"Selected file: {file_path}, collection: {collection_name}")
+            file_name, collection_name = list(csv_files.items())[choice - 1]
+            file_path = os.path.join(base_path, file_name)
             with MongoClient(MONGO_URI, tlsCAFile=certifi.where()) as client:
                 load_csv_to_mongo(client, DATABASE_NAME, file_path, collection_name)
         else:

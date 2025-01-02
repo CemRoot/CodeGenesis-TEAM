@@ -1,0 +1,39 @@
+2025-01-02 15:06:55 - MONGO_URI başarıyla yüklendi: mongodb+srv://koyluoglucem:*****@codegenesis.dupu0.mongodb.net/
+2025-01-02 15:06:55 - MongoDB'ye başarılı bir şekilde bağlandı.
+2025-01-02 15:06:55 - 'my_databaseCEM' veritabanına erişildi.
+2025-01-02 15:06:55 - Veri işleme işlemi başlatıldı.
+2025-01-02 15:06:55 - 'covid_vacc_death_rate' veri seti işleniyor...
+2025-01-02 15:07:11 - 'covid_vacc_death_rate' koleksiyonundan 447729 kayıt alındı.
+2025-01-02 15:07:12 - 'Day' sütunu tarih formatına çevrildi.
+2025-01-02 15:07:12 - 'Day' sütunundaki NaT değerleri None ile değiştirildi.
+2025-01-02 15:07:12 - 'COVID_19_doses_cumulative_per_hundred' sütunundaki NaN değerler Entity bazında ortalama ile dolduruldu.
+2025-01-02 15:07:12 - 'Daily_new_confirmed_deaths_due_to_COVID_19_per_million_people_rolling_7_day_average_right_aligned' sütunundaki NaN değerler Entity bazında ortalama ile dolduruldu.
+2025-01-02 15:07:13 - '_id' sütunu kaldırıldı.
+2025-01-02 15:07:13 - Temizlenen verinin ilk 5 satırı:
+2025-01-02 15:07:13 - Temizlenen verinin veri tipleri:
+2025-01-02 15:07:13 - Temizlenen verideki boş değer sayıları:
+2025-01-02 15:07:13 - '../data/processed/cleaned_covid_vacc_death_rate.csv' dosyası silindi.
+2025-01-02 15:07:13 - '../data/processed/cleaned_covid_vacc_death_rate.csv' dosyası başarıyla oluşturuldu.
+2025-01-02 15:07:18 - 'cleaned_covid_vacc_death_rate' verisi MongoDB'ye yüklenmedi.
+2025-01-02 15:07:18 - 'covid_vacc_death_rate' veri seti işlemi tamamlandı.
+
+2025-01-02 15:07:18 - 'us_death_rate' veri seti işleniyor...
+2025-01-02 15:07:18 - 'us_death_rate' koleksiyonu boş.
+2025-01-02 15:07:18 - 'us_death_rate' işlenemedi çünkü veri bulunamadı.
+2025-01-02 15:07:18 - 'us_death_rate' veri seti işlemi tamamlandı.
+
+2025-01-02 15:07:18 - 'covid_vacc_manufacturer' veri seti işleniyor...
+2025-01-02 15:07:23 - 'covid_vacc_manufacturer' koleksiyonundan 59224 kayıt alındı.
+2025-01-02 15:07:23 - Tarih sütunu bulunamadı veya belirtilmedi.
+2025-01-02 15:07:23 - 'Manufacturer_Column_1' sütunu bulunamadı ve işlenemedi.
+2025-01-02 15:07:23 - 'Manufacturer_Column_2' sütunu bulunamadı ve işlenemedi.
+2025-01-02 15:07:23 - '_id' sütunu kaldırıldı.
+2025-01-02 15:07:23 - Temizlenen verinin ilk 5 satırı:
+2025-01-02 15:07:23 - Temizlenen verinin veri tipleri:
+2025-01-02 15:07:23 - Temizlenen verideki boş değer sayıları:
+2025-01-02 15:07:23 - '../data/processed/cleaned_covid_vacc_manufacturer.csv' dosyası silindi.
+2025-01-02 15:07:23 - '../data/processed/cleaned_covid_vacc_manufacturer.csv' dosyası başarıyla oluşturuldu.
+2025-01-02 15:07:26 - 'cleaned_covid_vacc_manufacturer' verisi MongoDB'ye yüklenmedi.
+2025-01-02 15:07:26 - 'covid_vacc_manufacturer' veri seti işlemi tamamlandı.
+
+2025-01-02 15:07:26 - Tüm veri işleme işlemleri tamamlandı.

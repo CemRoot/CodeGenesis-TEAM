@@ -1,0 +1,2 @@
+2025-01-02 12:14:35 - 'cleaned_covid_vacc_death_rate' koleksiyonundan 447729 satır veri alındı.
+2025-01-02 12:14:35 - Veri işleme veya görselleştirme sırasında hata oluştu: agg function failed [how->mean,dtype->object]
