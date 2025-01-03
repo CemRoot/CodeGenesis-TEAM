@@ -1,171 +1,111 @@
 
+# CodeGenesis TEAM: COVID-19 Data Analysis
 
-# 🚧 **Project Under Construction** 🚧
+## Project Description
 
-![Project Under Construction](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaW56eG5ubW1kbHMwamx0MzliczA1b3hnNm1sdHB5dmViY3hpOGhsbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xZsLh7B3KMMyUptD9D/giphy.gif)
+This project is a comprehensive data analysis study that examines the impact of vaccination status on death rates during the COVID-19 pandemic and explores the distribution of global vaccine manufacturers. The analyses include:
 
-> **Heads up!** This project is currently under active development.  
-> Some sections may be incomplete or subject to change.  
-> We appreciate your patience while we work on making this awesome!
+1. **US Data**:
+   - Examination of death rates among unvaccinated, fully vaccinated without booster, and fully vaccinated with bivalent booster groups.
+   - Time series analysis, lag correlation, and statistical tests (ANOVA and Tukey HSD).
 
----
+2. **Global Data**:
+   - Distribution of final (cumulative) vaccine doses by manufacturers (Pfizer, Moderna, AstraZeneca, etc.) across countries.
 
-# CodeGenesis Project
+3. **Combined Analysis**:
+   - Cross-validation by merging US and global data.
 
-A brief one-liner describing the project.
+## Installation and Usage
 
-## Table of Contents
+### Requirements
+- Python 3.8+
+- MongoDB (local or cloud)
+- pip or conda
 
-- [Introduction](#introduction)
-- [Directory Structure](#directory-structure)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Data Explanation](#data-explanation)
-- [Notebooks](#notebooks)
-- [Reports](#reports)
-- [License](#license)
+### Installation Steps
+1. Clone the repository:
 
----
+    ```sh
+    git clone https://github.com/your-username/CodeGenesisTeam.git
+    cd CodeGenesisTeam
+    ```
 
-## Introduction
+2. Install dependencies:
 
-Short introduction about the project goals, scope, and any relevant background information.
+    ```sh
+    pip install -r requirements.txt
+    ```
 
----
+    or if using conda:
 
-## Directory Structure
+    ```sh
+    conda install --file requirements.txt
+    ```
 
-Below is a high-level overview of the project’s structure:
+3. Set up the `.env` file:
+   Create a `.env` file in the project root directory and configure it as follows:
 
-```markdown
-/CodeGenesisTeam/                     # Root project directory
+    ```sh
+    MONGO_URI="mongodb+srv://username:password@cluster.mongodb.net"
+    DATABASE_NAME="codegenesis_db"
+    ```
+
+4. Load data into MongoDB:
+   Run the `data_to_mongo.py` script to load raw data into MongoDB:
+
+    ```sh
+    python data_to_mongo.py
+    ```
+
+## Project Structure
+
+```
+CodeGenesis-TEAM/
 │
-├── data/                             # Data directory
-│   ├── raw/                          # Raw (original) datasets
-│   │   ├── covid-vaccinations-vs-covid-death-rate.csv
+├── data/                              # Data directory
+│   ├── raw/                           # Raw data
 │   │   ├── covid-vaccine-doses-by-manufacturer.csv
-│   │   ├── OECD_health_expenditure.csv
 │   │   ├── united-states-rates-of-covid-19-deaths-by-vaccination-status.csv
 │   │   ├── readme_for_vaccination-status.md
-│   │   ├── readme_for_covid-vaccine-doses-by-manufacturer.md
-│   │   └── readme_for_covid-vaccinations-vs-death-rate.md
-│   │
-│   ├── processed/                    # Processed data
-│   │   ├── merged_dataset.csv        # Cleaned and merged dataset
-│   │   └── README.md                 # Documentation for data processing steps
+│   └── processed/                     # Processed data
+│       ├── cleaned_covid_vacc_manufacturer.csv
+│       ├── cleaned_us_death_rates.csv
+│       ├── cleaned_us_vaccination_rates.csv
 │
-├── notebooks/                        # Jupyter Notebooks directory
-│   ├── 01_data_exploration.ipynb     # Initial data exploration and analysis
-│   ├── 02_data_to_mongo.ipynb        # Loading data into MongoDB
-│   ├── 03_data_cleaning.ipynb        # Cleaning and preprocessing data
-│   ├── 04_analysis.ipynb             # Data analysis and results
-│   ├── 05_visualization.ipynb        # Visualizing results
-│   └── 06_final_report.ipynb         # Final report and conclusions
 │
-├── reports/                          # Project reports and documentation
-│   ├── project_report.pdf            # Final project report
-│   └── project_journal.md            # Project journal (daily log)
+├── notebooks/                         # Jupyter Notebooks
+│   ├── data_to_mongo.py                   # Load data into MongoDB
+│   ├── main.ipynb                     # Main analysis file
+│   └── additional_notebooks.ipynb     # Additional analyses
 │
-├── .env                              # Environment variables (MongoDB credentials)
-├── README.md                         # Main README file with project overview
-└── requirements.txt                  # Python dependencies list
-```
-
-Note:
-- Adjust file paths, names, and descriptions as your project evolves.
-- The `.env` file typically contains secret credentials like database connection strings. Make sure not to commit secrets to version control in a public repository.
-
-## Getting Started
-
-### Prerequisites
-- Python 3.8+ (or your chosen version)
-- pip or conda for Python package management
-- A local or remote MongoDB instance (if needed)
-
-### Installation
-1. Clone this repository:
-```sh
-git clone https://github.com/your-username/CodeGenesisTeam.git
-```
-
-2. Navigate to the project directory:
-```sh
-cd CodeGenesisTeam
-```
-
-3. Install required packages:
-```sh
-pip install -r requirements.txt
-```
-or (if using conda):
-```sh
-conda install --file requirements.txt
-```
-
-4. Set up your environment variables in `.env` (e.g., `MONGO_URI`, `DATABASE_NAME`):
-```dotenv
-MONGO_URI="mongodb+srv://username:password@cluster.example.mongodb.net"
-DATABASE_NAME="codegenesis_db"
+├── reports/                           # Reports and logs
+│   ├── logs/                          # Log files
+│   └── final_report
+│
+├── .env                               # Environment variables
+├── README.md                          # Project description file
+└── requirements.txt                   # Python dependencies
 ```
 
 ## Usage
-1. **Data Exploration:**
-   - Open `notebooks/01_data_exploration.ipynb` to get a quick look at the raw data.
-2. **Data to MongoDB:**
-   - Run `notebooks/02_data_to_mongo.ipynb` to load data into MongoDB.
-3. **Data Cleaning:**
-   - Use `notebooks/03_data_cleaning.ipynb` for data preprocessing and cleaning steps.
-4. **Analysis & Visualization:**
-   - Explore `04_analysis.ipynb` and `05_visualization.ipynb` for key insights and charts.
-5. **Final Report:**
-   - All major findings and conclusions are compiled in `06_final_report.ipynb`.
+1. **Data Exploration and Cleaning**:
+   - Open `main.ipynb` with Jupyter Notebook to explore and clean the data.
 
-## Data Explanation
-- **Raw Datasets:** Located under `data/raw/`. These files are the original unaltered datasets.
-- **Processed Data:** Located under `data/processed/`. Contains cleaned and merged datasets.
+2. **Analysis and Visualization**:
+   - The project includes statistical tests (ANOVA, Tukey HSD), time series analysis, and lag correlations.
+   - Outputs are visualized graphically (Matplotlib, Seaborn).
 
-Refer to each `readme_for_*.md` file in `data/raw/` for detailed information on the specific datasets, their sources, and any usage caveats.
+3. **Reporting Results**:
+   - Key findings are summarized in `reports/final_report.md`.
 
-## Notebooks
+## Sample Outputs
 
-| Notebook               | Description                                      |
-|------------------------|--------------------------------------------------|
-| `01_data_exploration`  | Initial exploration of the raw datasets          |
-| `02_data_to_mongo`     | Scripts/Notebooks to load data into MongoDB      |
-| `03_data_cleaning`     | Data cleaning and preprocessing                  |
-| `04_analysis`          | Advanced analysis and hypothesis testing         |
-| `05_visualization`     | Charts, plots, and dashboards                    |
-| `06_final_report`      | Consolidated summary of all findings             |
+### Time Series Analysis
 
-Remember to check out the docstrings and code comments for additional context!
-
-## Reports
-- `project_report.pdf`: A final comprehensive PDF covering project objectives, methodology, and results.
-- `project_journal.md`: A running log of day-to-day progress and major decisions throughout the project lifecycle.
+### Lag Analysis
 
 ## License
 
-Specify your project license here (e.g., MIT, Apache 2.0, GPL, etc.).
+This project is licensed under the MIT License. For more information, see the LICENSE file.
 
-### MIT License
-
-MIT License
-
-```
-MIT License
-
-Copyright (c) 2024 CodeGenesis Team
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the “Software”), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is furnished
-to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-```
-
-Enjoy exploring the CodeGenesis Project!  
-Feel free to contribute, open issues, or suggest improvements.
+This `README.md` provides a comprehensive and accessible starting point for your project. Ensure that the file structure matches your actual directory layout.
