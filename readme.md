@@ -1,111 +1,143 @@
 
-# CodeGenesis TEAM: COVID-19 Data Analysis
+# CodeGenesis TEAM: Comprehensive COVID-19 Data Analysis
 
-## Project Description
+## 📖 Project Overview
 
-This project is a comprehensive data analysis study that examines the impact of vaccination status on death rates during the COVID-19 pandemic and explores the distribution of global vaccine manufacturers. The analyses include:
+This project aims to analyze the impact of vaccination on death rates during the COVID-19 pandemic, providing insights into the effectiveness of vaccines and their distribution worldwide. It combines statistical analyses, time-series evaluations, and cross-regional comparisons using rich datasets.
 
-1. **US Data**:
-   - Examination of death rates among unvaccinated, fully vaccinated without booster, and fully vaccinated with bivalent booster groups.
-   - Time series analysis, lag correlation, and statistical tests (ANOVA and Tukey HSD).
+Key questions addressed include:
+- What are the death rate trends for unvaccinated, vaccinated without boosters, and bivalent booster groups in the US?
+- How do vaccination doses per 100 people vary across countries and vaccine manufacturers?
+- What correlations exist between vaccination rates and death rates globally?
 
-2. **Global Data**:
-   - Distribution of final (cumulative) vaccine doses by manufacturers (Pfizer, Moderna, AstraZeneca, etc.) across countries.
+## 🧰 Installation and Setup
 
-3. **Combined Analysis**:
-   - Cross-validation by merging US and global data.
-
-## Installation and Usage
-
-### Requirements
+### Prerequisites
 - Python 3.8+
-- MongoDB (local or cloud)
-- pip or conda
+- MongoDB (local or cloud-based instance)
+- Required libraries listed in `requirements.txt`
 
 ### Installation Steps
-1. Clone the repository:
-
-    ```sh
+1. **Clone the repository**:
+    ```bash
     git clone https://github.com/your-username/CodeGenesisTeam.git
     cd CodeGenesisTeam
     ```
 
-2. Install dependencies:
-
-    ```sh
+2. **Install dependencies**:
+    ```bash
     pip install -r requirements.txt
     ```
 
-    or if using conda:
-
-    ```sh
-    conda install --file requirements.txt
-    ```
-
-3. Set up the `.env` file:
-   Create a `.env` file in the project root directory and configure it as follows:
-
-    ```sh
-    MONGO_URI="mongodb+srv://username:password@cluster.mongodb.net"
+3. **Configure MongoDB in `.env`**:
+    ```plaintext
+    MONGO_URI="your_mongo_connection_uri"
     DATABASE_NAME="codegenesis_db"
     ```
 
-4. Load data into MongoDB:
-   Run the `data_to_mongo.py` script to load raw data into MongoDB:
-
-    ```sh
-    python data_to_mongo.py
+4. **Load raw data into MongoDB**:
+    ```bash
+    python scripts/data_to_mongo.py
     ```
 
-## Project Structure
+5. **Begin analysis using `main.ipynb` or `pipeline_analysis.py`**.
+
+## 📂 Project Structure
 
 ```
 CodeGenesis-TEAM/
+├── data/
+│   ├── raw/                 # Original datasets
+│   ├── processed/           # Cleaned datasets
 │
-├── data/                              # Data directory
-│   ├── raw/                           # Raw data
-│   │   ├── covid-vaccine-doses-by-manufacturer.csv
-│   │   ├── united-states-rates-of-covid-19-deaths-by-vaccination-status.csv
-│   │   ├── readme_for_vaccination-status.md
-│   └── processed/                     # Processed data
-│       ├── cleaned_covid_vacc_manufacturer.csv
-│       ├── cleaned_us_death_rates.csv
-│       ├── cleaned_us_vaccination_rates.csv
+├── notebooks/               # Jupyter Notebooks for analysis
+├── scripts/                 # Python scripts
+├── reports/                 # Logs and final reports
+│   ├── logs/                # Execution logs
+│   ├── final_report.md      # Summary of findings
 │
-│
-├── notebooks/                         # Jupyter Notebooks
-│   ├── data_to_mongo.py                   # Load data into MongoDB
-│   ├── main.ipynb                     # Main analysis file
-│   └── additional_notebooks.ipynb     # Additional analyses
-│
-├── reports/                           # Reports and logs
-│   ├── logs/                          # Log files
-│   └── final_report
-│
-├── .env                               # Environment variables
-├── README.md                          # Project description file
-└── requirements.txt                   # Python dependencies
+├── .env                     # MongoDB credentials
+├── README.md                # Project documentation
+├── requirements.txt         # Python dependencies
+└── LICENSE                  # Licensing information
 ```
 
-## Usage
-1. **Data Exploration and Cleaning**:
-   - Open `main.ipynb` with Jupyter Notebook to explore and clean the data.
+## 📊 Analytical Highlights
 
-2. **Analysis and Visualization**:
-   - The project includes statistical tests (ANOVA, Tukey HSD), time series analysis, and lag correlations.
-   - Outputs are visualized graphically (Matplotlib, Seaborn).
+### 1️⃣ US Data Analysis
 
-3. **Reporting Results**:
-   - Key findings are summarized in `reports/final_report.md`.
+**Data Source**: `united-states-rates-of-covid-19-deaths-by-vaccination-status.csv`
 
-## Sample Outputs
+**Key Findings**:
+- **ANOVA and Tukey HSD Tests**:
+  - Significant differences in death rates among unvaccinated, vaccinated without booster, and vaccinated with bivalent booster groups.
+  - Post-hoc analysis revealed that unvaccinated individuals exhibited the highest death rates.
+- **Time-Series and Lag Analysis**:
+  - Death rates peaked during early pandemic phases and declined with vaccine rollouts.
+  - Lag correlations showed weak negative associations between unvaccinated and bivalent groups.
 
-### Time Series Analysis
+### 2️⃣ Global Data Analysis
 
-### Lag Analysis
+**Data Source**: `covid-vaccinations-vs-covid-death-rate.csv`
 
-## License
+**Key Insights**:
+- **Cumulative Vaccination Rates**:
+  - Highly vaccinated countries showed reduced death rates over time.
+  - Significant regional disparities in vaccination coverage.
+- **Correlation Analysis**:
+  - Strong negative correlation between doses per hundred and death rates.
 
-This project is licensed under the MIT License. For more information, see the LICENSE file.
+### 3️⃣ Manufacturer Data Analysis
 
-This `README.md` provides a comprehensive and accessible starting point for your project. Ensure that the file structure matches your actual directory layout.
+**Data Source**: `covid-vaccine-doses-by-manufacturer.csv`
+
+**Highlights**:
+- Pfizer and Moderna accounted for the majority of administered doses globally.
+- AstraZeneca had a stronger presence in low-to-middle-income countries.
+- Stacked bar plots visualized manufacturer contributions by region.
+
+## 🛠️ Key Features and Scripts
+
+1. **Data Cleaning and Loading**
+   - **Script**: `data_to_mongo.py`
+   - Ensures raw datasets are cleaned and structured for MongoDB ingestion.
+
+2. **Statistical Analysis**
+   - Implements:
+     - T-tests: Comparing two groups (e.g., unvaccinated vs. bivalent).
+     - ANOVA: Evaluating differences across three groups.
+     - Post-hoc Tests: Tukey HSD for detailed pairwise comparisons.
+
+3. **Visualization**
+   - Time-series plots and cumulative bar charts for intuitive trend analysis.
+
+4. **Combined Analysis**
+   - Cross-referencing US and global datasets for validation and synthesis.
+
+## 📈 Sample Visualizations
+
+1. **US Death Rate Trends**
+   - Compares death rates for unvaccinated, vaccinated without boosters, and bivalent booster groups over time.
+
+2. **Global Vaccination Trends**
+   - Displays vaccination rates vs. death rates for various countries.
+
+3. **Manufacturer Distribution**
+   - Highlights Pfizer, Moderna, and AstraZeneca’s contribution globally.
+   ![img.png](img.png)
+
+## 🎯 Key Insights
+1. Vaccination significantly reduces death rates, especially with booster doses.
+2. Global vaccination distribution is uneven, emphasizing the need for equitable access.
+3. Manufacturer contributions vary by region, with some focusing on high-income countries and others on emerging markets.
+
+## 🚀 Next Steps
+- Incorporate more datasets (e.g., hospitalization rates).
+- Refine analyses for emerging variants.
+- Enhance visualizations with interactive dashboards.
+
+## 📜 License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+For further queries, feel free to open an issue in the repository.
