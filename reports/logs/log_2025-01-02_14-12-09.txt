@@ -1,0 +1,34 @@
+2025-01-02 14:12:09 - Veri işleme işlemi başlatıldı.
+2025-01-02 14:12:24 - 'covid_vacc_death_rate' koleksiyonundan 447729 kayıt alındı.
+2025-01-02 14:12:24 - 'Day' sütunu tarih formatına çevrildi.
+2025-01-02 14:12:24 - 'COVID_19_doses_cumulative_per_hundred' sütunundaki NaN değerler Entity bazında ortalama ile dolduruldu.
+2025-01-02 14:12:24 - 'Daily_new_confirmed_deaths_due_to_COVID_19_per_million_people_rolling_7_day_average_right_aligned' sütunundaki NaN değerler Entity bazında ortalama ile dolduruldu.
+2025-01-02 14:12:24 - Temizlenen verinin ilk 5 satırı:
+2025-01-02 14:12:24 - Temizlenen verinin veri tipleri:
+2025-01-02 14:12:24 - Temizlenen verideki boş değer sayıları:
+2025-01-02 14:12:24 - '../data/processed/cleaned_covid_vacc_death_rate.csv' dosyası silindi.
+2025-01-02 14:12:25 - '../data/processed/cleaned_covid_vacc_death_rate.csv' dosyası başarıyla oluşturuldu.
+2025-01-02 14:12:30 - 'cleaned_covid_vacc_death_rate' verisi MongoDB'ye yüklenmedi.
+2025-01-02 14:12:30 - 'us_death_rates' koleksiyonundan 650 kayıt alındı.
+2025-01-02 14:12:30 - 'Day' sütunu tarih formatına çevrildi.
+2025-01-02 14:12:30 - 'Death_rate_weekly_of_unvaccinated_people_United_States_by_age' sütunundaki NaN değerler Entity bazında ortalama ile dolduruldu.
+2025-01-02 14:12:30 - 'Death_rate_weekly_of_fully_vaccinated_people_without_bivalent_booster_United_States_by_age' sütunundaki NaN değerler Entity bazında ortalama ile dolduruldu.
+2025-01-02 14:12:30 - 'Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age' sütunundaki NaN değerler Entity bazında ortalama ile dolduruldu.
+2025-01-02 14:12:30 - 'Code' sütunu kaldırıldı.
+2025-01-02 14:12:30 - Temizlenen verinin ilk 5 satırı:
+2025-01-02 14:12:30 - Temizlenen verinin veri tipleri:
+2025-01-02 14:12:30 - Temizlenen verideki boş değer sayıları:
+2025-01-02 14:12:30 - '../data/processed/cleaned_us_death_rates.csv' dosyası silindi.
+2025-01-02 14:12:30 - '../data/processed/cleaned_us_death_rates.csv' dosyası başarıyla oluşturuldu.
+2025-01-02 14:12:33 - 'cleaned_us_death_rates' verisi MongoDB'ye yüklenmedi.
+2025-01-02 14:12:38 - 'covid_vacc_manufacturer' koleksiyonundan 59224 kayıt alındı.
+2025-01-02 14:12:38 - 'Day' sütunu tarih formatına çevrildi.
+2025-01-02 14:12:38 - 'Manufacturer_Column_1' sütunu bulunamadı ve işlenemedi.
+2025-01-02 14:12:38 - 'Manufacturer_Column_2' sütunu bulunamadı ve işlenemedi.
+2025-01-02 14:12:38 - Temizlenen verinin ilk 5 satırı:
+2025-01-02 14:12:38 - Temizlenen verinin veri tipleri:
+2025-01-02 14:12:38 - Temizlenen verideki boş değer sayıları:
+2025-01-02 14:12:38 - '../data/processed/cleaned_covid_vacc_manufacturer.csv' dosyası silindi.
+2025-01-02 14:12:38 - '../data/processed/cleaned_covid_vacc_manufacturer.csv' dosyası başarıyla oluşturuldu.
+2025-01-02 14:12:40 - 'cleaned_covid_vacc_manufacturer' verisi MongoDB'ye yüklenmedi.
+2025-01-02 14:12:40 - Tüm veri işleme işlemleri tamamlandı.

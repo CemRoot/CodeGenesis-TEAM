@@ -1,171 +1,139 @@
 
+# CodeGenesis TEAM: Comprehensive COVID-19 Data Analysis
 
-# 🚧 **Project Under Construction** 🚧
+## 📖 Project Overview
 
-![Project Under Construction](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaW56eG5ubW1kbHMwamx0MzliczA1b3hnNm1sdHB5dmViY3hpOGhsbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xZsLh7B3KMMyUptD9D/giphy.gif)
+This project aims to analyze the impact of vaccination on death rates during the COVID-19 pandemic, providing insights into the effectiveness of vaccines and their distribution worldwide. It combines statistical analyses, time-series evaluations, and cross-regional comparisons using rich datasets.
 
-> **Heads up!** This project is currently under active development.  
-> Some sections may be incomplete or subject to change.  
-> We appreciate your patience while we work on making this awesome!
+Key questions addressed include:
+- What are the death rate trends for unvaccinated, vaccinated without boosters, and bivalent booster groups in the US?
+- How do vaccination doses per 100 people vary across countries and vaccine manufacturers?
+- What correlations exist between vaccination rates and death rates globally?
 
----
-
-# CodeGenesis Project
-
-A brief one-liner describing the project.
-
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Directory Structure](#directory-structure)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Data Explanation](#data-explanation)
-- [Notebooks](#notebooks)
-- [Reports](#reports)
-- [License](#license)
-
----
-
-## Introduction
-
-Short introduction about the project goals, scope, and any relevant background information.
-
----
-
-## Directory Structure
-
-Below is a high-level overview of the project’s structure:
-
-```markdown
-/CodeGenesisTeam/                     # Root project directory
-│
-├── data/                             # Data directory
-│   ├── raw/                          # Raw (original) datasets
-│   │   ├── covid-vaccinations-vs-covid-death-rate.csv
-│   │   ├── covid-vaccine-doses-by-manufacturer.csv
-│   │   ├── united-states-rates-of-covid-19-deaths-by-vaccination-status.csv
-│   │   ├── readme_for_vaccination-status.md
-│   │   ├── readme_for_covid-vaccine-doses-by-manufacturer.md
-│   │   └── readme_for_covid-vaccinations-vs-death-rate.md
-│   │
-│   ├── processed/                    # Processed data Cleaned and merged dataset
-│   │   ├── covid_vacc_death_rate_cleaned.csv
-│   │   ├── covid_vacc_doses_manufacturer_cleaned.csv
-│   │   └── us_covid_death_vaccination_status_cleaned.csv
-│
-├── notebooks/                        # Jupyter Notebooks directory
-│   ├── main.ipynb                    # Main notebook for the project
-│   ├── data_to_mongo.py.          # Loading data into MongoDB
-│
-├── reports/                          # Project reports and documentation
-│   ├── logs/                         # Log files (optional)
-│   │     ├── data_cleaning.json       # Data cleaning log
-│   │     ├── data_migration.json      # Data migration log
-│   │     ├── mongodb_upload_log.json # MongoDB upload log
-│   ├── project_report.pdf            # Final project report
-│   └── project_journal.md            # Project journal (daily log)
-│
-├── .env                              # Environment variables (MongoDB credentials)
-├── README.md                         # Main README file with project overview
-└── requirements.txt                  # Python dependencies list
-```
-
-Note:
-- Adjust file paths, names, and descriptions as your project evolves.
-- The `.env` file typically contains secret credentials like database connection strings. Make sure not to commit secrets to version control in a public repository.
-
-## Getting Started
+## 🧰 Installation and Setup
 
 ### Prerequisites
-- Python 3.8+ (or your chosen version)
-- pip or conda for Python package management
-- A local or remote MongoDB instance (if needed)
+- Python 3.8+
+- MongoDB (local or cloud-based instance)
+- Required libraries listed in `requirements.txt`
 
-### Installation
-1. Clone this repository:
-```sh
-git clone https://github.com/your-username/CodeGenesisTeam.git
-```
+### Installation Steps
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/CodeGenesisTeam.git
+    cd CodeGenesisTeam
+    ```
 
-2. Navigate to the project directory:
-```sh
-cd CodeGenesisTeam
-```
+2. **Install dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-3. Install required packages:
-```sh
-pip install -r requirements.txt
-```
-or (if using conda):
-```sh
-conda install --file requirements.txt
-```
+3. **Configure MongoDB in `.env`**:
+    ```plaintext
+    MONGO_URI="your_mongo_connection_uri"
+    DATABASE_NAME="codegenesis_db"
+    ```
 
-4. Set up your environment variables in `.env` (e.g., `MONGO_URI`, `DATABASE_NAME`):
-```dotenv
-MONGO_URI="mongodb+srv://username:password@cluster.example.mongodb.net"
-DATABASE_NAME="codegenesis_db"
-```
+4. **Load raw data into MongoDB**:
+    ```bash
+    python scripts/data_to_mongo.py
+    ```
 
-## Usage
-1. **Data Exploration:**
-   - Open `notebooks/01_data_exploration.ipynb` to get a quick look at the raw data.
-2. **Data to MongoDB:**
-   - Run `notebooks/02_data_to_mongo.ipynb` to load data into MongoDB.
-3. **Data Cleaning:**
-   - Use `notebooks/03_data_cleaning.ipynb` for data preprocessing and cleaning steps.
-4. **Analysis & Visualization:**
-   - Explore `04_analysis.ipynb` and `05_visualization.ipynb` for key insights and charts.
-5. **Final Report:**
-   - All major findings and conclusions are compiled in `06_final_report.ipynb`.
+5. **Begin analysis using `main.ipynb` or `pipeline_analysis.py`**.
 
-## Data Explanation
-- **Raw Datasets:** Located under `data/raw/`. These files are the original unaltered datasets.
-- **Processed Data:** Located under `data/processed/`. Contains cleaned and merged datasets.
-
-Refer to each `readme_for_*.md` file in `data/raw/` for detailed information on the specific datasets, their sources, and any usage caveats.
-
-## Notebooks
-
-| Notebook               | Description                                      |
-|------------------------|--------------------------------------------------|
-| `01_data_exploration`  | Initial exploration of the raw datasets          |
-| `02_data_to_mongo`     | Scripts/Notebooks to load data into MongoDB      |
-| `03_data_cleaning`     | Data cleaning and preprocessing                  |
-| `04_analysis`          | Advanced analysis and hypothesis testing         |
-| `05_visualization`     | Charts, plots, and dashboards                    |
-| `06_final_report`      | Consolidated summary of all findings             |
-
-Remember to check out the docstrings and code comments for additional context!
-
-## Reports
-- `project_report.pdf`: A final comprehensive PDF covering project objectives, methodology, and results.
-- `project_journal.md`: A running log of day-to-day progress and major decisions throughout the project lifecycle.
-
-## License
-
-Specify your project license here (e.g., MIT, Apache 2.0, GPL, etc.).
-
-### MIT License
-
-MIT License
+## 📂 Project Structure
 
 ```
-MIT License
-
-Copyright (c) 2024 CodeGenesis Team
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the “Software”), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is furnished
-to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+CodeGenesis-TEAM/
+├── data/
+│   ├── raw/                 # Original datasets
+│   ├── processed/           # Cleaned datasets
+│
+├── notebooks/               # Jupyter Notebooks for analysis
+├── scripts/                 # Python scripts
+├── reports/                 # Logs and final reports
+│   ├── logs/                # Execution logs
+│   ├── final_report.md      # Summary of findings
+│
+├── .env                     # MongoDB credentials
+├── README.md                # Project documentation
+├── requirements.txt         # Python dependencies
+└── LICENSE                  # Licensing information
 ```
 
-Enjoy exploring the CodeGenesis Project!  
-Feel free to contribute, open issues, or suggest improvements.
+## 📊 Analytical Highlights
+
+### 1️⃣ US Data Analysis
+
+**Data Source**: `united-states-rates-of-covid-19-deaths-by-vaccination-status.csv`
+
+**Key Findings**:
+- **ANOVA and Tukey HSD Tests**:
+  - Significant differences in death rates among unvaccinated, vaccinated without booster, and vaccinated with bivalent booster groups.
+  - Post-hoc analysis revealed that unvaccinated individuals exhibited the highest death rates.
+- **Time-Series and Lag Analysis**:
+  - Death rates peaked during early pandemic phases and declined with vaccine rollouts.
+  - Lag correlations showed weak negative associations between unvaccinated and bivalent groups.
+
+### 2️⃣ Global Data Analysis
+
+**Data Source**: `covid-vaccinations-vs-covid-death-rate.csv`
+
+**Key Insights**:
+- **Cumulative Vaccination Rates**:
+  - Highly vaccinated countries showed reduced death rates over time.
+  - Significant regional disparities in vaccination coverage.
+- **Correlation Analysis**:
+  - Strong negative correlation between doses per hundred and death rates.
+
+### 3️⃣ Manufacturer Data Analysis
+
+**Data Source**: `covid-vaccine-doses-by-manufacturer.csv`
+
+**Highlights**:
+- Pfizer and Moderna accounted for the majority of administered doses globally.
+- AstraZeneca had a stronger presence in low-to-middle-income countries.
+- Stacked bar plots visualized manufacturer contributions by region.
+
+## 🛠️ Key Features and Scripts
+
+1. **Data Cleaning and Loading**
+   - **Script**: `data_to_mongo.py`
+   - Ensures raw datasets are cleaned and structured for MongoDB ingestion.
+
+2. **Statistical Analysis**
+   - Implements:
+     - T-tests: Comparing two groups (e.g., unvaccinated vs. bivalent).
+     - ANOVA: Evaluating differences across three groups.
+     - Post-hoc Tests: Tukey HSD for detailed pairwise comparisons.
+
+3. **Visualization**
+   - Time-series plots and cumulative bar charts for intuitive trend analysis.
+
+4. **Combined Analysis**
+   - Cross-referencing US and global datasets for validation and synthesis.
+
+## 📈 Sample Visualizations
+
+1. **US Death Rate Trends**
+   - Compares death rates for unvaccinated, vaccinated without boosters, and bivalent booster groups over time.
+   <img src="img/img_1.png" alt="US Death Rate Trends" width="500"/>
+
+2. **Global Vaccination Trends**
+   - Displays vaccination rates vs. death rates for various countries.
+   <img src="img/img_3.png" alt="Global Vaccination Trends" width="500"/>
+
+3. **Manufacturer Distribution**
+   - Highlights Pfizer, Moderna, and AstraZeneca’s contribution globally.
+   <img src="img/img_2.png" alt="Manufacturer Distribution" width="500"/>
+## 🎯 Key Insights
+1. Vaccination significantly reduces death rates, especially with booster doses.
+2. Global vaccination distribution is uneven, emphasizing the need for equitable access.
+3. Manufacturer contributions vary by region, with some focusing on high-income countries and others on emerging markets.
+
+## 📜 License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+For further queries, feel free to open an issue in the repository.

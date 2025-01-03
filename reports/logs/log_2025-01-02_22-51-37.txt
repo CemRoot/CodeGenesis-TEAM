@@ -1,0 +1,90 @@
+2025-01-02 22:51:49 - 'cleaned_covid_vacc_death_rate' koleksiyonundan özet istatistikler oluşturuluyor...
+2025-01-02 22:51:54 - 'cleaned_covid_vacc_manufacturer' koleksiyonundan özet istatistikler oluşturuluyor...
+2025-01-02 22:51:54 - 'cleaned_us_death_rates' koleksiyonundan özet istatistikler oluşturuluyor...
+2025-01-02 23:03:34 - 'cleaned_covid_vacc_death_rate' koleksiyonundan zaman serisi analizi yapılıyor...
+2025-01-02 23:03:35 - 'cleaned_us_death_rates' koleksiyonundan zaman serisi analizi yapılıyor...
+2025-01-02 23:08:16 - 'cleaned_covid_vacc_death_rate' koleksiyonundan zaman serisi analizi yapılıyor...
+2025-01-02 23:09:00 - 'cleaned_covid_vacc_death_rate' koleksiyonundan zaman serisi analizi yapılıyor...
+2025-01-02 23:09:00 - 'cleaned_us_death_rates' koleksiyonundan zaman serisi analizi yapılıyor...
+2025-01-02 23:11:27 - 'cleaned_covid_vacc_death_rate' koleksiyonundan zaman serisi analizi yapılıyor...
+2025-01-02 23:11:27 - 'cleaned_us_death_rates' koleksiyonundan zaman serisi analizi yapılıyor...
+2025-01-02 23:13:00 - 'cleaned_covid_vacc_manufacturer' koleksiyonunda bölgesel/kategorik analiz yapılıyor...
+2025-01-02 23:13:00 - Gruplama yapılacak 'World_regions_according_to_OWID' sütunu bulunamadı veya belirtilmedi.
+2025-01-02 23:14:42 - 'cleaned_covid_vacc_manufacturer' koleksiyonunda bölgesel/kategorik analiz yapılıyor...
+2025-01-02 23:14:42 - Gruplama yapılacak 'World_regions_according_to_OWID' sütunu bulunamadı veya belirtilmedi.
+2025-01-02 23:18:03 - 'cleaned_covid_vacc_manufacturer' koleksiyonunda 'Entity' bazında grup analizi yapılıyor...
+2025-01-02 23:21:48 - 'cleaned_covid_vacc_manufacturer' koleksiyonunda kümülatif (final) analiz yapılıyor...
+2025-01-02 23:28:15 - 'cleaned_covid_vacc_manufacturer' koleksiyonunda gelişmiş analiz yapılıyor...
+2025-01-02 23:29:21 - 'cleaned_covid_vacc_manufacturer' koleksiyonunda gelişmiş analiz yapılıyor...
+2025-01-02 23:29:21 - Veriler nüfusa göre normalize edildi.
+2025-01-02 23:29:21 - Veriler kıta bazında gruplandı.
+2025-01-02 23:33:46 - Nüfus verisi eksik olan ülkeler: {'Nepal', 'Japan', 'Ireland', 'Finland', 'Belgium', 'Hungary', 'Norway', 'Sweden', 'Austria', 'Spain', 'Peru', 'South Korea', 'Netherlands', 'Italy', 'Romania', 'Luxembourg', 'Slovakia', 'Slovenia', 'Portugal', 'Lithuania', 'Denmark', 'Iceland', 'Estonia', 'Hong Kong', 'Czechia', 'Latvia', 'Chile', 'Poland', 'Bulgaria', 'European Union (27)', 'Ecuador', 'Ukraine', 'Croatia', 'Switzerland', 'Liechtenstein', 'Cyprus', 'Uruguay', 'South Africa', 'Malta'}
+2025-01-02 23:34:28 - 'cleaned_covid_vacc_manufacturer' koleksiyonunda gelişmiş analiz yapılıyor...
+2025-01-02 23:34:28 - Veriler nüfusa göre normalize edildi.
+2025-01-02 23:34:28 - Veriler kıta bazında gruplandı.
+2025-01-02 23:34:59 - 'cleaned_covid_vacc_manufacturer' koleksiyonunda gelişmiş analiz yapılıyor...
+2025-01-02 23:34:59 - Veriler nüfusa göre normalize edildi.
+2025-01-02 23:34:59 - Veriler kıta bazında gruplandı.
+2025-01-02 23:35:10 - 'cleaned_covid_vacc_manufacturer' koleksiyonunda kümülatif (final) analiz yapılıyor...
+2025-01-02 23:40:50 - 'cleaned_covid_vacc_manufacturer' koleksiyonunda kümülatif (final) analiz yapılıyor...
+2025-01-02 23:40:51 - Nüfusu aşan dozlar tespit edildi:
+      Entity  Total_Doses  Population
+0  Argentina    116945814  45000000.0
+1    Austria     20459016   9000000.0
+2    Belgium     29617119  11000000.0
+4     Canada     95155135  38000000.0
+5      Chile     34560792  19000000.0
+6    Croatia      5416888   4100000.0
+7     Cyprus      1795933   1200000.0
+8    Czechia     19047028  10500000.0
+9    Denmark     14105500   5800000.0
+2025-01-02 23:44:56 - 'cleaned_covid_vacc_manufacturer' koleksiyonunda kümülatif (final) analiz yapılıyor...
+2025-01-02 23:44:56 - Nüfusu aşan dozlar tespit edildi:
+      Entity  Total_Doses  Population
+0  Argentina    116945814  45000000.0
+1    Austria     20459016   9000000.0
+2    Belgium     29617119  11000000.0
+4     Canada     95155135  38000000.0
+5      Chile     34560792  19000000.0
+6    Croatia      5416888   4100000.0
+7     Cyprus      1795933   1200000.0
+8    Czechia     19047028  10500000.0
+9    Denmark     14105500   5800000.0
+2025-01-03 09:24:16 - T-test sonucu: t=9.5218, p=0.0000
+2025-01-03 09:24:16 - p=0.0000 < 0.05, İstatistiksel olarak anlamlı fark VAR.
+2025-01-03 09:24:16 - Death_rate_weekly_of_unvaccinated_people_United_States_by_age ortalama: 10.4275, Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age ortalama: 0.2057
+2025-01-03 09:24:16 - T-test sonucu: t=8.0980, p=0.0000
+2025-01-03 09:24:16 - p=0.0000 < 0.05, İstatistiksel olarak anlamlı fark VAR.
+2025-01-03 09:24:16 - Death_rate_weekly_of_fully_vaccinated_people_without_bivalent_booster_United_States_by_age ortalama: 1.4454, Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age ortalama: 0.2057
+2025-01-03 10:16:35 - T-test sonucu: t=9.5218, p=0.0000
+2025-01-03 10:16:35 - p=0.0000 < 0.05, İstatistiksel olarak anlamlı fark VAR.
+2025-01-03 10:16:35 - Death_rate_weekly_of_unvaccinated_people_United_States_by_age ortalama: 10.4275, Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age ortalama: 0.2057
+2025-01-03 10:16:35 - T-test sonucu: t=8.0980, p=0.0000
+2025-01-03 10:16:35 - p=0.0000 < 0.05, İstatistiksel olarak anlamlı fark VAR.
+2025-01-03 10:16:35 - Death_rate_weekly_of_fully_vaccinated_people_without_bivalent_booster_United_States_by_age ortalama: 1.4454, Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age ortalama: 0.2057
+2025-01-03 10:16:39 - T-test sonucu: t=9.5218, p=0.0000
+2025-01-03 10:16:39 - p=0.0000 < 0.05, İstatistiksel olarak anlamlı fark VAR.
+2025-01-03 10:16:39 - Death_rate_weekly_of_unvaccinated_people_United_States_by_age ortalama: 10.4275, Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age ortalama: 0.2057
+2025-01-03 10:16:39 - T-test sonucu: t=8.0980, p=0.0000
+2025-01-03 10:16:39 - p=0.0000 < 0.05, İstatistiksel olarak anlamlı fark VAR.
+2025-01-03 10:16:39 - Death_rate_weekly_of_fully_vaccinated_people_without_bivalent_booster_United_States_by_age ortalama: 1.4454, Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age ortalama: 0.2057
+2025-01-03 10:19:36 - One-Way ANOVA sonucu: F=79.4638, p=0.0000
+2025-01-03 10:19:36 - p=0.0000 < 0.05, Gruplar arasında en az bir fark var.
+2025-01-03 10:19:36 - Post-hoc Tukey HSD sonucu:
+2025-01-03 10:19:36 - Ortalama değerler: Unvaccinated=10.4275, NoBooster=1.4454, Bivalent=0.2057
+2025-01-03 10:28:34 - 'cleaned_us_death_rates' koleksiyonundan veri çekiliyor...
+2025-01-03 10:28:34 - Erken dönem aralığı: ('2021-10-01', '2022-01-31'), Orta dönem: ('2022-02-01', '2022-07-31'), Geç dönem: ('2022-08-01', '2023-12-31')
+2025-01-03 10:28:34 - Toplam veri satırı (filtered): 650
+2025-01-03 10:28:35 - **Lag Korelasyon** Death_rate_weekly_of_unvaccinated_people_United_States_by_age vs. Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age için...
+2025-01-03 10:28:35 - Lag=7 gün => correlation(Death_rate_weekly_of_unvaccinated_people_United_States_by_age, Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age shifted by 7) = -0.0574
+2025-01-03 10:28:35 - Lag=14 gün => correlation(Death_rate_weekly_of_unvaccinated_people_United_States_by_age, Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age shifted by 14) = -0.0552
+2025-01-03 10:28:35 - Lag=21 gün => correlation(Death_rate_weekly_of_unvaccinated_people_United_States_by_age, Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age shifted by 21) = -0.0638
+2025-01-03 10:28:35 - Zaman dönemi + lag korelasyon analizi tamamlandı.
+2025-01-03 10:35:34 - 'cleaned_us_death_rates' koleksiyonundan veri çekiliyor...
+2025-01-03 10:35:34 - Erken dönem aralığı: ('2021-10-01', '2022-01-31'), Orta dönem: ('2022-02-01', '2022-07-31'), Geç dönem: ('2022-08-01', '2023-12-31')
+2025-01-03 10:35:34 - Toplam veri satırı (filtered): 650
+2025-01-03 10:35:35 - **Lag Korelasyon** Death_rate_weekly_of_unvaccinated_people_United_States_by_age vs. Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age için...
+2025-01-03 10:35:35 - Lag=7 gün => correlation(Death_rate_weekly_of_unvaccinated_people_United_States_by_age, Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age shifted by 7) = -0.0574
+2025-01-03 10:35:35 - Lag=14 gün => correlation(Death_rate_weekly_of_unvaccinated_people_United_States_by_age, Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age shifted by 14) = -0.0552
+2025-01-03 10:35:35 - Lag=21 gün => correlation(Death_rate_weekly_of_unvaccinated_people_United_States_by_age, Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age shifted by 21) = -0.0638
+2025-01-03 10:35:35 - Zaman dönemi + lag korelasyon analizi tamamlandı.

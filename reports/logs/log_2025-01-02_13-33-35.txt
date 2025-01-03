@@ -1,0 +1,22 @@
+2025-01-02 13:33:35 - MongoDB bağlantısı başarılı.
+2025-01-02 13:33:35 - İşlem başlıyor.
+2025-01-02 13:33:49 - 'covid_vacc_death_rate' koleksiyonundan 447729 kayıt alındı.
+2025-01-02 13:33:49 - 'Day' sütunu tarih formatına çevrildi.
+2025-01-02 13:33:49 - 'COVID_19_doses_cumulative_per_hundred' sütunundaki NaN değerler Entity bazında ortalama ile dolduruldu.
+2025-01-02 13:33:49 - 'Daily_new_confirmed_deaths_due_to_COVID_19_per_million_people_rolling_7_day_average_right_aligned' sütunundaki NaN değerler Entity bazında ortalama ile dolduruldu.
+2025-01-02 13:33:49 - Temizlenen veri (ilk 5 satır):
+2025-01-02 13:33:49 - Veri tipi bilgisi:
+2025-01-02 13:33:49 - Boş değer sayıları:
+2025-01-02 13:33:50 - '../data/processed/cleaned_covid_vacc_death_rate.csv' dosyası başarıyla oluşturuldu.
+2025-01-02 13:33:53 - 'cleaned_covid_vacc_death_rate' verisi MongoDB'ye yüklenmedi.
+2025-01-02 13:33:54 - 'us_death_rates' koleksiyonundan 650 kayıt alındı.
+2025-01-02 13:33:54 - 'Day' sütunu tarih formatına çevrildi.
+2025-01-02 13:33:54 - 'Death_rate_weekly_of_unvaccinated_people_United_States_by_age' sütunundaki NaN değerler Entity bazında ortalama ile dolduruldu.
+2025-01-02 13:33:54 - 'Death_rate_weekly_of_fully_vaccinated_people_without_bivalent_booster_United_States_by_age' sütunundaki NaN değerler Entity bazında ortalama ile dolduruldu.
+2025-01-02 13:33:54 - 'Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age' sütunundaki NaN değerler Entity bazında ortalama ile dolduruldu.
+2025-01-02 13:33:54 - Temizlenen veri (ilk 5 satır):
+2025-01-02 13:33:54 - Veri tipi bilgisi:
+2025-01-02 13:33:54 - Boş değer sayıları:
+2025-01-02 13:33:54 - '../data/processed/cleaned_us_death_rates.csv' dosyası başarıyla oluşturuldu.
+2025-01-02 13:33:56 - 'cleaned_us_death_rates' verisi MongoDB'ye yüklenmedi.
+2025-01-02 13:33:56 - Tüm işlemler tamamlandı.

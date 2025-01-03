@@ -1,0 +1,2 @@
+2025-01-02 13:20:09 - MongoDB bağlantısı başarılı.
+2025-01-02 13:20:09 - İşlem başlıyor.

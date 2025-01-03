@@ -1,0 +1,3 @@
+2025-01-02 01:38:38 - cleaned_covid_vacc_death_rate koleksiyonundan 447729 kayıt alındı.
+2025-01-02 01:38:39 - Analiz başlatılıyor: Ölüm oranı ve aşılanma oranı ilişkisi.
+2025-01-02 01:38:39 - Çizgi grafiği analizi tamamlandı ve görselleştirme oluşturuldu.

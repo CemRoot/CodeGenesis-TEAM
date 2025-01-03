@@ -1,0 +1,35 @@
+2025-01-03 23:16:39 - Creating summary statistics from 'cleaned_covid_vacc_death_rate' collection...
+2025-01-03 23:16:44 - Creating summary statistics from 'cleaned_covid_vacc_manufacturer' collection...
+2025-01-03 23:16:44 - Creating summary statistics from 'cleaned_us_death_rates' collection...
+2025-01-03 23:17:12 - Performing time series analysis from 'cleaned_covid_vacc_death_rate' collection...
+2025-01-03 23:17:12 - Performing time series analysis from 'cleaned_us_death_rates' collection...
+2025-01-03 23:17:24 - Performing cumulative (final) analysis on 'cleaned_covid_vacc_manufacturer' collection...
+2025-01-03 23:17:24 - Doses exceeding population detected:
+      Entity  Total_Doses  Population
+0  Argentina    116945814  45000000.0
+1    Austria     20459016   9000000.0
+2    Belgium     29617119  11000000.0
+4     Canada     95155135  38000000.0
+5      Chile     34560792  19000000.0
+6    Croatia      5416888   4100000.0
+7     Cyprus      1795933   1200000.0
+8    Czechia     19047028  10500000.0
+9    Denmark     14105500   5800000.0
+2025-01-03 23:17:34 - T-test result: t=9.5218, p=0.0000
+2025-01-03 23:17:34 - p=0.0000 < 0.05, There IS a statistically significant difference.
+2025-01-03 23:17:34 - Death_rate_weekly_of_unvaccinated_people_United_States_by_age mean: 10.4275, Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age mean: 0.2057
+2025-01-03 23:17:34 - T-test result: t=8.0980, p=0.0000
+2025-01-03 23:17:34 - p=0.0000 < 0.05, There IS a statistically significant difference.
+2025-01-03 23:17:34 - Death_rate_weekly_of_fully_vaccinated_people_without_bivalent_booster_United_States_by_age mean: 1.4454, Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age mean: 0.2057
+2025-01-03 23:17:41 - One-Way ANOVA result: F=79.4638, p=0.0000
+2025-01-03 23:17:41 - p=0.0000 < 0.05, There is at least one difference between groups.
+2025-01-03 23:17:41 - Post-hoc Tukey HSD result:
+2025-01-03 23:17:41 - Mean values: Unvaccinated=10.4275, NoBooster=1.4454, Bivalent=0.2057
+2025-01-03 23:17:47 - Fetching data from 'cleaned_us_death_rates' collection...
+2025-01-03 23:17:47 - Early period range: ('2021-10-01', '2022-01-31'), Mid period: ('2022-02-01', '2022-07-31'), Late period: ('2022-08-01', '2023-12-31')
+2025-01-03 23:17:47 - Total data rows (filtered): 650
+2025-01-03 23:17:48 - **Lag Correlation** for Death_rate_weekly_of_unvaccinated_people_United_States_by_age vs. Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age...
+2025-01-03 23:17:48 - Lag=7 days => correlation(Death_rate_weekly_of_unvaccinated_people_United_States_by_age, Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age shifted by 7) = -0.0574
+2025-01-03 23:17:48 - Lag=14 days => correlation(Death_rate_weekly_of_unvaccinated_people_United_States_by_age, Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age shifted by 14) = -0.0552
+2025-01-03 23:17:48 - Lag=21 days => correlation(Death_rate_weekly_of_unvaccinated_people_United_States_by_age, Death_rate_weekly_of_fully_vaccinated_people_with_bivalent_booster_United_States_by_age shifted by 21) = -0.0638
+2025-01-03 23:17:48 - Time period + lag correlation analysis completed.
