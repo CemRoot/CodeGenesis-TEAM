@@ -118,23 +118,19 @@ CodeGenesis-TEAM/
 
 1. **US Death Rate Trends**
    - Compares death rates for unvaccinated, vaccinated without boosters, and bivalent booster groups over time.
+   <img src="img/img_1.png" alt="US Death Rate Trends" width="500"/>
 
 2. **Global Vaccination Trends**
    - Displays vaccination rates vs. death rates for various countries.
+   <img src="img/img_3.png" alt="Global Vaccination Trends" width="500"/>
 
 3. **Manufacturer Distribution**
    - Highlights Pfizer, Moderna, and AstraZeneca’s contribution globally.
-   ![img.png](img.png)
-
+   <img src="img/img_2.png" alt="Manufacturer Distribution" width="500"/>
 ## 🎯 Key Insights
 1. Vaccination significantly reduces death rates, especially with booster doses.
 2. Global vaccination distribution is uneven, emphasizing the need for equitable access.
 3. Manufacturer contributions vary by region, with some focusing on high-income countries and others on emerging markets.
-
-## 🚀 Next Steps
-- Incorporate more datasets (e.g., hospitalization rates).
-- Refine analyses for emerging variants.
-- Enhance visualizations with interactive dashboards.
 
 ## 📜 License
 
