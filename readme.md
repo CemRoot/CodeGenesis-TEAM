@@ -40,7 +40,7 @@ Key questions addressed include:
     python scripts/data_to_mongo.py
     ```
 
-5. **Begin analysis using `main.ipynb` or `pipeline_analysis.py`**.
+5. **Begin analysis using `data_to_mongo` or `main.ipybn`**.
 
 ## 📂 Project Structure
 
