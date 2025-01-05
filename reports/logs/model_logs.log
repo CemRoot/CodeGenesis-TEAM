@@ -1,0 +1,9 @@
+INFO  [2025-01-05 14:55:04] Data loaded successfully.
+INFO  [2025-01-05 14:55:04] Target variable transformed and categorized.
+INFO  [2025-01-05 14:55:04] Data split into training and testing sets.
+INFO  [2025-01-05 14:55:04] Random Forest model trained.
+INFO  [2025-01-05 14:55:04] Model predictions made and performance evaluated.
+INFO  [2025-01-05 14:55:04] ROC curve plotted and saved as 'roc_curve.png'.
+INFO  [2025-01-05 14:55:04] AUC Score: 1
+INFO  [2025-01-05 14:55:04] Variable importance plotted.
+INFO  [2025-01-05 14:55:04] Model saved as 'rfModel.RData'.

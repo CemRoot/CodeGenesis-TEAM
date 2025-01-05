@@ -1,0 +1,5 @@
+2025-01-05 12:19:10 - Regression: Aşılama Oranı vs Ölüm Oranı - MSE: 6.510134766051401, R²: 0.00047153900106544633
+2025-01-05 12:19:15 - Regression: Pfizer vs Moderna Aşılama - MSE: 389084912416912.06, R²: 0.7569239132801321
+2025-01-05 12:19:15 - ANOVA: Aşı Durumuna Göre Ölüm Oranları - ANOVA F-statistic: 44.097979137157324, P-value: 2.351816075664237e-56
+2025-01-05 12:19:15 - 
+All analyses completed.
