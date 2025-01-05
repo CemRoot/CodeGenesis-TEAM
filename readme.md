@@ -3,12 +3,12 @@
 
 ## 📖 Project Overview
 
-This project aims to analyze the impact of vaccination on death rates during the COVID-19 pandemic, providing insights into the effectiveness of vaccines and their distribution worldwide. It combines statistical analyses, time-series evaluations, and cross-regional comparisons using rich datasets.
+This project investigates the relationship between COVID-19 vaccination rates and mortality, focusing on both global data and US-specific trends. Using advanced analytics and Python-based tools, the analysis aims to uncover key insights and implications for public health policies. The study incorporates statistical analysis, machine learning, and dynamic visualizations.
 
-Key questions addressed include:
-- What are the death rate trends for unvaccinated, vaccinated without boosters, and bivalent booster groups in the US?
-- How do vaccination doses per 100 people vary across countries and vaccine manufacturers?
-- What correlations exist between vaccination rates and death rates globally?
+### Key Objectives:
+- Analyze trends in death rates among unvaccinated, vaccinated without boosters, and bivalent booster groups in the US.
+- Identify regional disparities in vaccine distribution and its impact on mortality globally.
+- Examine correlations between vaccination rates and mortality using statistical and machine learning models.
 
 ## 🧰 Installation and Setup
 
@@ -17,123 +17,102 @@ Key questions addressed include:
 - MongoDB (local or cloud-based instance)
 - Required libraries listed in `requirements.txt`
 
-### Installation Steps
-1. **Clone the repository**:
+### Steps
+1. **Clone the repository:**
     ```bash
     git clone https://github.com/your-username/CodeGenesisTeam.git
     cd CodeGenesisTeam
     ```
 
-2. **Install dependencies**:
+2. **Install dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
 
-3. **Configure MongoDB in `.env`**:
+3. **Set up MongoDB:**
+    - Add your MongoDB credentials in `.env`:
     ```plaintext
     MONGO_URI="your_mongo_connection_uri"
     DATABASE_NAME="codegenesis_db"
     ```
 
-4. **Load raw data into MongoDB**:
+4. **Load raw data into MongoDB:**
     ```bash
     python scripts/data_to_mongo.py
     ```
 
-5. **Begin analysis using `data_to_mongo` or `main.ipybn`**.
+5. **Run analyses using Jupyter Notebooks:**
+    - `main.ipynb` for full data analysis.
 
 ## 📂 Project Structure
 
 ```
 CodeGenesis-TEAM/
 ├── data/
+│   ├── processed/           # Processed datasets
 │   ├── raw/                 # Original datasets
-│   ├── processed/           # Cleaned datasets
 │
+├── img/                     # Images for README and report
 ├── notebooks/               # Jupyter Notebooks for analysis
-├── scripts/                 # Python scripts
-├── reports/                 # Logs and final reports
+│   ├── main.ipynb           # Main analysis notebook
+│   ├── data_to_mongo.ipynb  # Data preprocessing and loading
+│
+├── scripts/                 # Python scripts for automation
+├── reports/                 # Project reports and logs
 │   ├── logs/                # Execution logs
-│   ├── final_report.md      # Summary of findings
+│   ├── Final_Project.pdf    # Final project report
 │
 ├── .env                     # MongoDB credentials
 ├── README.md                # Project documentation
-├── requirements.txt         # Python dependencies
-└── LICENSE                  # Licensing information
+└── requirements.txt         # Python dependencies
 ```
 
-## 📊 Analytical Highlights
+## 📊 Key Highlights
 
 ### 1️⃣ US Data Analysis
-
-**Data Source**: `united-states-rates-of-covid-19-deaths-by-vaccination-status.csv`
-
-**Key Findings**:
-- **ANOVA and Tukey HSD Tests**:
-  - Significant differences in death rates among unvaccinated, vaccinated without booster, and vaccinated with bivalent booster groups.
-  - Post-hoc analysis revealed that unvaccinated individuals exhibited the highest death rates.
-- **Time-Series and Lag Analysis**:
-  - Death rates peaked during early pandemic phases and declined with vaccine rollouts.
-  - Lag correlations showed weak negative associations between unvaccinated and bivalent groups.
+**Findings:**
+- Bivalent booster recipients showed the lowest death rates.
+- Death rates declined with vaccination campaigns.
+- Significant differences identified through ANOVA and Tukey HSD tests.
 
 ### 2️⃣ Global Data Analysis
+**Findings:**
+- Strong negative correlation between vaccination rates and mortality.
+- Regional disparities highlight unequal vaccine distribution.
 
-**Data Source**: `covid-vaccinations-vs-covid-death-rate.csv`
-
-**Key Insights**:
-- **Cumulative Vaccination Rates**:
-  - Highly vaccinated countries showed reduced death rates over time.
-  - Significant regional disparities in vaccination coverage.
-- **Correlation Analysis**:
-  - Strong negative correlation between doses per hundred and death rates.
-
-### 3️⃣ Manufacturer Data Analysis
-
-**Data Source**: `covid-vaccine-doses-by-manufacturer.csv`
-
-**Highlights**:
-- Pfizer and Moderna accounted for the majority of administered doses globally.
-- AstraZeneca had a stronger presence in low-to-middle-income countries.
-- Stacked bar plots visualized manufacturer contributions by region.
+### 3️⃣ Manufacturer Data Insights
+- Pfizer and Moderna dominate high-income regions, while AstraZeneca focuses on low-to-middle-income countries.
 
 ## 🛠️ Key Features and Scripts
+1. **Data Preprocessing:**
+    - **Script:** `data_to_mongo.py`
+    - Cleans and structures datasets for MongoDB storage.
+2. **Statistical and Machine Learning Analysis:**
+    - Linear regression and logistic regression models.
+    - Random Forest with SMOTE for imbalanced data.
+3. **Interactive Visualizations:**
+    - Created using Matplotlib and Plotly for dynamic data insights.
 
-1. **Data Cleaning and Loading**
-   - **Script**: `data_to_mongo.py`
-   - Ensures raw datasets are cleaned and structured for MongoDB ingestion.
+## 📈 Visualizations
+1. **Death Rate Trends (US):**
+    - Time-series analysis comparing vaccinated and unvaccinated groups.
+    <img src="img/us_trends.png" alt="US Death Rate Trends" width="500"/>
 
-2. **Statistical Analysis**
-   - Implements:
-     - T-tests: Comparing two groups (e.g., unvaccinated vs. bivalent).
-     - ANOVA: Evaluating differences across three groups.
-     - Post-hoc Tests: Tukey HSD for detailed pairwise comparisons.
+2. **Global Vaccination Impact:**
+    - Scatter plot of vaccination rates vs. mortality.
+    <img src="img/global_trends.png" alt="Global Vaccination Trends" width="500"/>
 
-3. **Visualization**
-   - Time-series plots and cumulative bar charts for intuitive trend analysis.
+3. **Manufacturer Distribution:**
+    - Stacked bar chart highlighting regional manufacturer contributions.
+    <img src="img/manufacturer_dist.png" alt="Manufacturer Distribution" width="500"/>
 
-4. **Combined Analysis**
-   - Cross-referencing US and global datasets for validation and synthesis.
-
-## 📈 Sample Visualizations
-
-1. **US Death Rate Trends**
-   - Compares death rates for unvaccinated, vaccinated without boosters, and bivalent booster groups over time.
-   <img src="img/img_1.png" alt="US Death Rate Trends" width="500"/>
-
-2. **Global Vaccination Trends**
-   - Displays vaccination rates vs. death rates for various countries.
-   <img src="img/img_3.png" alt="Global Vaccination Trends" width="500"/>
-
-3. **Manufacturer Distribution**
-   - Highlights Pfizer, Moderna, and AstraZeneca’s contribution globally.
-   <img src="img/img_2.png" alt="Manufacturer Distribution" width="500"/>
-## 🎯 Key Insights
-1. Vaccination significantly reduces death rates, especially with booster doses.
-2. Global vaccination distribution is uneven, emphasizing the need for equitable access.
-3. Manufacturer contributions vary by region, with some focusing on high-income countries and others on emerging markets.
+## 🎯 Insights
+1. Vaccination reduces COVID-19 mortality, especially with booster doses.
+2. Equitable vaccine distribution remains a global challenge.
+3. Manufacturer strategies differ by region, impacting accessibility.
 
 ## 📜 License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-For further queries, feel free to open an issue in the repository.
+For inquiries or feedback, please open an issue in the repository.
