@@ -1,0 +1,2 @@
+{"timestamp": "2025-01-05 21:19:30,542", "level": "INFO", "message": "Logger setup complete. Logs will be written to '../reports/logs/data_migration_20250105_211930.log'.", "filename": "/Users/dr.sam/Desktop/CodeGenesis-TEAM/Project/data_to_mongo.py", "line_no": 60}
+{"timestamp": "2025-01-05 21:19:30,542", "level": "INFO", "message": "Migration process started.", "filename": "/Users/dr.sam/Desktop/CodeGenesis-TEAM/Project/data_to_mongo.py", "line_no": 179}
